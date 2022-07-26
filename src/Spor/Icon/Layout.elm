@@ -1,4 +1,10 @@
-module Spor.Icon.Layout exposing (..)
+module Spor.Icon.Layout exposing (dropdownDownFill18X18, dropdownDownFill24X24, dropdownDownFill30X30, dropdownLeftFill18X18, dropdownLeftFill24X24, dropdownLeftFill30X30, dropdownRightFill18X18, dropdownRightFill24X24, dropdownRightFill30X30, dropdownUpFill18X18, dropdownUpFill24X24, dropdownUpFill30X30, expandFill18X18, expandFill24X24, expandFill30X30, expandOutline18X18, expandOutline24X24, expandOutline30X30, gridFill18X18, gridFill24X24, gridFill30X30, gridOutline18X18, gridOutline24X24, gridOutline30X30, listFill18X18, listFill24X24, listFill30X30, listOutline18X18, listOutline24X24, listOutline30X30)
+
+{-| Layout icons
+
+@docs dropdownDownFill18X18, dropdownDownFill24X24, dropdownDownFill30X30, dropdownLeftFill18X18, dropdownLeftFill24X24, dropdownLeftFill30X30, dropdownRightFill18X18, dropdownRightFill24X24, dropdownRightFill30X30, dropdownUpFill18X18, dropdownUpFill24X24, dropdownUpFill30X30, expandFill18X18, expandFill24X24, expandFill30X30, expandOutline18X18, expandOutline24X24, expandOutline30X30, gridFill18X18, gridFill24X24, gridFill30X30, gridOutline18X18, gridOutline24X24, gridOutline30X30, listFill18X18, listFill24X24, listFill30X30, listOutline18X18, listOutline24X24, listOutline30X30
+
+-}
 
 import Svg
 import VirtualDom exposing (Attribute, attribute)

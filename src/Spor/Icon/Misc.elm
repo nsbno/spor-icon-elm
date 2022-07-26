@@ -1,4 +1,10 @@
-module Spor.Icon.Misc exposing (..)
+module Spor.Icon.Misc exposing (autumnFill18X18, autumnFill24X24, autumnFill30X30, autumnOutline18X18, autumnOutline24X24, autumnOutline30X30, componentsFill18X18, componentsFill24X24, componentsFill30X30, componentsOutline18X18, componentsOutline24X24, componentsOutline30X30, guidelinesFill18X18, guidelinesFill24X24, guidelinesFill30X30, guidelinesOutline18X18, guidelinesOutline24X24, guidelinesOutline30X30, iconsFill18X18, iconsFill24X24, iconsFill30X30, iconsOutline18X18, iconsOutline24X24, iconsOutline30X30, springFill18X18, springFill24X24, springFill30X30, springOutline18X18, springOutline24X24, springOutline30X30, summerFill18X18, summerFill24X24, summerFill30X30, summerOutline18X18, summerOutline24X24, summerOutline30X30, tokensFill18X18, tokensFill24X24, tokensFill30X30, tokensOutline18X18, tokensOutline24X24, tokensOutline30X30, vy18X18, vy24X24, vy30X30, winterFill18X18, winterFill24X24, winterFill30X30, winterOutline18X18, winterOutline24X24, winterOutline30X30)
+
+{-| Misc icons
+
+@docs autumnFill18X18, autumnFill24X24, autumnFill30X30, autumnOutline18X18, autumnOutline24X24, autumnOutline30X30, componentsFill18X18, componentsFill24X24, componentsFill30X30, componentsOutline18X18, componentsOutline24X24, componentsOutline30X30, guidelinesFill18X18, guidelinesFill24X24, guidelinesFill30X30, guidelinesOutline18X18, guidelinesOutline24X24, guidelinesOutline30X30, iconsFill18X18, iconsFill24X24, iconsFill30X30, iconsOutline18X18, iconsOutline24X24, iconsOutline30X30, springFill18X18, springFill24X24, springFill30X30, springOutline18X18, springOutline24X24, springOutline30X30, summerFill18X18, summerFill24X24, summerFill30X30, summerOutline18X18, summerOutline24X24, summerOutline30X30, tokensFill18X18, tokensFill24X24, tokensFill30X30, tokensOutline18X18, tokensOutline24X24, tokensOutline30X30, vy18X18, vy24X24, vy30X30, winterFill18X18, winterFill24X24, winterFill30X30, winterOutline18X18, winterOutline24X24, winterOutline30X30
+
+-}
 
 import Svg
 import VirtualDom exposing (Attribute, attribute)

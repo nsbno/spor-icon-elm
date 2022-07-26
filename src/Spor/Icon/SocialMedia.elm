@@ -1,4 +1,10 @@
-module Spor.Icon.SocialMedia exposing (..)
+module Spor.Icon.SocialMedia exposing (facebook18X18, facebook24X24, facebook30X30, figmaColor18X18, figmaColor24X24, figmaColor30X30, figmaFill18X18, figmaFill24X24, figmaFill30X30, figmaOutline18X18, figmaOutline24X24, figmaOutline30X30, githubColor18X18, githubColor24X24, githubColor30X30, githubFill18X18, githubFill24X24, githubFill30X30, githubOutline18X18, githubOutline24X24, githubOutline30X30, instagram18X18, instagram24X24, instagram30X30, linkedin18X18, linkedin24X24, linkedin30X30, twitter18X18, twitter24X24, twitter30X30, youtube18X18, youtube24X24, youtube30X30)
+
+{-| SocialMedia icons
+
+@docs facebook18X18, facebook24X24, facebook30X30, figmaColor18X18, figmaColor24X24, figmaColor30X30, figmaFill18X18, figmaFill24X24, figmaFill30X30, figmaOutline18X18, figmaOutline24X24, figmaOutline30X30, githubColor18X18, githubColor24X24, githubColor30X30, githubFill18X18, githubFill24X24, githubFill30X30, githubOutline18X18, githubOutline24X24, githubOutline30X30, instagram18X18, instagram24X24, instagram30X30, linkedin18X18, linkedin24X24, linkedin30X30, twitter18X18, twitter24X24, twitter30X30, youtube18X18, youtube24X24, youtube30X30
+
+-}
 
 import Svg
 import VirtualDom exposing (Attribute, attribute)

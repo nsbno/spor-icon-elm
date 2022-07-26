@@ -1,4 +1,10 @@
-module Spor.Icon.Map exposing (..)
+module Spor.Icon.Map exposing (compassFill18X18, compassFill24X24, compassFill30X30, compassOutline18X18, compassOutline24X24, compassOutline30X30, mapFill18X18, mapFill24X24, mapFill30X30, mapOutline18X18, mapOutline24X24, mapOutline30X30, myPositionFill18X18, myPositionFill24X24, myPositionFill30X30, myPositionOutline18X18, myPositionOutline24X24, myPositionOutline30X30, parkingFill18X18, parkingFill24X24, parkingFill30X30, parkingOutline18X18, parkingOutline24X24, parkingOutline30X30, positionOnMapFill18X18, positionOnMapFill24X24, positionOnMapFill30X30, positionOnMapOutline18X18, positionOnMapOutline24X24, positionOnMapOutline30X30, satelliteFill18X18, satelliteFill24X24, satelliteFill30X30, satelliteOutline18X18, satelliteOutline24X24, satelliteOutline30X30)
+
+{-| Map icons
+
+@docs compassFill18X18, compassFill24X24, compassFill30X30, compassOutline18X18, compassOutline24X24, compassOutline30X30, mapFill18X18, mapFill24X24, mapFill30X30, mapOutline18X18, mapOutline24X24, mapOutline30X30, myPositionFill18X18, myPositionFill24X24, myPositionFill30X30, myPositionOutline18X18, myPositionOutline24X24, myPositionOutline30X30, parkingFill18X18, parkingFill24X24, parkingFill30X30, parkingOutline18X18, parkingOutline24X24, parkingOutline30X30, positionOnMapFill18X18, positionOnMapFill24X24, positionOnMapFill30X30, positionOnMapOutline18X18, positionOnMapOutline24X24, positionOnMapOutline30X30, satelliteFill18X18, satelliteFill24X24, satelliteFill30X30, satelliteOutline18X18, satelliteOutline24X24, satelliteOutline30X30
+
+-}
 
 import Svg
 import VirtualDom exposing (Attribute, attribute)
