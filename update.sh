@@ -26,7 +26,11 @@ popd
 
 # Copy generated elm package to root
 
-cp -R spor/packages/spor-icon-elm/ .
+cp spor/packages/spor-icon-elm/elm.json .
+cp spor/packages/spor-icon-elm/README.md .
+cp spor/packages/spor-icon-elm/LICENSE .
+cp -R spor/packages/spor-icon-elm/src .
+
 jq --indent 4 ".version = $CURRENT_VERSION" elm.json > elm2.json
 mv elm2.json elm.json
 
