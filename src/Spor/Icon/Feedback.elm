@@ -1,8 +1,8 @@
-module Spor.Icon.Feedback exposing (addFill12X12, addFill18X18, addFill24X24, addFill30X30, addOutline12X12, addOutline18X18, addOutline24X24, addOutline30X30, errorFill12X12, errorFill18X18, errorFill24X24, errorFill30X30, errorOutline12X12, errorOutline18X18, errorOutline24X24, errorOutline30X30, frownFill18X18, frownFill24X24, frownFill30X30, frownFill60X60, frownOutline18X18, frownOutline24X24, frownOutline30X30, frownOutline60X60, informationFill12X12, informationFill18X18, informationFill24X24, informationFill30X30, informationOutline12X12, informationOutline18X18, informationOutline24X24, informationOutline30X30, neutralFill18X18, neutralFill24X24, neutralFill30X30, neutralFill60X60, neutralOutline18X18, neutralOutline24X24, neutralOutline30X30, neutralOutline60X60, questionFill12X12, questionFill18X18, questionFill24X24, questionFill30X30, questionOutline12X12, questionOutline18X18, questionOutline24X24, questionOutline30X30, realtimeCancelled12X12, realtimeCancelled18X18, realtimeDelay12X12, realtimeDelay18X18, realtimeNotStarted12X12, realtimeNotStarted18X18, realtimeOnRoute12X12, realtimeOnRoute18X18, smileFill18X18, smileFill24X24, smileFill30X30, smileFill60X60, smileOutline18X18, smileOutline24X24, smileOutline30X30, smileOutline60X60, subtractFill18X18, subtractFill24X24, subtractFill30X30, subtractOutline18X18, subtractOutline24X24, subtractOutline30X30, successFill12X12, successFill18X18, successFill24X24, successFill30X30, successOutline12X12, successOutline18X18, successOutline24X24, successOutline30X30, warningFill12X12, warningFill18X18, warningFill24X24, warningFill30X30, warningOutline12X12, warningOutline18X18, warningOutline24X24, warningOutline30X30)
+module Spor.Icon.Feedback exposing (addFill12X12, addFill18X18, addFill24X24, addFill30X30, addOutline12X12, addOutline18X18, addOutline24X24, addOutline30X30, checkmarkFill18X18, checkmarkFill24X24, checkmarkFill30X30, checkmarkOutline18X18, checkmarkOutline24X24, checkmarkOutline30X30, errorFill12X12, errorFill18X18, errorFill24X24, errorFill30X30, errorOutline12X12, errorOutline18X18, errorOutline24X24, errorOutline30X30, frownFill18X18, frownFill24X24, frownFill30X30, frownFill60X60, frownOutline18X18, frownOutline24X24, frownOutline30X30, frownOutline60X60, informationFill12X12, informationFill18X18, informationFill24X24, informationFill30X30, informationOutline12X12, informationOutline18X18, informationOutline24X24, informationOutline30X30, neutralFill18X18, neutralFill24X24, neutralFill30X30, neutralFill60X60, neutralOutline18X18, neutralOutline24X24, neutralOutline30X30, neutralOutline60X60, questionFill12X12, questionFill18X18, questionFill24X24, questionFill30X30, questionOutline12X12, questionOutline18X18, questionOutline24X24, questionOutline30X30, realtimeCancelled12X12, realtimeCancelled18X18, realtimeDelay12X12, realtimeDelay18X18, realtimeNotStarted12X12, realtimeNotStarted18X18, realtimeOnRoute12X12, realtimeOnRoute18X18, smileFill18X18, smileFill24X24, smileFill30X30, smileFill60X60, smileOutline18X18, smileOutline24X24, smileOutline30X30, smileOutline60X60, subtractFill18X18, subtractFill24X24, subtractFill30X30, subtractOutline18X18, subtractOutline24X24, subtractOutline30X30, successFill12X12, successFill18X18, successFill24X24, successFill30X30, successOutline12X12, successOutline18X18, successOutline24X24, successOutline30X30, warningFill12X12, warningFill18X18, warningFill24X24, warningFill30X30, warningOutline12X12, warningOutline18X18, warningOutline24X24, warningOutline30X30)
 
 {-| Feedback icons
 
-@docs addFill12X12, addFill18X18, addFill24X24, addFill30X30, addOutline12X12, addOutline18X18, addOutline24X24, addOutline30X30, errorFill12X12, errorFill18X18, errorFill24X24, errorFill30X30, errorOutline12X12, errorOutline18X18, errorOutline24X24, errorOutline30X30, frownFill18X18, frownFill24X24, frownFill30X30, frownFill60X60, frownOutline18X18, frownOutline24X24, frownOutline30X30, frownOutline60X60, informationFill12X12, informationFill18X18, informationFill24X24, informationFill30X30, informationOutline12X12, informationOutline18X18, informationOutline24X24, informationOutline30X30, neutralFill18X18, neutralFill24X24, neutralFill30X30, neutralFill60X60, neutralOutline18X18, neutralOutline24X24, neutralOutline30X30, neutralOutline60X60, questionFill12X12, questionFill18X18, questionFill24X24, questionFill30X30, questionOutline12X12, questionOutline18X18, questionOutline24X24, questionOutline30X30, realtimeCancelled12X12, realtimeCancelled18X18, realtimeDelay12X12, realtimeDelay18X18, realtimeNotStarted12X12, realtimeNotStarted18X18, realtimeOnRoute12X12, realtimeOnRoute18X18, smileFill18X18, smileFill24X24, smileFill30X30, smileFill60X60, smileOutline18X18, smileOutline24X24, smileOutline30X30, smileOutline60X60, subtractFill18X18, subtractFill24X24, subtractFill30X30, subtractOutline18X18, subtractOutline24X24, subtractOutline30X30, successFill12X12, successFill18X18, successFill24X24, successFill30X30, successOutline12X12, successOutline18X18, successOutline24X24, successOutline30X30, warningFill12X12, warningFill18X18, warningFill24X24, warningFill30X30, warningOutline12X12, warningOutline18X18, warningOutline24X24, warningOutline30X30
+@docs addFill12X12, addFill18X18, addFill24X24, addFill30X30, addOutline12X12, addOutline18X18, addOutline24X24, addOutline30X30, checkmarkFill18X18, checkmarkFill24X24, checkmarkFill30X30, checkmarkOutline18X18, checkmarkOutline24X24, checkmarkOutline30X30, errorFill12X12, errorFill18X18, errorFill24X24, errorFill30X30, errorOutline12X12, errorOutline18X18, errorOutline24X24, errorOutline30X30, frownFill18X18, frownFill24X24, frownFill30X30, frownFill60X60, frownOutline18X18, frownOutline24X24, frownOutline30X30, frownOutline60X60, informationFill12X12, informationFill18X18, informationFill24X24, informationFill30X30, informationOutline12X12, informationOutline18X18, informationOutline24X24, informationOutline30X30, neutralFill18X18, neutralFill24X24, neutralFill30X30, neutralFill60X60, neutralOutline18X18, neutralOutline24X24, neutralOutline30X30, neutralOutline60X60, questionFill12X12, questionFill18X18, questionFill24X24, questionFill30X30, questionOutline12X12, questionOutline18X18, questionOutline24X24, questionOutline30X30, realtimeCancelled12X12, realtimeCancelled18X18, realtimeDelay12X12, realtimeDelay18X18, realtimeNotStarted12X12, realtimeNotStarted18X18, realtimeOnRoute12X12, realtimeOnRoute18X18, smileFill18X18, smileFill24X24, smileFill30X30, smileFill60X60, smileOutline18X18, smileOutline24X24, smileOutline30X30, smileOutline60X60, subtractFill18X18, subtractFill24X24, subtractFill30X30, subtractOutline18X18, subtractOutline24X24, subtractOutline30X30, successFill12X12, successFill18X18, successFill24X24, successFill30X30, successOutline12X12, successOutline18X18, successOutline24X24, successOutline30X30, warningFill12X12, warningFill18X18, warningFill24X24, warningFill30X30, warningOutline12X12, warningOutline18X18, warningOutline24X24, warningOutline30X30
 
 -}
 
@@ -18,17 +18,17 @@ addFill12X12 attrs = Svg.node "svg" ([attribute "width" "12", attribute "height"
 
 {-|-}
 addFill18X18 : List (Attribute msg) -> Svg.Svg msg
-addFill18X18 attrs = Svg.node "svg" ([attribute "width" "18", attribute "height" "18", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M9 1.5a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15Zm0 3.464a.5.5 0 0 1 .5.5V8.5h3.036a.5.5 0 1 1 0 1H9.5v3.036a.5.5 0 1 1-1 0V9.5H5.464a.5.5 0 1 1 0-1H8.5V5.464a.5.5 0 0 1 .5-.5Z", attribute "fill" "#2B2B2C"]) []]
+addFill18X18 attrs = Svg.node "svg" ([attribute "width" "18", attribute "height" "18", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M9 1.5a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15Zm0 4a.5.5 0 0 1 .5.5v2.5H12a.5.5 0 0 1 0 1H9.5V12a.5.5 0 1 1-1 0V9.5H6a.5.5 0 1 1 0-1h2.5V6a.5.5 0 0 1 .5-.5Z", attribute "fill" "#2B2B2C"]) []]
 
 
 {-|-}
 addFill24X24 : List (Attribute msg) -> Svg.Svg msg
-addFill24X24 attrs = Svg.node "svg" ([attribute "width" "24", attribute "height" "24", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 4.257a.5.5 0 0 1 .5.5V11.5h3.743a.5.5 0 1 1 0 1H12.5v3.743a.5.5 0 0 1-1 0V12.5H7.757a.5.5 0 1 1 0-1H11.5V7.757a.5.5 0 0 1 .5-.5Z", attribute "fill" "#2B2B2C"]) []]
+addFill24X24 attrs = Svg.node "svg" ([attribute "width" "24", attribute "height" "24", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 4.5a.5.5 0 0 1 .5.5v3.5H16a.5.5 0 0 1 0 1h-3.5V16a.5.5 0 0 1-1 0v-3.5H8a.5.5 0 1 1 0-1h3.5V8a.5.5 0 0 1 .5-.5Z", attribute "fill" "#2B2B2C"]) []]
 
 
 {-|-}
 addFill30X30 : List (Attribute msg) -> Svg.Svg msg
-addFill30X30 attrs = Svg.node "svg" ([attribute "width" "30", attribute "height" "30", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M26.875 15c0 6.213-5.037 11.25-11.25 11.25S4.375 21.213 4.375 15 9.412 3.75 15.625 3.75 26.875 8.787 26.875 15ZM16.24 9.822a.625.625 0 0 0-1.24.112v4.441h-4.442l-.113.01a.625.625 0 0 0 .113 1.24H15v4.44l.01.112a.625.625 0 0 0 1.24-.112v-4.44h4.441l.113-.01a.625.625 0 0 0-.113-1.24H16.25v-4.44l-.01-.113Z", attribute "fill" "#2B2B2C"]) []]
+addFill30X30 attrs = Svg.node "svg" ([attribute "width" "30", attribute "height" "30", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M15 3C8.373 3 3 8.373 3 15s5.373 12 12 12 12-5.373 12-12S21.627 3 15 3Zm0 5.5a.5.5 0 0 1 .5.5v5.5H21a.5.5 0 1 1 0 1h-5.5V21a.5.5 0 0 1-1 0v-5.5H9a.5.5 0 0 1 0-1h5.5V9a.5.5 0 0 1 .5-.5Z", attribute "fill" "#2B2B2C"]) []]
 
 
 {-|-}
@@ -38,12 +38,12 @@ addOutline12X12 attrs = Svg.node "svg" ([attribute "width" "12", attribute "heig
 
 {-|-}
 addOutline18X18 : List (Attribute msg) -> Svg.Svg msg
-addOutline18X18 attrs = Svg.node "svg" ([attribute "width" "18", attribute "height" "18", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M9 2.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM1.5 9a7.5 7.5 0 1 1 15 0 7.5 7.5 0 0 1-15 0ZM9 4.964a.5.5 0 0 1 .5.5V8.5h3.036a.5.5 0 1 1 0 1H9.5v3.036a.5.5 0 0 1-1 0V9.5H5.464a.5.5 0 1 1 0-1H8.5V5.464a.5.5 0 0 1 .5-.5Z", attribute "fill" "#2B2B2C"]) []]
+addOutline18X18 attrs = Svg.node "svg" ([attribute "width" "18", attribute "height" "18", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M9 2.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM1.5 9a7.5 7.5 0 1 1 15 0 7.5 7.5 0 0 1-15 0ZM9 5.5a.5.5 0 0 1 .5.5v2.5H12a.5.5 0 0 1 0 1H9.5V12a.5.5 0 0 1-1 0V9.5H6a.5.5 0 1 1 0-1h2.5V6a.5.5 0 0 1 .5-.5Z", attribute "fill" "#2B2B2C"]) []]
 
 
 {-|-}
 addOutline24X24 : List (Attribute msg) -> Svg.Svg msg
-addOutline24X24 attrs = Svg.node "svg" ([attribute "width" "24", attribute "height" "24", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm-9 8a9 9 0 1 1 18 0 9 9 0 0 1-18 0Zm9-4.743a.5.5 0 0 1 .5.5V11.5h3.743a.5.5 0 1 1 0 1H12.5v3.743a.5.5 0 0 1-1 0V12.5H7.757a.5.5 0 1 1 0-1H11.5V7.757a.5.5 0 0 1 .5-.5Z", attribute "fill" "#2B2B2C"]) []]
+addOutline24X24 attrs = Svg.node "svg" ([attribute "width" "24", attribute "height" "24", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm-9 8a9 9 0 1 1 18 0 9 9 0 0 1-18 0Zm9-4.5a.5.5 0 0 1 .5.5v3.5H16a.5.5 0 1 1 0 1h-3.5V16a.5.5 0 0 1-1 0v-3.5H8a.5.5 0 0 1 0-1h3.5V8a.5.5 0 0 1 .5-.5Z", attribute "fill" "#2B2B2C"]) []]
 
 
 {-|-}
@@ -52,43 +52,73 @@ addOutline30X30 attrs = Svg.node "svg" ([attribute "width" "30", attribute "heig
 
 
 {-|-}
+checkmarkFill18X18 : List (Attribute msg) -> Svg.Svg msg
+checkmarkFill18X18 attrs = Svg.node "svg" ([attribute "width" "18", attribute "height" "18", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M14.49 4.433a.75.75 0 0 1 .077 1.058l-6.923 8a.75.75 0 0 1-1.134 0L3.433 9.935a.75.75 0 1 1 1.134-.981l2.51 2.9 6.356-7.345a.75.75 0 0 1 1.058-.076Z", attribute "fill" "#2B2B2C"]) []]
+
+
+{-|-}
+checkmarkFill24X24 : List (Attribute msg) -> Svg.Svg msg
+checkmarkFill24X24 attrs = Svg.node "svg" ([attribute "width" "24", attribute "height" "24", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M20.62 4.216a1 1 0 0 1 .164 1.404l-11.077 14a1 1 0 0 1-1.568 0l-4.923-6.222a1 1 0 0 1 1.568-1.24l4.14 5.23L19.215 4.38a1 1 0 0 1 1.404-.164Z", attribute "fill" "#2B2B2C"]) []]
+
+
+{-|-}
+checkmarkFill30X30 : List (Attribute msg) -> Svg.Svg msg
+checkmarkFill30X30 attrs = Svg.node "svg" ([attribute "width" "30", attribute "height" "30", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M26.625 4.22a1 1 0 0 1 .155 1.405l-15.23 19a1 1 0 0 1-1.561 0l-6.77-8.444a1 1 0 1 1 1.561-1.25l5.99 7.47L25.22 4.375a1 1 0 0 1 1.405-.155Z", attribute "fill" "#2B2B2C"]) []]
+
+
+{-|-}
+checkmarkOutline18X18 : List (Attribute msg) -> Svg.Svg msg
+checkmarkOutline18X18 attrs = Svg.node "svg" ([attribute "width" "18", attribute "height" "18", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M14.327 4.622a.5.5 0 0 1 .051.705l-6.923 8a.5.5 0 0 1-.756 0L3.622 9.772a.5.5 0 0 1 .756-.655l2.699 3.119 6.545-7.563a.5.5 0 0 1 .705-.051Z", attribute "fill" "#2B2B2C"]) []]
+
+
+{-|-}
+checkmarkOutline24X24 : List (Attribute msg) -> Svg.Svg msg
+checkmarkOutline24X24 attrs = Svg.node "svg" ([attribute "width" "24", attribute "height" "24", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M20.31 4.608a.5.5 0 0 1 .082.702l-11.077 14a.5.5 0 0 1-.784 0l-4.923-6.222a.5.5 0 1 1 .784-.62l4.531 5.726L19.608 4.69a.5.5 0 0 1 .702-.082Z", attribute "fill" "#2B2B2C"]) []]
+
+
+{-|-}
+checkmarkOutline30X30 : List (Attribute msg) -> Svg.Svg msg
+checkmarkOutline30X30 attrs = Svg.node "svg" ([attribute "width" "30", attribute "height" "30", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M26.313 4.61a.5.5 0 0 1 .077.703l-15.23 19a.5.5 0 0 1-.78 0l-6.77-8.445a.5.5 0 0 1 .78-.625l6.38 7.958L25.61 4.687a.5.5 0 0 1 .703-.077Z", attribute "fill" "#2B2B2C"]) []]
+
+
+{-|-}
 errorFill12X12 : List (Attribute msg) -> Svg.Svg msg
-errorFill12X12 attrs = Svg.node "svg" ([attribute "width" "12", attribute "height" "12", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "circle" ([attribute "cx" "6", attribute "cy" "6", attribute "r" "3", attribute "fill" "#fff"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M6 1a5 5 0 1 0 0 10A5 5 0 0 0 6 1ZM4.146 4.146a.5.5 0 0 1 .708 0L6 5.293l1.146-1.147a.5.5 0 1 1 .708.708L6.707 6l1.147 1.146a.5.5 0 1 1-.708.708L6 6.707 4.854 7.854a.5.5 0 1 1-.708-.708L5.293 6 4.146 4.854a.5.5 0 0 1 0-.708Z", attribute "fill" "#ED0000"]) []]
+errorFill12X12 attrs = Svg.node "svg" ([attribute "width" "12", attribute "height" "12", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "circle" ([attribute "cx" "6", attribute "cy" "6", attribute "r" "3", attribute "fill" "#fff"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M6 1a5 5 0 1 0 0 10A5 5 0 0 0 6 1ZM4.146 4.146a.5.5 0 0 1 .708 0L6 5.293l1.146-1.147a.5.5 0 1 1 .708.708L6.707 6l1.147 1.146a.5.5 0 1 1-.708.708L6 6.707 4.854 7.854a.5.5 0 1 1-.708-.708L5.293 6 4.146 4.854a.5.5 0 0 1 0-.708Z", attribute "fill" "#2B2B2C"]) []]
 
 
 {-|-}
 errorFill18X18 : List (Attribute msg) -> Svg.Svg msg
-errorFill18X18 attrs = Svg.node "svg" ([attribute "width" "18", attribute "height" "18", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "circle" ([attribute "cx" "9", attribute "cy" "9", attribute "r" "5", attribute "fill" "#fff"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M9 1.5a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15ZM6.146 6.146a.5.5 0 0 1 .708 0L9 8.293l2.146-2.147a.5.5 0 0 1 .708.708L9.707 9l2.147 2.146a.5.5 0 0 1-.708.708L9 9.707l-2.146 2.147a.5.5 0 0 1-.708-.708L8.293 9 6.146 6.854a.5.5 0 0 1 0-.708Z", attribute "fill" "#ED0000"]) []]
+errorFill18X18 attrs = Svg.node "svg" ([attribute "width" "18", attribute "height" "18", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "circle" ([attribute "cx" "9", attribute "cy" "9", attribute "r" "5", attribute "fill" "#fff"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M9 1.5a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15ZM6.146 6.146a.5.5 0 0 1 .708 0L9 8.293l2.146-2.147a.5.5 0 0 1 .708.708L9.707 9l2.147 2.146a.5.5 0 0 1-.708.708L9 9.707l-2.146 2.147a.5.5 0 0 1-.708-.708L8.293 9 6.146 6.854a.5.5 0 0 1 0-.708Z", attribute "fill" "#2B2B2C"]) []]
 
 
 {-|-}
 errorFill24X24 : List (Attribute msg) -> Svg.Svg msg
-errorFill24X24 attrs = Svg.node "svg" ([attribute "width" "24", attribute "height" "24", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "circle" ([attribute "cx" "11.5", attribute "cy" "11.5", attribute "r" "6.5", attribute "fill" "#fff"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM8.646 8.646a.5.5 0 0 1 .708 0L12 11.293l2.646-2.647a.5.5 0 0 1 .708.708L12.707 12l2.647 2.646a.5.5 0 0 1-.708.708L12 12.707l-2.646 2.647a.5.5 0 0 1-.708-.708L11.293 12 8.646 9.354a.5.5 0 0 1 0-.708Z", attribute "fill" "#ED0000"]) []]
+errorFill24X24 attrs = Svg.node "svg" ([attribute "width" "24", attribute "height" "24", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "circle" ([attribute "cx" "11.5", attribute "cy" "11.5", attribute "r" "6.5", attribute "fill" "#fff"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM8.646 8.646a.5.5 0 0 1 .708 0L12 11.293l2.646-2.647a.5.5 0 0 1 .708.708L12.707 12l2.647 2.646a.5.5 0 0 1-.708.708L12 12.707l-2.646 2.647a.5.5 0 0 1-.708-.708L11.293 12 8.646 9.354a.5.5 0 0 1 0-.708Z", attribute "fill" "#2B2B2C"]) []]
 
 
 {-|-}
 errorFill30X30 : List (Attribute msg) -> Svg.Svg msg
-errorFill30X30 attrs = Svg.node "svg" ([attribute "width" "30", attribute "height" "30", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "circle" ([attribute "cx" "15", attribute "cy" "15", attribute "r" "8", attribute "fill" "#fff"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M15 3C8.373 3 3 8.373 3 15s5.373 12 12 12 12-5.373 12-12S21.627 3 15 3Zm-4.854 7.146a.5.5 0 0 1 .708 0L15 14.293l4.146-4.147a.5.5 0 0 1 .708.708L15.707 15l4.147 4.146a.5.5 0 0 1-.708.708L15 15.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 15l-4.147-4.146a.5.5 0 0 1 0-.708Z", attribute "fill" "#ED0000"]) []]
+errorFill30X30 attrs = Svg.node "svg" ([attribute "width" "30", attribute "height" "30", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "circle" ([attribute "cx" "15", attribute "cy" "15", attribute "r" "8", attribute "fill" "#fff"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M15 3C8.373 3 3 8.373 3 15s5.373 12 12 12 12-5.373 12-12S21.627 3 15 3Zm-4.854 7.146a.5.5 0 0 1 .708 0L15 14.293l4.146-4.147a.5.5 0 0 1 .708.708L15.707 15l4.147 4.146a.5.5 0 0 1-.708.708L15 15.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 15l-4.147-4.146a.5.5 0 0 1 0-.708Z", attribute "fill" "#2B2B2C"]) []]
 
 
 {-|-}
 errorOutline12X12 : List (Attribute msg) -> Svg.Svg msg
-errorOutline12X12 attrs = Svg.node "svg" ([attribute "width" "12", attribute "height" "12", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M6 2a4 4 0 1 0 0 8 4 4 0 0 0 0-8ZM1 6a5 5 0 1 1 10 0A5 5 0 0 1 1 6Zm3.146-1.854a.5.5 0 0 1 .708 0L6 5.293l1.146-1.147a.5.5 0 1 1 .708.708L6.707 6l1.147 1.146a.5.5 0 1 1-.708.708L6 6.707 4.854 7.854a.5.5 0 1 1-.708-.708L5.293 6 4.146 4.854a.5.5 0 0 1 0-.708Z", attribute "fill" "#ED0000"]) []]
+errorOutline12X12 attrs = Svg.node "svg" ([attribute "width" "12", attribute "height" "12", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M6 2a4 4 0 1 0 0 8 4 4 0 0 0 0-8ZM1 6a5 5 0 1 1 10 0A5 5 0 0 1 1 6Zm3.146-1.854a.5.5 0 0 1 .708 0L6 5.293l1.146-1.147a.5.5 0 1 1 .708.708L6.707 6l1.147 1.146a.5.5 0 1 1-.708.708L6 6.707 4.854 7.854a.5.5 0 1 1-.708-.708L5.293 6 4.146 4.854a.5.5 0 0 1 0-.708Z", attribute "fill" "#2B2B2C"]) []]
 
 
 {-|-}
 errorOutline18X18 : List (Attribute msg) -> Svg.Svg msg
-errorOutline18X18 attrs = Svg.node "svg" ([attribute "width" "18", attribute "height" "18", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M9 2.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM1.5 9a7.5 7.5 0 1 1 15 0 7.5 7.5 0 0 1-15 0Zm4.646-2.854a.5.5 0 0 1 .708 0L9 8.293l2.146-2.147a.5.5 0 0 1 .708.708L9.707 9l2.147 2.146a.5.5 0 0 1-.708.708L9 9.707l-2.146 2.147a.5.5 0 0 1-.708-.708L8.293 9 6.146 6.854a.5.5 0 0 1 0-.708Z", attribute "fill" "#ED0000"]) []]
+errorOutline18X18 attrs = Svg.node "svg" ([attribute "width" "18", attribute "height" "18", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M9 2.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM1.5 9a7.5 7.5 0 1 1 15 0 7.5 7.5 0 0 1-15 0Zm4.646-2.854a.5.5 0 0 1 .708 0L9 8.293l2.146-2.147a.5.5 0 0 1 .708.708L9.707 9l2.147 2.146a.5.5 0 0 1-.708.708L9 9.707l-2.146 2.147a.5.5 0 0 1-.708-.708L8.293 9 6.146 6.854a.5.5 0 0 1 0-.708Z", attribute "fill" "#2B2B2C"]) []]
 
 
 {-|-}
 errorOutline24X24 : List (Attribute msg) -> Svg.Svg msg
-errorOutline24X24 attrs = Svg.node "svg" ([attribute "width" "24", attribute "height" "24", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm-9 8a9 9 0 1 1 18 0 9 9 0 0 1-18 0Zm5.646-3.354a.5.5 0 0 1 .708 0L12 11.293l2.646-2.647a.5.5 0 0 1 .708.708L12.707 12l2.647 2.646a.5.5 0 0 1-.708.708L12 12.707l-2.646 2.647a.5.5 0 0 1-.708-.708L11.293 12 8.646 9.354a.5.5 0 0 1 0-.708Z", attribute "fill" "#ED0000"]) []]
+errorOutline24X24 attrs = Svg.node "svg" ([attribute "width" "24", attribute "height" "24", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm-9 8a9 9 0 1 1 18 0 9 9 0 0 1-18 0Zm5.646-3.354a.5.5 0 0 1 .708 0L12 11.293l2.646-2.647a.5.5 0 0 1 .708.708L12.707 12l2.647 2.646a.5.5 0 0 1-.708.708L12 12.707l-2.646 2.647a.5.5 0 0 1-.708-.708L11.293 12 8.646 9.354a.5.5 0 0 1 0-.708Z", attribute "fill" "#2B2B2C"]) []]
 
 
 {-|-}
 errorOutline30X30 : List (Attribute msg) -> Svg.Svg msg
-errorOutline30X30 attrs = Svg.node "svg" ([attribute "width" "30", attribute "height" "30", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M15 4C8.925 4 4 8.925 4 15s4.925 11 11 11 11-4.925 11-11S21.075 4 15 4ZM3 15C3 8.373 8.373 3 15 3s12 5.373 12 12-5.373 12-12 12S3 21.627 3 15Zm7.146-4.854a.5.5 0 0 1 .708 0L15 14.293l4.146-4.147a.5.5 0 0 1 .708.708L15.707 15l4.147 4.146a.5.5 0 0 1-.708.708L15 15.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 15l-4.147-4.146a.5.5 0 0 1 0-.708Z", attribute "fill" "#ED0000"]) []]
+errorOutline30X30 attrs = Svg.node "svg" ([attribute "width" "30", attribute "height" "30", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M15 4C8.925 4 4 8.925 4 15s4.925 11 11 11 11-4.925 11-11S21.075 4 15 4ZM3 15C3 8.373 8.373 3 15 3s12 5.373 12 12-5.373 12-12 12S3 21.627 3 15Zm7.146-4.854a.5.5 0 0 1 .708 0L15 14.293l4.146-4.147a.5.5 0 0 1 .708.708L15.707 15l4.147 4.146a.5.5 0 0 1-.708.708L15 15.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 15l-4.147-4.146a.5.5 0 0 1 0-.708Z", attribute "fill" "#2B2B2C"]) []]
 
 
 {-|-}
@@ -133,22 +163,22 @@ frownOutline60X60 attrs = Svg.node "svg" ([attribute "width" "60", attribute "he
 
 {-|-}
 informationFill12X12 : List (Attribute msg) -> Svg.Svg msg
-informationFill12X12 attrs = Svg.node "svg" ([attribute "width" "12", attribute "height" "12", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "d" "M9.5 6a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z", attribute "fill" "#fff"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M6 1a5 5 0 1 0 0 10A5 5 0 0 0 6 1Zm.5 3a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Zm0 1.5a.5.5 0 0 0-1 0V8a.5.5 0 0 0 1 0V5.5Z", attribute "fill" "#2B2B2C"]) []]
+informationFill12X12 attrs = Svg.node "svg" ([attribute "width" "12", attribute "height" "12", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "d" "M11 6A5 5 0 1 1 1 6a5 5 0 0 1 10 0Z", attribute "fill" "#fff"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M6 1a5 5 0 1 0 0 10A5 5 0 0 0 6 1Zm.5 3a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Zm0 1.5a.5.5 0 0 0-1 0V8a.5.5 0 0 0 1 0V5.5Z", attribute "fill" "#2B2B2C"]) []]
 
 
 {-|-}
 informationFill18X18 : List (Attribute msg) -> Svg.Svg msg
-informationFill18X18 attrs = Svg.node "svg" ([attribute "width" "18", attribute "height" "18", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "circle" ([attribute "cx" "9", attribute "cy" "9", attribute "r" "5", attribute "fill" "#fff"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M9 1.5a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15Zm.625 4.125a.625.625 0 1 1-1.25 0 .625.625 0 0 1 1.25 0ZM9.5 8a.5.5 0 0 0-1 0v4a.5.5 0 0 0 1 0V8Z", attribute "fill" "#2B2B2C"]) []]
+informationFill18X18 attrs = Svg.node "svg" ([attribute "width" "18", attribute "height" "18", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "circle" ([attribute "cx" "9", attribute "cy" "9", attribute "r" "7.5", attribute "fill" "#fff"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M9 1.5a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15Zm.625 4.125a.625.625 0 1 1-1.25 0 .625.625 0 0 1 1.25 0ZM9.5 8a.5.5 0 0 0-1 0v4a.5.5 0 0 0 1 0V8Z", attribute "fill" "#2B2B2C"]) []]
 
 
 {-|-}
 informationFill24X24 : List (Attribute msg) -> Svg.Svg msg
-informationFill24X24 attrs = Svg.node "svg" ([attribute "width" "24", attribute "height" "24", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "circle" ([attribute "cx" "12", attribute "cy" "12", attribute "r" "6", attribute "fill" "#fff"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm.75 4.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm-.25 2.75a.5.5 0 0 0-1 0V16a.5.5 0 0 0 1 0v-5.5Z", attribute "fill" "#2B2B2C"]) []]
+informationFill24X24 attrs = Svg.node "svg" ([attribute "width" "24", attribute "height" "24", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "circle" ([attribute "cx" "12", attribute "cy" "12", attribute "r" "9", attribute "fill" "#fff"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm.75 4.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm-.25 2.75a.5.5 0 0 0-1 0V16a.5.5 0 0 0 1 0v-5.5Z", attribute "fill" "#2B2B2C"]) []]
 
 
 {-|-}
 informationFill30X30 : List (Attribute msg) -> Svg.Svg msg
-informationFill30X30 attrs = Svg.node "svg" ([attribute "width" "30", attribute "height" "30", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "circle" ([attribute "cx" "15", attribute "cy" "15", attribute "r" "7", attribute "fill" "#fff"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M15 3C8.373 3 3 8.373 3 15s5.373 12 12 12 12-5.373 12-12S21.627 3 15 3Zm.75 6.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm-.25 2.75a.5.5 0 0 0-1 0V20a.5.5 0 0 0 1 0v-7.5Z", attribute "fill" "#2B2B2C"]) []]
+informationFill30X30 attrs = Svg.node "svg" ([attribute "width" "30", attribute "height" "30", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "circle" ([attribute "cx" "15", attribute "cy" "15", attribute "r" "12", attribute "fill" "#fff"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M15 3C8.373 3 3 8.373 3 15s5.373 12 12 12 12-5.373 12-12S21.627 3 15 3Zm.75 6.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm-.25 2.75a.5.5 0 0 0-1 0V20a.5.5 0 0 0 1 0v-7.5Z", attribute "fill" "#2B2B2C"]) []]
 
 
 {-|-}
@@ -158,7 +188,7 @@ informationOutline12X12 attrs = Svg.node "svg" ([attribute "width" "12", attribu
 
 {-|-}
 informationOutline18X18 : List (Attribute msg) -> Svg.Svg msg
-informationOutline18X18 attrs = Svg.node "svg" ([attribute "width" "18", attribute "height" "18", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M9 2.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM1.5 9a7.5 7.5 0 1 1 15 0 7.5 7.5 0 0 1-15 0Zm8.125-3.375a.625.625 0 1 1-1.25 0 .625.625 0 0 1 1.25 0ZM9.5 8a.5.5 0 0 0-1 0v4a.5.5 0 0 0 1 0V8Z", attribute "fill" "#2B2B2C"]) []]
+informationOutline18X18 attrs = Svg.node "svg" ([attribute "width" "18", attribute "height" "18", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "g" ([attribute "clip-path" "url(#a)"]) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M9 2.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM1.5 9a7.5 7.5 0 1 1 15 0 7.5 7.5 0 0 1-15 0Zm8.125-3.375a.625.625 0 1 1-1.25 0 .625.625 0 0 1 1.25 0ZM9.5 8a.5.5 0 0 0-1 0v4a.5.5 0 0 0 1 0V8Z", attribute "fill" "#2B2B2C"]) []], Svg.node "defs" ([]) [ Svg.node "clipPath" ([attribute "id" "a"]) [ Svg.node "path" ([attribute "fill" "#fff", attribute "d" "M0 0h18v18H0z"]) []]]]
 
 
 {-|-}
@@ -333,12 +363,12 @@ smileOutline60X60 attrs = Svg.node "svg" ([attribute "width" "60", attribute "he
 
 {-|-}
 subtractFill18X18 : List (Attribute msg) -> Svg.Svg msg
-subtractFill18X18 attrs = Svg.node "svg" ([attribute "width" "18", attribute "height" "18", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M9 2.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM1.5 9a7.5 7.5 0 1 1 15 0 7.5 7.5 0 0 1-15 0Z", attribute "fill" "#2B2B2C"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M9 16A7 7 0 1 0 9 2a7 7 0 0 0 0 14ZM6 8.5a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H6Z", attribute "fill" "#2B2B2C"]) []]
+subtractFill18X18 attrs = Svg.node "svg" ([attribute "width" "18", attribute "height" "18", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M9 1.5a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15ZM5.5 9a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5Z", attribute "fill" "#2B2B2C"]) []]
 
 
 {-|-}
 subtractFill24X24 : List (Attribute msg) -> Svg.Svg msg
-subtractFill24X24 attrs = Svg.node "svg" ([attribute "width" "24", attribute "height" "24", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm-9 8a9 9 0 1 1 18 0 9 9 0 0 1-18 0Z", attribute "fill" "#2B2B2C"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M12 20.5a8.5 8.5 0 1 0 0-17 8.5 8.5 0 0 0 0 17Zm-4-9a.5.5 0 0 0 0 1h8a.5.5 0 0 0 0-1H8Z", attribute "fill" "#2B2B2C"]) []]
+subtractFill24X24 attrs = Svg.node "svg" ([attribute "width" "24", attribute "height" "24", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm-4.5 9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1H8a.5.5 0 0 1-.5-.5Z", attribute "fill" "#2B2B2C"]) []]
 
 
 {-|-}
@@ -363,62 +393,62 @@ subtractOutline30X30 attrs = Svg.node "svg" ([attribute "width" "30", attribute 
 
 {-|-}
 successFill12X12 : List (Attribute msg) -> Svg.Svg msg
-successFill12X12 attrs = Svg.node "svg" ([attribute "width" "12", attribute "height" "12", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "circle" ([attribute "cx" "6", attribute "cy" "6", attribute "r" "4", attribute "fill" "#fff"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M1 6a5 5 0 1 1 10 0A5 5 0 0 1 1 6Zm7.354-.646a.5.5 0 1 0-.708-.708L5.5 6.793 4.354 5.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l2.5-2.5Z", attribute "fill" "#037D67"]) []]
+successFill12X12 attrs = Svg.node "svg" ([attribute "width" "12", attribute "height" "12", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "circle" ([attribute "cx" "6", attribute "cy" "6", attribute "r" "5", attribute "fill" "#fff"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M1 6a5 5 0 1 1 10 0A5 5 0 0 1 1 6Zm7.354-.646a.5.5 0 1 0-.708-.708L5.5 6.793 4.354 5.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l2.5-2.5Z", attribute "fill" "#2B2B2C"]) []]
 
 
 {-|-}
 successFill18X18 : List (Attribute msg) -> Svg.Svg msg
-successFill18X18 attrs = Svg.node "svg" ([attribute "width" "18", attribute "height" "18", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "d" "M14.5 9a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0Z", attribute "fill" "#fff"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M1.5 9a7.5 7.5 0 1 1 15 0 7.5 7.5 0 0 1-15 0Zm11.354-2.146a.5.5 0 0 0-.708-.708L8 10.293 6.354 8.646a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l4.5-4.5Z", attribute "fill" "#037D67"]) []]
+successFill18X18 attrs = Svg.node "svg" ([attribute "width" "18", attribute "height" "18", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "d" "M14.5 9a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0Z", attribute "fill" "#fff"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M1.5 9a7.5 7.5 0 1 1 15 0 7.5 7.5 0 0 1-15 0Zm11.354-2.146a.5.5 0 0 0-.708-.708L8 10.293 6.354 8.646a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l4.5-4.5Z", attribute "fill" "#2B2B2C"]) []]
 
 
 {-|-}
 successFill24X24 : List (Attribute msg) -> Svg.Svg msg
-successFill24X24 attrs = Svg.node "svg" ([attribute "width" "24", attribute "height" "24", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "circle" ([attribute "cx" "12.5", attribute "cy" "12.5", attribute "r" "6.5", attribute "fill" "#fff"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M3 12a9 9 0 1 1 18 0 9 9 0 0 1-18 0Zm13.854-2.646a.5.5 0 0 0-.708-.708L11 13.793l-2.146-2.147a.5.5 0 0 0-.708.708l2.5 2.5a.5.5 0 0 0 .708 0l5.5-5.5Z", attribute "fill" "#037D67"]) []]
+successFill24X24 attrs = Svg.node "svg" ([attribute "width" "24", attribute "height" "24", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "circle" ([attribute "cx" "12.5", attribute "cy" "12.5", attribute "r" "6.5", attribute "fill" "#fff"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M3 12a9 9 0 1 1 18 0 9 9 0 0 1-18 0Zm13.854-2.646a.5.5 0 0 0-.708-.708L11 13.793l-2.146-2.147a.5.5 0 0 0-.708.708l2.5 2.5a.5.5 0 0 0 .708 0l5.5-5.5Z", attribute "fill" "#2B2B2C"]) []]
 
 
 {-|-}
 successFill30X30 : List (Attribute msg) -> Svg.Svg msg
-successFill30X30 attrs = Svg.node "svg" ([attribute "width" "30", attribute "height" "30", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "circle" ([attribute "cx" "15", attribute "cy" "15", attribute "r" "9", attribute "fill" "#fff"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M3 15C3 8.373 8.373 3 15 3s12 5.373 12 12-5.373 12-12 12S3 21.627 3 15Zm18.854-4.146a.5.5 0 0 0-.708-.708L13.5 17.793l-3.646-3.647a.5.5 0 0 0-.708.708l4 4a.5.5 0 0 0 .708 0l8-8Z", attribute "fill" "#037D67"]) []]
+successFill30X30 attrs = Svg.node "svg" ([attribute "width" "30", attribute "height" "30", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "circle" ([attribute "cx" "15", attribute "cy" "15", attribute "r" "9", attribute "fill" "#fff"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M3 15C3 8.373 8.373 3 15 3s12 5.373 12 12-5.373 12-12 12S3 21.627 3 15Zm18.854-4.146a.5.5 0 0 0-.708-.708L13.5 17.793l-3.646-3.647a.5.5 0 0 0-.708.708l4 4a.5.5 0 0 0 .708 0l8-8Z", attribute "fill" "#2B2B2C"]) []]
 
 
 {-|-}
 successOutline12X12 : List (Attribute msg) -> Svg.Svg msg
-successOutline12X12 attrs = Svg.node "svg" ([attribute "width" "12", attribute "height" "12", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M2 6a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-5a5 5 0 1 0 0 10A5 5 0 0 0 6 1Zm2.354 4.354a.5.5 0 1 0-.708-.708L5.5 6.793 4.354 5.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l2.5-2.5Z", attribute "fill" "#037D67"]) []]
+successOutline12X12 attrs = Svg.node "svg" ([attribute "width" "12", attribute "height" "12", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M2 6a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm4-5a5 5 0 1 0 0 10A5 5 0 0 0 6 1Zm2.354 4.354a.5.5 0 1 0-.708-.708L5.5 6.793 4.354 5.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l2.5-2.5Z", attribute "fill" "#2B2B2C"]) []]
 
 
 {-|-}
 successOutline18X18 : List (Attribute msg) -> Svg.Svg msg
-successOutline18X18 attrs = Svg.node "svg" ([attribute "width" "18", attribute "height" "18", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M2.5 9a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0ZM9 1.5a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15Zm3.854 5.354a.5.5 0 0 0-.708-.708L8 10.293 6.354 8.646a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l4.5-4.5Z", attribute "fill" "#037D67"]) []]
+successOutline18X18 attrs = Svg.node "svg" ([attribute "width" "18", attribute "height" "18", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M2.5 9a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0ZM9 1.5a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15Zm3.854 5.354a.5.5 0 0 0-.708-.708L8 10.293 6.354 8.646a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l4.5-4.5Z", attribute "fill" "#2B2B2C"]) []]
 
 
 {-|-}
 successOutline24X24 : List (Attribute msg) -> Svg.Svg msg
-successOutline24X24 attrs = Svg.node "svg" ([attribute "width" "24", attribute "height" "24", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm-9 8a9 9 0 1 1 18 0 9 9 0 0 1-18 0Z", attribute "fill" "#037D67"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M16.854 8.646a.5.5 0 0 1 0 .708l-5.5 5.5a.5.5 0 0 1-.708 0l-2.5-2.5a.5.5 0 0 1 .708-.708L11 13.793l5.146-5.147a.5.5 0 0 1 .708 0Z", attribute "fill" "#037D67"]) []]
+successOutline24X24 attrs = Svg.node "svg" ([attribute "width" "24", attribute "height" "24", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm-9 8a9 9 0 1 1 18 0 9 9 0 0 1-18 0Z", attribute "fill" "#2B2B2C"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M16.854 8.646a.5.5 0 0 1 0 .708l-5.5 5.5a.5.5 0 0 1-.708 0l-2.5-2.5a.5.5 0 0 1 .708-.708L11 13.793l5.146-5.147a.5.5 0 0 1 .708 0Z", attribute "fill" "#2B2B2C"]) []]
 
 
 {-|-}
 successOutline30X30 : List (Attribute msg) -> Svg.Svg msg
-successOutline30X30 attrs = Svg.node "svg" ([attribute "width" "30", attribute "height" "30", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M4 15C4 8.925 8.925 4 15 4s11 4.925 11 11-4.925 11-11 11S4 21.075 4 15ZM15 3C8.373 3 3 8.373 3 15s5.373 12 12 12 12-5.373 12-12S21.627 3 15 3Zm6.854 7.854a.5.5 0 0 0-.708-.708L13.5 17.793l-3.646-3.647a.5.5 0 0 0-.708.708l4 4a.5.5 0 0 0 .708 0l8-8Z", attribute "fill" "#037D67"]) []]
+successOutline30X30 attrs = Svg.node "svg" ([attribute "width" "30", attribute "height" "30", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M4 15C4 8.925 8.925 4 15 4s11 4.925 11 11-4.925 11-11 11S4 21.075 4 15ZM15 3C8.373 3 3 8.373 3 15s5.373 12 12 12 12-5.373 12-12S21.627 3 15 3Zm6.854 7.854a.5.5 0 0 0-.708-.708L13.5 17.793l-3.646-3.647a.5.5 0 0 0-.708.708l4 4a.5.5 0 0 0 .708 0l8-8Z", attribute "fill" "#2B2B2C"]) []]
 
 
 {-|-}
 warningFill12X12 : List (Attribute msg) -> Svg.Svg msg
-warningFill12X12 attrs = Svg.node "svg" ([attribute "width" "12", attribute "height" "12", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "d" "M9.5 9.5 6 2 3.5 9.5h6Z", attribute "fill" "#2B2B2C"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M5.115 1.108a1 1 0 0 1 1.77 0l4.172 7.926a1 1 0 0 1-.885 1.466H1.828a1 1 0 0 1-.885-1.466l4.172-7.926ZM6 4a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 6 4Zm.5 4a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z", attribute "fill" "#E5A80C"]) []]
+warningFill12X12 attrs = Svg.node "svg" ([attribute "width" "12", attribute "height" "12", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M6.885 1.108a1 1 0 0 0-1.77 0L.943 9.034a1 1 0 0 0 .885 1.466h8.344a1 1 0 0 0 .885-1.466L6.885 1.108Z", attribute "fill" "#2B2B2C"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M5.115 1.108a1 1 0 0 1 1.77 0l4.172 7.926a1 1 0 0 1-.885 1.466H1.828a1 1 0 0 1-.885-1.466l4.172-7.926ZM6 4a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 6 4Zm.5 4a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z", attribute "fill" "#E5A80C"]) []]
 
 
 {-|-}
 warningFill18X18 : List (Attribute msg) -> Svg.Svg msg
-warningFill18X18 attrs = Svg.node "svg" ([attribute "width" "18", attribute "height" "18", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "d" "M13.5 14.5 9 4 5 14.5h8.5Z", attribute "fill" "#2B2B2C"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M7.897 1.506a1.25 1.25 0 0 1 2.206 0l6.75 12.656A1.25 1.25 0 0 1 15.75 16H2.25a1.25 1.25 0 0 1-1.103-1.838l6.75-12.656ZM9 6a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0v-4A.5.5 0 0 1 9 6Zm.625 6.375a.625.625 0 1 1-1.25 0 .625.625 0 0 1 1.25 0Z", attribute "fill" "#E5A80C"]) []]
+warningFill18X18 attrs = Svg.node "svg" ([attribute "width" "18", attribute "height" "18", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M10.103 1.506a1.25 1.25 0 0 0-2.206 0l-6.75 12.656A1.25 1.25 0 0 0 2.25 16h13.5a1.25 1.25 0 0 0 1.103-1.838l-6.75-12.656Z", attribute "fill" "#2B2B2C"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M7.897 1.506a1.25 1.25 0 0 1 2.206 0l6.75 12.656A1.25 1.25 0 0 1 15.75 16H2.25a1.25 1.25 0 0 1-1.103-1.838l6.75-12.656ZM9 6a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0v-4A.5.5 0 0 1 9 6Zm.625 6.375a.625.625 0 1 1-1.25 0 .625.625 0 0 1 1.25 0Z", attribute "fill" "#E5A80C"]) []]
 
 
 {-|-}
 warningFill24X24 : List (Attribute msg) -> Svg.Svg msg
-warningFill24X24 attrs = Svg.node "svg" ([attribute "width" "24", attribute "height" "24", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "d" "m18 19.5-5.5-14H11l-4 14h11Z", attribute "fill" "#2B2B2C"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M10.687 2.842a1.5 1.5 0 0 1 2.626 0l8.805 15.933A1.5 1.5 0 0 1 20.805 21H3.195a1.5 1.5 0 0 1-1.313-2.226l8.805-15.932ZM12 8a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0v-6A.5.5 0 0 1 12 8Zm.75 8.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z", attribute "fill" "#E5A80C"]) []]
+warningFill24X24 attrs = Svg.node "svg" ([attribute "width" "24", attribute "height" "24", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M13.313 2.842a1.5 1.5 0 0 0-2.626 0L1.882 18.775A1.5 1.5 0 0 0 3.195 21h17.61a1.5 1.5 0 0 0 1.313-2.226L13.313 2.842Z", attribute "fill" "#2B2B2C"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M10.687 2.842a1.5 1.5 0 0 1 2.626 0l8.805 15.933A1.5 1.5 0 0 1 20.805 21H3.195a1.5 1.5 0 0 1-1.313-2.226l8.805-15.932ZM12 8a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0v-6A.5.5 0 0 1 12 8Zm.75 8.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z", attribute "fill" "#E5A80C"]) []]
 
 
 {-|-}
 warningFill30X30 : List (Attribute msg) -> Svg.Svg msg
-warningFill30X30 attrs = Svg.node "svg" ([attribute "width" "30", attribute "height" "30", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "d" "M22.5 25 16 7l-2.5-1-5 18 14 1Z", attribute "fill" "#2B2B2C"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M13.241 3.697c.757-1.397 2.761-1.397 3.518 0l10.481 19.35C27.962 24.38 26.997 26 25.482 26H4.518c-1.515 0-2.48-1.62-1.758-2.953L13.24 3.697ZM15 9.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0v-8a.5.5 0 0 1 .5-.5Zm.875 11.375a.875.875 0 1 1-1.75 0 .875.875 0 0 1 1.75 0Z", attribute "fill" "#E5A80C"]) []]
+warningFill30X30 attrs = Svg.node "svg" ([attribute "width" "30", attribute "height" "30", attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg"] ++ attrs) [ Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M16.759 3.697c-.757-1.397-2.761-1.397-3.518 0L2.76 23.047C2.038 24.38 3.003 26 4.518 26h20.964c1.515 0 2.48-1.62 1.758-2.953L16.76 3.697Z", attribute "fill" "#2B2B2C"]) [], Svg.node "path" ([attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M13.241 3.697c.757-1.397 2.761-1.397 3.518 0l10.481 19.35C27.962 24.38 26.997 26 25.482 26H4.518c-1.515 0-2.48-1.62-1.758-2.953L13.24 3.697ZM15 9.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0v-8a.5.5 0 0 1 .5-.5Zm.875 11.375a.875.875 0 1 1-1.75 0 .875.875 0 0 1 1.75 0Z", attribute "fill" "#E5A80C"]) []]
 
 
 {-|-}
