@@ -256,22 +256,22 @@ sizeToEm : Size -> String
 sizeToEm size =
     case size of
         Size18 ->
-            "1.125em"
+            "1.125rem"
 
         Size24 ->
-            "1.5em"
+            "1.5rem"
 
         Size30 ->
-            "1.875em"
+            "1.875rem"
 
         Size12 ->
-            "0.75em"
+            "0.75rem"
 
         Size60 ->
-            "3.75em"
+            "3.75rem"
 
         Size42 ->
-            "2.625em"
+            "2.625rem"
 
 
 {-| -}
