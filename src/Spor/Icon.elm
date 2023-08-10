@@ -1,11 +1,11 @@
 module Spor.Icon exposing
-    ( toHtml, IconConfig, icon, withColor
+    ( toHtml, IconConfig, icon, withColor, withAttributes
     , FillType(..), IconVariant(..), Size(..)
     )
 
 {-| Icon
 
-@docs toHtml, FillType, IconConfig, Size, IconVariant, icon, withColor
+@docs toHtml, FillType, IconConfig, Size, IconVariant, icon, withColor, withAttributes
 
 Example usage:
 
@@ -225,30 +225,38 @@ type FillType
 
 
 {-| -}
-type IconConfig
+type IconConfig msg
     = IconConfig
         { icon : IconVariant
         , size : Size
         , variant : FillType
         , color : String
+        , attributes : List (Attribute msg)
         }
 
 
 {-| -}
-icon : Size -> FillType -> IconVariant -> IconConfig
+icon : Size -> FillType -> IconVariant -> IconConfig msg
 icon size fillType iconVariant =
     IconConfig
         { icon = iconVariant
         , size = size
         , variant = fillType
         , color = "#2B2B2C"
+        , attributes = []
         }
 
 
 {-| -}
-withColor : String -> IconConfig -> IconConfig
+withColor : String -> IconConfig msg -> IconConfig msg
 withColor color (IconConfig config) =
     IconConfig { config | color = color }
+
+
+{-| -}
+withAttributes : List (Attribute msg) -> IconConfig msg -> IconConfig msg
+withAttributes attributes (IconConfig config) =
+    IconConfig { config | attributes = attributes }
 
 
 {-| -}
@@ -275,7 +283,7 @@ sizeToEm size =
 
 
 {-| -}
-toHtml : IconConfig -> Html msg
+toHtml : IconConfig msg -> Html msg
 toHtml ((IconConfig iconOptions) as iconConfig) =
     Html.Styled.fromUnstyled <|
         case iconOptions.icon of
@@ -833,7 +841,7 @@ toHtml ((IconConfig iconOptions) as iconConfig) =
 
 
 {-| -}
-add : IconConfig -> Svg.Svg msg
+add : IconConfig msg -> Svg.Svg msg
 add (IconConfig iconConfig) =
     let
         attributes =
@@ -848,7 +856,7 @@ add (IconConfig iconConfig) =
 
 
 {-| -}
-aircondition : IconConfig -> Svg.Svg msg
+aircondition : IconConfig msg -> Svg.Svg msg
 aircondition (IconConfig iconConfig) =
     let
         attributes =
@@ -863,7 +871,7 @@ aircondition (IconConfig iconConfig) =
 
 
 {-| -}
-airplane : IconConfig -> Svg.Svg msg
+airplane : IconConfig msg -> Svg.Svg msg
 airplane (IconConfig iconConfig) =
     let
         attributes =
@@ -878,7 +886,7 @@ airplane (IconConfig iconConfig) =
 
 
 {-| -}
-altTransport : IconConfig -> Svg.Svg msg
+altTransport : IconConfig msg -> Svg.Svg msg
 altTransport (IconConfig iconConfig) =
     let
         attributes =
@@ -893,7 +901,7 @@ altTransport (IconConfig iconConfig) =
 
 
 {-| -}
-arrowDown : IconConfig -> Svg.Svg msg
+arrowDown : IconConfig msg -> Svg.Svg msg
 arrowDown (IconConfig iconConfig) =
     let
         attributes =
@@ -908,7 +916,7 @@ arrowDown (IconConfig iconConfig) =
 
 
 {-| -}
-arrowLeft : IconConfig -> Svg.Svg msg
+arrowLeft : IconConfig msg -> Svg.Svg msg
 arrowLeft (IconConfig iconConfig) =
     let
         attributes =
@@ -923,7 +931,7 @@ arrowLeft (IconConfig iconConfig) =
 
 
 {-| -}
-arrowRight : IconConfig -> Svg.Svg msg
+arrowRight : IconConfig msg -> Svg.Svg msg
 arrowRight (IconConfig iconConfig) =
     let
         attributes =
@@ -938,7 +946,7 @@ arrowRight (IconConfig iconConfig) =
 
 
 {-| -}
-arrowUp : IconConfig -> Svg.Svg msg
+arrowUp : IconConfig msg -> Svg.Svg msg
 arrowUp (IconConfig iconConfig) =
     let
         attributes =
@@ -953,7 +961,7 @@ arrowUp (IconConfig iconConfig) =
 
 
 {-| -}
-autumn : IconConfig -> Svg.Svg msg
+autumn : IconConfig msg -> Svg.Svg msg
 autumn (IconConfig iconConfig) =
     let
         attributes =
@@ -968,7 +976,7 @@ autumn (IconConfig iconConfig) =
 
 
 {-| -}
-babyChanging : IconConfig -> Svg.Svg msg
+babyChanging : IconConfig msg -> Svg.Svg msg
 babyChanging (IconConfig iconConfig) =
     let
         attributes =
@@ -983,7 +991,7 @@ babyChanging (IconConfig iconConfig) =
 
 
 {-| -}
-battery : IconConfig -> Svg.Svg msg
+battery : IconConfig msg -> Svg.Svg msg
 battery (IconConfig iconConfig) =
     let
         attributes =
@@ -998,7 +1006,7 @@ battery (IconConfig iconConfig) =
 
 
 {-| -}
-bicycle : IconConfig -> Svg.Svg msg
+bicycle : IconConfig msg -> Svg.Svg msg
 bicycle (IconConfig iconConfig) =
     let
         attributes =
@@ -1013,7 +1021,7 @@ bicycle (IconConfig iconConfig) =
 
 
 {-| -}
-bookmark : IconConfig -> Svg.Svg msg
+bookmark : IconConfig msg -> Svg.Svg msg
 bookmark (IconConfig iconConfig) =
     let
         attributes =
@@ -1028,7 +1036,7 @@ bookmark (IconConfig iconConfig) =
 
 
 {-| -}
-bus : IconConfig -> Svg.Svg msg
+bus : IconConfig msg -> Svg.Svg msg
 bus (IconConfig iconConfig) =
     let
         attributes =
@@ -1043,7 +1051,7 @@ bus (IconConfig iconConfig) =
 
 
 {-| -}
-cafe : IconConfig -> Svg.Svg msg
+cafe : IconConfig msg -> Svg.Svg msg
 cafe (IconConfig iconConfig) =
     let
         attributes =
@@ -1058,7 +1066,7 @@ cafe (IconConfig iconConfig) =
 
 
 {-| -}
-calendar : IconConfig -> Svg.Svg msg
+calendar : IconConfig msg -> Svg.Svg msg
 calendar (IconConfig iconConfig) =
     let
         attributes =
@@ -1073,7 +1081,7 @@ calendar (IconConfig iconConfig) =
 
 
 {-| -}
-campaign : IconConfig -> Svg.Svg msg
+campaign : IconConfig msg -> Svg.Svg msg
 campaign (IconConfig iconConfig) =
     let
         attributes =
@@ -1088,7 +1096,7 @@ campaign (IconConfig iconConfig) =
 
 
 {-| -}
-capacityCarriage : IconConfig -> Svg.Svg msg
+capacityCarriage : IconConfig msg -> Svg.Svg msg
 capacityCarriage (IconConfig iconConfig) =
     let
         attributes =
@@ -1103,7 +1111,7 @@ capacityCarriage (IconConfig iconConfig) =
 
 
 {-| -}
-capacitySeat : IconConfig -> Svg.Svg msg
+capacitySeat : IconConfig msg -> Svg.Svg msg
 capacitySeat (IconConfig iconConfig) =
     let
         attributes =
@@ -1118,7 +1126,7 @@ capacitySeat (IconConfig iconConfig) =
 
 
 {-| -}
-car : IconConfig -> Svg.Svg msg
+car : IconConfig msg -> Svg.Svg msg
 car (IconConfig iconConfig) =
     let
         attributes =
@@ -1133,7 +1141,7 @@ car (IconConfig iconConfig) =
 
 
 {-| -}
-card : IconConfig -> Svg.Svg msg
+card : IconConfig msg -> Svg.Svg msg
 card (IconConfig iconConfig) =
     let
         attributes =
@@ -1148,7 +1156,7 @@ card (IconConfig iconConfig) =
 
 
 {-| -}
-changeDirection : IconConfig -> Svg.Svg msg
+changeDirection : IconConfig msg -> Svg.Svg msg
 changeDirection (IconConfig iconConfig) =
     let
         attributes =
@@ -1163,7 +1171,7 @@ changeDirection (IconConfig iconConfig) =
 
 
 {-| -}
-chapter : IconConfig -> Svg.Svg msg
+chapter : IconConfig msg -> Svg.Svg msg
 chapter (IconConfig iconConfig) =
     let
         attributes =
@@ -1178,7 +1186,7 @@ chapter (IconConfig iconConfig) =
 
 
 {-| -}
-checkmark : IconConfig -> Svg.Svg msg
+checkmark : IconConfig msg -> Svg.Svg msg
 checkmark (IconConfig iconConfig) =
     let
         attributes =
@@ -1193,7 +1201,7 @@ checkmark (IconConfig iconConfig) =
 
 
 {-| -}
-childSeat : IconConfig -> Svg.Svg msg
+childSeat : IconConfig msg -> Svg.Svg msg
 childSeat (IconConfig iconConfig) =
     let
         attributes =
@@ -1208,7 +1216,7 @@ childSeat (IconConfig iconConfig) =
 
 
 {-| -}
-city : IconConfig -> Svg.Svg msg
+city : IconConfig msg -> Svg.Svg msg
 city (IconConfig iconConfig) =
     let
         attributes =
@@ -1223,7 +1231,7 @@ city (IconConfig iconConfig) =
 
 
 {-| -}
-close : IconConfig -> Svg.Svg msg
+close : IconConfig msg -> Svg.Svg msg
 close (IconConfig iconConfig) =
     let
         attributes =
@@ -1238,7 +1246,7 @@ close (IconConfig iconConfig) =
 
 
 {-| -}
-code : IconConfig -> Svg.Svg msg
+code : IconConfig msg -> Svg.Svg msg
 code (IconConfig iconConfig) =
     let
         attributes =
@@ -1253,7 +1261,7 @@ code (IconConfig iconConfig) =
 
 
 {-| -}
-coffee : IconConfig -> Svg.Svg msg
+coffee : IconConfig msg -> Svg.Svg msg
 coffee (IconConfig iconConfig) =
     let
         attributes =
@@ -1268,7 +1276,7 @@ coffee (IconConfig iconConfig) =
 
 
 {-| -}
-coffeeCart : IconConfig -> Svg.Svg msg
+coffeeCart : IconConfig msg -> Svg.Svg msg
 coffeeCart (IconConfig iconConfig) =
     let
         attributes =
@@ -1283,7 +1291,7 @@ coffeeCart (IconConfig iconConfig) =
 
 
 {-| -}
-coffeeMachine : IconConfig -> Svg.Svg msg
+coffeeMachine : IconConfig msg -> Svg.Svg msg
 coffeeMachine (IconConfig iconConfig) =
     let
         attributes =
@@ -1298,7 +1306,7 @@ coffeeMachine (IconConfig iconConfig) =
 
 
 {-| -}
-comfort : IconConfig -> Svg.Svg msg
+comfort : IconConfig msg -> Svg.Svg msg
 comfort (IconConfig iconConfig) =
     let
         attributes =
@@ -1313,7 +1321,7 @@ comfort (IconConfig iconConfig) =
 
 
 {-| -}
-compass : IconConfig -> Svg.Svg msg
+compass : IconConfig msg -> Svg.Svg msg
 compass (IconConfig iconConfig) =
     let
         attributes =
@@ -1328,7 +1336,7 @@ compass (IconConfig iconConfig) =
 
 
 {-| -}
-components : IconConfig -> Svg.Svg msg
+components : IconConfig msg -> Svg.Svg msg
 components (IconConfig iconConfig) =
     let
         attributes =
@@ -1343,7 +1351,7 @@ components (IconConfig iconConfig) =
 
 
 {-| -}
-cookies : IconConfig -> Svg.Svg msg
+cookies : IconConfig msg -> Svg.Svg msg
 cookies (IconConfig iconConfig) =
     let
         attributes =
@@ -1358,7 +1366,7 @@ cookies (IconConfig iconConfig) =
 
 
 {-| -}
-copy : IconConfig -> Svg.Svg msg
+copy : IconConfig msg -> Svg.Svg msg
 copy (IconConfig iconConfig) =
     let
         attributes =
@@ -1373,7 +1381,7 @@ copy (IconConfig iconConfig) =
 
 
 {-| -}
-cottage : IconConfig -> Svg.Svg msg
+cottage : IconConfig msg -> Svg.Svg msg
 cottage (IconConfig iconConfig) =
     let
         attributes =
@@ -1388,7 +1396,7 @@ cottage (IconConfig iconConfig) =
 
 
 {-| -}
-coupon : IconConfig -> Svg.Svg msg
+coupon : IconConfig msg -> Svg.Svg msg
 coupon (IconConfig iconConfig) =
     let
         attributes =
@@ -1403,7 +1411,7 @@ coupon (IconConfig iconConfig) =
 
 
 {-| -}
-customerService : IconConfig -> Svg.Svg msg
+customerService : IconConfig msg -> Svg.Svg msg
 customerService (IconConfig iconConfig) =
     let
         attributes =
@@ -1418,7 +1426,7 @@ customerService (IconConfig iconConfig) =
 
 
 {-| -}
-delete : IconConfig -> Svg.Svg msg
+delete : IconConfig msg -> Svg.Svg msg
 delete (IconConfig iconConfig) =
     let
         attributes =
@@ -1433,7 +1441,7 @@ delete (IconConfig iconConfig) =
 
 
 {-| -}
-deleteCircle : IconConfig -> Svg.Svg msg
+deleteCircle : IconConfig msg -> Svg.Svg msg
 deleteCircle (IconConfig iconConfig) =
     let
         attributes =
@@ -1448,7 +1456,7 @@ deleteCircle (IconConfig iconConfig) =
 
 
 {-| -}
-departure : IconConfig -> Svg.Svg msg
+departure : IconConfig msg -> Svg.Svg msg
 departure (IconConfig iconConfig) =
     let
         attributes =
@@ -1463,7 +1471,7 @@ departure (IconConfig iconConfig) =
 
 
 {-| -}
-destination : IconConfig -> Svg.Svg msg
+destination : IconConfig msg -> Svg.Svg msg
 destination (IconConfig iconConfig) =
     let
         attributes =
@@ -1478,7 +1486,7 @@ destination (IconConfig iconConfig) =
 
 
 {-| -}
-discount : IconConfig -> Svg.Svg msg
+discount : IconConfig msg -> Svg.Svg msg
 discount (IconConfig iconConfig) =
     let
         attributes =
@@ -1493,7 +1501,7 @@ discount (IconConfig iconConfig) =
 
 
 {-| -}
-download : IconConfig -> Svg.Svg msg
+download : IconConfig msg -> Svg.Svg msg
 download (IconConfig iconConfig) =
     let
         attributes =
@@ -1508,7 +1516,7 @@ download (IconConfig iconConfig) =
 
 
 {-| -}
-dropdownDown : IconConfig -> Svg.Svg msg
+dropdownDown : IconConfig msg -> Svg.Svg msg
 dropdownDown (IconConfig iconConfig) =
     let
         attributes =
@@ -1523,7 +1531,7 @@ dropdownDown (IconConfig iconConfig) =
 
 
 {-| -}
-dropdownLeft : IconConfig -> Svg.Svg msg
+dropdownLeft : IconConfig msg -> Svg.Svg msg
 dropdownLeft (IconConfig iconConfig) =
     let
         attributes =
@@ -1538,7 +1546,7 @@ dropdownLeft (IconConfig iconConfig) =
 
 
 {-| -}
-dropdownRight : IconConfig -> Svg.Svg msg
+dropdownRight : IconConfig msg -> Svg.Svg msg
 dropdownRight (IconConfig iconConfig) =
     let
         attributes =
@@ -1553,7 +1561,7 @@ dropdownRight (IconConfig iconConfig) =
 
 
 {-| -}
-dropdownUp : IconConfig -> Svg.Svg msg
+dropdownUp : IconConfig msg -> Svg.Svg msg
 dropdownUp (IconConfig iconConfig) =
     let
         attributes =
@@ -1568,7 +1576,7 @@ dropdownUp (IconConfig iconConfig) =
 
 
 {-| -}
-edit : IconConfig -> Svg.Svg msg
+edit : IconConfig msg -> Svg.Svg msg
 edit (IconConfig iconConfig) =
     let
         attributes =
@@ -1583,7 +1591,7 @@ edit (IconConfig iconConfig) =
 
 
 {-| -}
-email : IconConfig -> Svg.Svg msg
+email : IconConfig msg -> Svg.Svg msg
 email (IconConfig iconConfig) =
     let
         attributes =
@@ -1598,7 +1606,7 @@ email (IconConfig iconConfig) =
 
 
 {-| -}
-error : IconConfig -> Svg.Svg msg
+error : IconConfig msg -> Svg.Svg msg
 error (IconConfig iconConfig) =
     let
         attributes =
@@ -1613,7 +1621,7 @@ error (IconConfig iconConfig) =
 
 
 {-| -}
-expand : IconConfig -> Svg.Svg msg
+expand : IconConfig msg -> Svg.Svg msg
 expand (IconConfig iconConfig) =
     let
         attributes =
@@ -1628,7 +1636,7 @@ expand (IconConfig iconConfig) =
 
 
 {-| -}
-expressBus : IconConfig -> Svg.Svg msg
+expressBus : IconConfig msg -> Svg.Svg msg
 expressBus (IconConfig iconConfig) =
     let
         attributes =
@@ -1643,7 +1651,7 @@ expressBus (IconConfig iconConfig) =
 
 
 {-| -}
-facebook : IconConfig -> Svg.Svg msg
+facebook : IconConfig msg -> Svg.Svg msg
 facebook (IconConfig iconConfig) =
     let
         attributes =
@@ -1658,7 +1666,7 @@ facebook (IconConfig iconConfig) =
 
 
 {-| -}
-family : IconConfig -> Svg.Svg msg
+family : IconConfig msg -> Svg.Svg msg
 family (IconConfig iconConfig) =
     let
         attributes =
@@ -1673,7 +1681,7 @@ family (IconConfig iconConfig) =
 
 
 {-| -}
-favourite : IconConfig -> Svg.Svg msg
+favourite : IconConfig msg -> Svg.Svg msg
 favourite (IconConfig iconConfig) =
     let
         attributes =
@@ -1688,7 +1696,7 @@ favourite (IconConfig iconConfig) =
 
 
 {-| -}
-ferry : IconConfig -> Svg.Svg msg
+ferry : IconConfig msg -> Svg.Svg msg
 ferry (IconConfig iconConfig) =
     let
         attributes =
@@ -1703,7 +1711,7 @@ ferry (IconConfig iconConfig) =
 
 
 {-| -}
-figma : IconConfig -> Svg.Svg msg
+figma : IconConfig msg -> Svg.Svg msg
 figma (IconConfig iconConfig) =
     let
         attributes =
@@ -1718,7 +1726,7 @@ figma (IconConfig iconConfig) =
 
 
 {-| -}
-filter : IconConfig -> Svg.Svg msg
+filter : IconConfig msg -> Svg.Svg msg
 filter (IconConfig iconConfig) =
     let
         attributes =
@@ -1733,7 +1741,7 @@ filter (IconConfig iconConfig) =
 
 
 {-| -}
-frown : IconConfig -> Svg.Svg msg
+frown : IconConfig msg -> Svg.Svg msg
 frown (IconConfig iconConfig) =
     let
         attributes =
@@ -1748,7 +1756,7 @@ frown (IconConfig iconConfig) =
 
 
 {-| -}
-github : IconConfig -> Svg.Svg msg
+github : IconConfig msg -> Svg.Svg msg
 github (IconConfig iconConfig) =
     let
         attributes =
@@ -1763,7 +1771,7 @@ github (IconConfig iconConfig) =
 
 
 {-| -}
-greenJourney : IconConfig -> Svg.Svg msg
+greenJourney : IconConfig msg -> Svg.Svg msg
 greenJourney (IconConfig iconConfig) =
     let
         attributes =
@@ -1778,7 +1786,7 @@ greenJourney (IconConfig iconConfig) =
 
 
 {-| -}
-grid : IconConfig -> Svg.Svg msg
+grid : IconConfig msg -> Svg.Svg msg
 grid (IconConfig iconConfig) =
     let
         attributes =
@@ -1793,7 +1801,7 @@ grid (IconConfig iconConfig) =
 
 
 {-| -}
-guideDog : IconConfig -> Svg.Svg msg
+guideDog : IconConfig msg -> Svg.Svg msg
 guideDog (IconConfig iconConfig) =
     let
         attributes =
@@ -1808,7 +1816,7 @@ guideDog (IconConfig iconConfig) =
 
 
 {-| -}
-guidelines : IconConfig -> Svg.Svg msg
+guidelines : IconConfig msg -> Svg.Svg msg
 guidelines (IconConfig iconConfig) =
     let
         attributes =
@@ -1823,7 +1831,7 @@ guidelines (IconConfig iconConfig) =
 
 
 {-| -}
-gym : IconConfig -> Svg.Svg msg
+gym : IconConfig msg -> Svg.Svg msg
 gym (IconConfig iconConfig) =
     let
         attributes =
@@ -1838,7 +1846,7 @@ gym (IconConfig iconConfig) =
 
 
 {-| -}
-hamburger : IconConfig -> Svg.Svg msg
+hamburger : IconConfig msg -> Svg.Svg msg
 hamburger (IconConfig iconConfig) =
     let
         attributes =
@@ -1853,7 +1861,7 @@ hamburger (IconConfig iconConfig) =
 
 
 {-| -}
-headphones : IconConfig -> Svg.Svg msg
+headphones : IconConfig msg -> Svg.Svg msg
 headphones (IconConfig iconConfig) =
     let
         attributes =
@@ -1868,7 +1876,7 @@ headphones (IconConfig iconConfig) =
 
 
 {-| -}
-history : IconConfig -> Svg.Svg msg
+history : IconConfig msg -> Svg.Svg msg
 history (IconConfig iconConfig) =
     let
         attributes =
@@ -1883,7 +1891,7 @@ history (IconConfig iconConfig) =
 
 
 {-| -}
-home : IconConfig -> Svg.Svg msg
+home : IconConfig msg -> Svg.Svg msg
 home (IconConfig iconConfig) =
     let
         attributes =
@@ -1898,7 +1906,7 @@ home (IconConfig iconConfig) =
 
 
 {-| -}
-icons : IconConfig -> Svg.Svg msg
+icons : IconConfig msg -> Svg.Svg msg
 icons (IconConfig iconConfig) =
     let
         attributes =
@@ -1913,7 +1921,7 @@ icons (IconConfig iconConfig) =
 
 
 {-| -}
-information : IconConfig -> Svg.Svg msg
+information : IconConfig msg -> Svg.Svg msg
 information (IconConfig iconConfig) =
     let
         attributes =
@@ -1928,7 +1936,7 @@ information (IconConfig iconConfig) =
 
 
 {-| -}
-instagram : IconConfig -> Svg.Svg msg
+instagram : IconConfig msg -> Svg.Svg msg
 instagram (IconConfig iconConfig) =
     let
         attributes =
@@ -1943,7 +1951,7 @@ instagram (IconConfig iconConfig) =
 
 
 {-| -}
-insurance : IconConfig -> Svg.Svg msg
+insurance : IconConfig msg -> Svg.Svg msg
 insurance (IconConfig iconConfig) =
     let
         attributes =
@@ -1958,7 +1966,7 @@ insurance (IconConfig iconConfig) =
 
 
 {-| -}
-keyboard : IconConfig -> Svg.Svg msg
+keyboard : IconConfig msg -> Svg.Svg msg
 keyboard (IconConfig iconConfig) =
     let
         attributes =
@@ -1973,7 +1981,7 @@ keyboard (IconConfig iconConfig) =
 
 
 {-| -}
-klippekort : IconConfig -> Svg.Svg msg
+klippekort : IconConfig msg -> Svg.Svg msg
 klippekort (IconConfig iconConfig) =
     let
         attributes =
@@ -1988,7 +1996,7 @@ klippekort (IconConfig iconConfig) =
 
 
 {-| -}
-kroner : IconConfig -> Svg.Svg msg
+kroner : IconConfig msg -> Svg.Svg msg
 kroner (IconConfig iconConfig) =
     let
         attributes =
@@ -2003,7 +2011,7 @@ kroner (IconConfig iconConfig) =
 
 
 {-| -}
-language : IconConfig -> Svg.Svg msg
+language : IconConfig msg -> Svg.Svg msg
 language (IconConfig iconConfig) =
     let
         attributes =
@@ -2018,7 +2026,7 @@ language (IconConfig iconConfig) =
 
 
 {-| -}
-largeCar : IconConfig -> Svg.Svg msg
+largeCar : IconConfig msg -> Svg.Svg msg
 largeCar (IconConfig iconConfig) =
     let
         attributes =
@@ -2033,7 +2041,7 @@ largeCar (IconConfig iconConfig) =
 
 
 {-| -}
-largeDog : IconConfig -> Svg.Svg msg
+largeDog : IconConfig msg -> Svg.Svg msg
 largeDog (IconConfig iconConfig) =
     let
         attributes =
@@ -2048,7 +2056,7 @@ largeDog (IconConfig iconConfig) =
 
 
 {-| -}
-like : IconConfig -> Svg.Svg msg
+like : IconConfig msg -> Svg.Svg msg
 like (IconConfig iconConfig) =
     let
         attributes =
@@ -2063,7 +2071,7 @@ like (IconConfig iconConfig) =
 
 
 {-| -}
-linkOut : IconConfig -> Svg.Svg msg
+linkOut : IconConfig msg -> Svg.Svg msg
 linkOut (IconConfig iconConfig) =
     let
         attributes =
@@ -2078,7 +2086,7 @@ linkOut (IconConfig iconConfig) =
 
 
 {-| -}
-linkedin : IconConfig -> Svg.Svg msg
+linkedin : IconConfig msg -> Svg.Svg msg
 linkedin (IconConfig iconConfig) =
     let
         attributes =
@@ -2093,7 +2101,7 @@ linkedin (IconConfig iconConfig) =
 
 
 {-| -}
-list : IconConfig -> Svg.Svg msg
+list : IconConfig msg -> Svg.Svg msg
 list (IconConfig iconConfig) =
     let
         attributes =
@@ -2108,7 +2116,7 @@ list (IconConfig iconConfig) =
 
 
 {-| -}
-luggage : IconConfig -> Svg.Svg msg
+luggage : IconConfig msg -> Svg.Svg msg
 luggage (IconConfig iconConfig) =
     let
         attributes =
@@ -2123,7 +2131,7 @@ luggage (IconConfig iconConfig) =
 
 
 {-| -}
-luggagePlus : IconConfig -> Svg.Svg msg
+luggagePlus : IconConfig msg -> Svg.Svg msg
 luggagePlus (IconConfig iconConfig) =
     let
         attributes =
@@ -2138,7 +2146,7 @@ luggagePlus (IconConfig iconConfig) =
 
 
 {-| -}
-luggageSpecial1 : IconConfig -> Svg.Svg msg
+luggageSpecial1 : IconConfig msg -> Svg.Svg msg
 luggageSpecial1 (IconConfig iconConfig) =
     let
         attributes =
@@ -2153,7 +2161,7 @@ luggageSpecial1 (IconConfig iconConfig) =
 
 
 {-| -}
-luggageSpecial2 : IconConfig -> Svg.Svg msg
+luggageSpecial2 : IconConfig msg -> Svg.Svg msg
 luggageSpecial2 (IconConfig iconConfig) =
     let
         attributes =
@@ -2168,7 +2176,7 @@ luggageSpecial2 (IconConfig iconConfig) =
 
 
 {-| -}
-map : IconConfig -> Svg.Svg msg
+map : IconConfig msg -> Svg.Svg msg
 map (IconConfig iconConfig) =
     let
         attributes =
@@ -2183,7 +2191,7 @@ map (IconConfig iconConfig) =
 
 
 {-| -}
-maxitaxi : IconConfig -> Svg.Svg msg
+maxitaxi : IconConfig msg -> Svg.Svg msg
 maxitaxi (IconConfig iconConfig) =
     let
         attributes =
@@ -2198,7 +2206,7 @@ maxitaxi (IconConfig iconConfig) =
 
 
 {-| -}
-minibuss : IconConfig -> Svg.Svg msg
+minibuss : IconConfig msg -> Svg.Svg msg
 minibuss (IconConfig iconConfig) =
     let
         attributes =
@@ -2213,7 +2221,7 @@ minibuss (IconConfig iconConfig) =
 
 
 {-| -}
-mobile : IconConfig -> Svg.Svg msg
+mobile : IconConfig msg -> Svg.Svg msg
 mobile (IconConfig iconConfig) =
     let
         attributes =
@@ -2228,7 +2236,7 @@ mobile (IconConfig iconConfig) =
 
 
 {-| -}
-neutral : IconConfig -> Svg.Svg msg
+neutral : IconConfig msg -> Svg.Svg msg
 neutral (IconConfig iconConfig) =
     let
         attributes =
@@ -2243,7 +2251,7 @@ neutral (IconConfig iconConfig) =
 
 
 {-| -}
-newspaper : IconConfig -> Svg.Svg msg
+newspaper : IconConfig msg -> Svg.Svg msg
 newspaper (IconConfig iconConfig) =
     let
         attributes =
@@ -2258,7 +2266,7 @@ newspaper (IconConfig iconConfig) =
 
 
 {-| -}
-night : IconConfig -> Svg.Svg msg
+night : IconConfig msg -> Svg.Svg msg
 night (IconConfig iconConfig) =
     let
         attributes =
@@ -2273,7 +2281,7 @@ night (IconConfig iconConfig) =
 
 
 {-| -}
-notification : IconConfig -> Svg.Svg msg
+notification : IconConfig msg -> Svg.Svg msg
 notification (IconConfig iconConfig) =
     let
         attributes =
@@ -2288,7 +2296,7 @@ notification (IconConfig iconConfig) =
 
 
 {-| -}
-notificationMute : IconConfig -> Svg.Svg msg
+notificationMute : IconConfig msg -> Svg.Svg msg
 notificationMute (IconConfig iconConfig) =
     let
         attributes =
@@ -2303,7 +2311,7 @@ notificationMute (IconConfig iconConfig) =
 
 
 {-| -}
-notificationReceived : IconConfig -> Svg.Svg msg
+notificationReceived : IconConfig msg -> Svg.Svg msg
 notificationReceived (IconConfig iconConfig) =
     let
         attributes =
@@ -2318,7 +2326,7 @@ notificationReceived (IconConfig iconConfig) =
 
 
 {-| -}
-options : IconConfig -> Svg.Svg msg
+options : IconConfig msg -> Svg.Svg msg
 options (IconConfig iconConfig) =
     let
         attributes =
@@ -2333,7 +2341,7 @@ options (IconConfig iconConfig) =
 
 
 {-| -}
-parking : IconConfig -> Svg.Svg msg
+parking : IconConfig msg -> Svg.Svg msg
 parking (IconConfig iconConfig) =
     let
         attributes =
@@ -2348,7 +2356,7 @@ parking (IconConfig iconConfig) =
 
 
 {-| -}
-password : IconConfig -> Svg.Svg msg
+password : IconConfig msg -> Svg.Svg msg
 password (IconConfig iconConfig) =
     let
         attributes =
@@ -2363,7 +2371,7 @@ password (IconConfig iconConfig) =
 
 
 {-| -}
-pc : IconConfig -> Svg.Svg msg
+pc : IconConfig msg -> Svg.Svg msg
 pc (IconConfig iconConfig) =
     let
         attributes =
@@ -2378,7 +2386,7 @@ pc (IconConfig iconConfig) =
 
 
 {-| -}
-pdf : IconConfig -> Svg.Svg msg
+pdf : IconConfig msg -> Svg.Svg msg
 pdf (IconConfig iconConfig) =
     let
         attributes =
@@ -2393,7 +2401,7 @@ pdf (IconConfig iconConfig) =
 
 
 {-| -}
-person : IconConfig -> Svg.Svg msg
+person : IconConfig msg -> Svg.Svg msg
 person (IconConfig iconConfig) =
     let
         attributes =
@@ -2408,7 +2416,7 @@ person (IconConfig iconConfig) =
 
 
 {-| -}
-petAllowed : IconConfig -> Svg.Svg msg
+petAllowed : IconConfig msg -> Svg.Svg msg
 petAllowed (IconConfig iconConfig) =
     let
         attributes =
@@ -2423,7 +2431,7 @@ petAllowed (IconConfig iconConfig) =
 
 
 {-| -}
-petNotAllowed : IconConfig -> Svg.Svg msg
+petNotAllowed : IconConfig msg -> Svg.Svg msg
 petNotAllowed (IconConfig iconConfig) =
     let
         attributes =
@@ -2438,7 +2446,7 @@ petNotAllowed (IconConfig iconConfig) =
 
 
 {-| -}
-phone : IconConfig -> Svg.Svg msg
+phone : IconConfig msg -> Svg.Svg msg
 phone (IconConfig iconConfig) =
     let
         attributes =
@@ -2453,7 +2461,7 @@ phone (IconConfig iconConfig) =
 
 
 {-| -}
-phoneSignal : IconConfig -> Svg.Svg msg
+phoneSignal : IconConfig msg -> Svg.Svg msg
 phoneSignal (IconConfig iconConfig) =
     let
         attributes =
@@ -2468,7 +2476,7 @@ phoneSignal (IconConfig iconConfig) =
 
 
 {-| -}
-picture : IconConfig -> Svg.Svg msg
+picture : IconConfig msg -> Svg.Svg msg
 picture (IconConfig iconConfig) =
     let
         attributes =
@@ -2483,7 +2491,7 @@ picture (IconConfig iconConfig) =
 
 
 {-| -}
-playRoom : IconConfig -> Svg.Svg msg
+playRoom : IconConfig msg -> Svg.Svg msg
 playRoom (IconConfig iconConfig) =
     let
         attributes =
@@ -2498,7 +2506,7 @@ playRoom (IconConfig iconConfig) =
 
 
 {-| -}
-plussSeat : IconConfig -> Svg.Svg msg
+plussSeat : IconConfig msg -> Svg.Svg msg
 plussSeat (IconConfig iconConfig) =
     let
         attributes =
@@ -2513,7 +2521,7 @@ plussSeat (IconConfig iconConfig) =
 
 
 {-| -}
-podcast : IconConfig -> Svg.Svg msg
+podcast : IconConfig msg -> Svg.Svg msg
 podcast (IconConfig iconConfig) =
     let
         attributes =
@@ -2528,7 +2536,7 @@ podcast (IconConfig iconConfig) =
 
 
 {-| -}
-position : IconConfig -> Svg.Svg msg
+position : IconConfig msg -> Svg.Svg msg
 position (IconConfig iconConfig) =
     let
         attributes =
@@ -2543,7 +2551,7 @@ position (IconConfig iconConfig) =
 
 
 {-| -}
-positionDot : IconConfig -> Svg.Svg msg
+positionDot : IconConfig msg -> Svg.Svg msg
 positionDot (IconConfig iconConfig) =
     let
         attributes =
@@ -2558,7 +2566,7 @@ positionDot (IconConfig iconConfig) =
 
 
 {-| -}
-positionOnMap : IconConfig -> Svg.Svg msg
+positionOnMap : IconConfig msg -> Svg.Svg msg
 positionOnMap (IconConfig iconConfig) =
     let
         attributes =
@@ -2573,7 +2581,7 @@ positionOnMap (IconConfig iconConfig) =
 
 
 {-| -}
-powerOutlet : IconConfig -> Svg.Svg msg
+powerOutlet : IconConfig msg -> Svg.Svg msg
 powerOutlet (IconConfig iconConfig) =
     let
         attributes =
@@ -2588,7 +2596,7 @@ powerOutlet (IconConfig iconConfig) =
 
 
 {-| -}
-profile : IconConfig -> Svg.Svg msg
+profile : IconConfig msg -> Svg.Svg msg
 profile (IconConfig iconConfig) =
     let
         attributes =
@@ -2603,7 +2611,7 @@ profile (IconConfig iconConfig) =
 
 
 {-| -}
-qr : IconConfig -> Svg.Svg msg
+qr : IconConfig msg -> Svg.Svg msg
 qr (IconConfig iconConfig) =
     let
         attributes =
@@ -2618,7 +2626,7 @@ qr (IconConfig iconConfig) =
 
 
 {-| -}
-question : IconConfig -> Svg.Svg msg
+question : IconConfig msg -> Svg.Svg msg
 question (IconConfig iconConfig) =
     let
         attributes =
@@ -2633,7 +2641,7 @@ question (IconConfig iconConfig) =
 
 
 {-| -}
-realtime : IconConfig -> Svg.Svg msg
+realtime : IconConfig msg -> Svg.Svg msg
 realtime (IconConfig iconConfig) =
     let
         attributes =
@@ -2648,7 +2656,7 @@ realtime (IconConfig iconConfig) =
 
 
 {-| -}
-refresh : IconConfig -> Svg.Svg msg
+refresh : IconConfig msg -> Svg.Svg msg
 refresh (IconConfig iconConfig) =
     let
         attributes =
@@ -2663,7 +2671,7 @@ refresh (IconConfig iconConfig) =
 
 
 {-| -}
-refundCard : IconConfig -> Svg.Svg msg
+refundCard : IconConfig msg -> Svg.Svg msg
 refundCard (IconConfig iconConfig) =
     let
         attributes =
@@ -2678,7 +2686,7 @@ refundCard (IconConfig iconConfig) =
 
 
 {-| -}
-refundKrone : IconConfig -> Svg.Svg msg
+refundKrone : IconConfig msg -> Svg.Svg msg
 refundKrone (IconConfig iconConfig) =
     let
         attributes =
@@ -2693,7 +2701,7 @@ refundKrone (IconConfig iconConfig) =
 
 
 {-| -}
-ruter : IconConfig -> Svg.Svg msg
+ruter : IconConfig msg -> Svg.Svg msg
 ruter (IconConfig iconConfig) =
     let
         attributes =
@@ -2708,7 +2716,7 @@ ruter (IconConfig iconConfig) =
 
 
 {-| -}
-satellite : IconConfig -> Svg.Svg msg
+satellite : IconConfig msg -> Svg.Svg msg
 satellite (IconConfig iconConfig) =
     let
         attributes =
@@ -2723,7 +2731,7 @@ satellite (IconConfig iconConfig) =
 
 
 {-| -}
-school : IconConfig -> Svg.Svg msg
+school : IconConfig msg -> Svg.Svg msg
 school (IconConfig iconConfig) =
     let
         attributes =
@@ -2738,7 +2746,7 @@ school (IconConfig iconConfig) =
 
 
 {-| -}
-scooter : IconConfig -> Svg.Svg msg
+scooter : IconConfig msg -> Svg.Svg msg
 scooter (IconConfig iconConfig) =
     let
         attributes =
@@ -2753,7 +2761,7 @@ scooter (IconConfig iconConfig) =
 
 
 {-| -}
-search : IconConfig -> Svg.Svg msg
+search : IconConfig msg -> Svg.Svg msg
 search (IconConfig iconConfig) =
     let
         attributes =
@@ -2768,7 +2776,7 @@ search (IconConfig iconConfig) =
 
 
 {-| -}
-seat : IconConfig -> Svg.Svg msg
+seat : IconConfig msg -> Svg.Svg msg
 seat (IconConfig iconConfig) =
     let
         attributes =
@@ -2783,7 +2791,7 @@ seat (IconConfig iconConfig) =
 
 
 {-| -}
-seatNotAvailable : IconConfig -> Svg.Svg msg
+seatNotAvailable : IconConfig msg -> Svg.Svg msg
 seatNotAvailable (IconConfig iconConfig) =
     let
         attributes =
@@ -2798,7 +2806,7 @@ seatNotAvailable (IconConfig iconConfig) =
 
 
 {-| -}
-settingsX1 : IconConfig -> Svg.Svg msg
+settingsX1 : IconConfig msg -> Svg.Svg msg
 settingsX1 (IconConfig iconConfig) =
     let
         attributes =
@@ -2813,7 +2821,7 @@ settingsX1 (IconConfig iconConfig) =
 
 
 {-| -}
-settingsX2 : IconConfig -> Svg.Svg msg
+settingsX2 : IconConfig msg -> Svg.Svg msg
 settingsX2 (IconConfig iconConfig) =
     let
         attributes =
@@ -2828,7 +2836,7 @@ settingsX2 (IconConfig iconConfig) =
 
 
 {-| -}
-share : IconConfig -> Svg.Svg msg
+share : IconConfig msg -> Svg.Svg msg
 share (IconConfig iconConfig) =
     let
         attributes =
@@ -2843,7 +2851,7 @@ share (IconConfig iconConfig) =
 
 
 {-| -}
-skiStorage : IconConfig -> Svg.Svg msg
+skiStorage : IconConfig msg -> Svg.Svg msg
 skiStorage (IconConfig iconConfig) =
     let
         attributes =
@@ -2858,7 +2866,7 @@ skiStorage (IconConfig iconConfig) =
 
 
 {-| -}
-skicard : IconConfig -> Svg.Svg msg
+skicard : IconConfig msg -> Svg.Svg msg
 skicard (IconConfig iconConfig) =
     let
         attributes =
@@ -2873,7 +2881,7 @@ skicard (IconConfig iconConfig) =
 
 
 {-| -}
-sleep : IconConfig -> Svg.Svg msg
+sleep : IconConfig msg -> Svg.Svg msg
 sleep (IconConfig iconConfig) =
     let
         attributes =
@@ -2888,7 +2896,7 @@ sleep (IconConfig iconConfig) =
 
 
 {-| -}
-smallCar : IconConfig -> Svg.Svg msg
+smallCar : IconConfig msg -> Svg.Svg msg
 smallCar (IconConfig iconConfig) =
     let
         attributes =
@@ -2903,7 +2911,7 @@ smallCar (IconConfig iconConfig) =
 
 
 {-| -}
-smallDog : IconConfig -> Svg.Svg msg
+smallDog : IconConfig msg -> Svg.Svg msg
 smallDog (IconConfig iconConfig) =
     let
         attributes =
@@ -2918,7 +2926,7 @@ smallDog (IconConfig iconConfig) =
 
 
 {-| -}
-smartprice : IconConfig -> Svg.Svg msg
+smartprice : IconConfig msg -> Svg.Svg msg
 smartprice (IconConfig iconConfig) =
     let
         attributes =
@@ -2933,7 +2941,7 @@ smartprice (IconConfig iconConfig) =
 
 
 {-| -}
-smile : IconConfig -> Svg.Svg msg
+smile : IconConfig msg -> Svg.Svg msg
 smile (IconConfig iconConfig) =
     let
         attributes =
@@ -2948,7 +2956,7 @@ smile (IconConfig iconConfig) =
 
 
 {-| -}
-sofa : IconConfig -> Svg.Svg msg
+sofa : IconConfig msg -> Svg.Svg msg
 sofa (IconConfig iconConfig) =
     let
         attributes =
@@ -2963,7 +2971,7 @@ sofa (IconConfig iconConfig) =
 
 
 {-| -}
-soundOff : IconConfig -> Svg.Svg msg
+soundOff : IconConfig msg -> Svg.Svg msg
 soundOff (IconConfig iconConfig) =
     let
         attributes =
@@ -2978,7 +2986,7 @@ soundOff (IconConfig iconConfig) =
 
 
 {-| -}
-soundOn : IconConfig -> Svg.Svg msg
+soundOn : IconConfig msg -> Svg.Svg msg
 soundOn (IconConfig iconConfig) =
     let
         attributes =
@@ -2993,7 +3001,7 @@ soundOn (IconConfig iconConfig) =
 
 
 {-| -}
-speechBubble : IconConfig -> Svg.Svg msg
+speechBubble : IconConfig msg -> Svg.Svg msg
 speechBubble (IconConfig iconConfig) =
     let
         attributes =
@@ -3008,7 +3016,7 @@ speechBubble (IconConfig iconConfig) =
 
 
 {-| -}
-spring : IconConfig -> Svg.Svg msg
+spring : IconConfig msg -> Svg.Svg msg
 spring (IconConfig iconConfig) =
     let
         attributes =
@@ -3023,7 +3031,7 @@ spring (IconConfig iconConfig) =
 
 
 {-| -}
-stopwatch : IconConfig -> Svg.Svg msg
+stopwatch : IconConfig msg -> Svg.Svg msg
 stopwatch (IconConfig iconConfig) =
     let
         attributes =
@@ -3038,7 +3046,7 @@ stopwatch (IconConfig iconConfig) =
 
 
 {-| -}
-stroller : IconConfig -> Svg.Svg msg
+stroller : IconConfig msg -> Svg.Svg msg
 stroller (IconConfig iconConfig) =
     let
         attributes =
@@ -3053,7 +3061,7 @@ stroller (IconConfig iconConfig) =
 
 
 {-| -}
-subtract : IconConfig -> Svg.Svg msg
+subtract : IconConfig msg -> Svg.Svg msg
 subtract (IconConfig iconConfig) =
     let
         attributes =
@@ -3068,7 +3076,7 @@ subtract (IconConfig iconConfig) =
 
 
 {-| -}
-subway : IconConfig -> Svg.Svg msg
+subway : IconConfig msg -> Svg.Svg msg
 subway (IconConfig iconConfig) =
     let
         attributes =
@@ -3083,7 +3091,7 @@ subway (IconConfig iconConfig) =
 
 
 {-| -}
-success : IconConfig -> Svg.Svg msg
+success : IconConfig msg -> Svg.Svg msg
 success (IconConfig iconConfig) =
     let
         attributes =
@@ -3098,7 +3106,7 @@ success (IconConfig iconConfig) =
 
 
 {-| -}
-summer : IconConfig -> Svg.Svg msg
+summer : IconConfig msg -> Svg.Svg msg
 summer (IconConfig iconConfig) =
     let
         attributes =
@@ -3113,7 +3121,7 @@ summer (IconConfig iconConfig) =
 
 
 {-| -}
-table : IconConfig -> Svg.Svg msg
+table : IconConfig msg -> Svg.Svg msg
 table (IconConfig iconConfig) =
     let
         attributes =
@@ -3128,7 +3136,7 @@ table (IconConfig iconConfig) =
 
 
 {-| -}
-tablet : IconConfig -> Svg.Svg msg
+tablet : IconConfig msg -> Svg.Svg msg
 tablet (IconConfig iconConfig) =
     let
         attributes =
@@ -3143,7 +3151,7 @@ tablet (IconConfig iconConfig) =
 
 
 {-| -}
-taxi : IconConfig -> Svg.Svg msg
+taxi : IconConfig msg -> Svg.Svg msg
 taxi (IconConfig iconConfig) =
     let
         attributes =
@@ -3158,7 +3166,7 @@ taxi (IconConfig iconConfig) =
 
 
 {-| -}
-ticket : IconConfig -> Svg.Svg msg
+ticket : IconConfig msg -> Svg.Svg msg
 ticket (IconConfig iconConfig) =
     let
         attributes =
@@ -3173,7 +3181,7 @@ ticket (IconConfig iconConfig) =
 
 
 {-| -}
-ticketAdd : IconConfig -> Svg.Svg msg
+ticketAdd : IconConfig msg -> Svg.Svg msg
 ticketAdd (IconConfig iconConfig) =
     let
         attributes =
@@ -3188,7 +3196,7 @@ ticketAdd (IconConfig iconConfig) =
 
 
 {-| -}
-ticketControl : IconConfig -> Svg.Svg msg
+ticketControl : IconConfig msg -> Svg.Svg msg
 ticketControl (IconConfig iconConfig) =
     let
         attributes =
@@ -3203,7 +3211,7 @@ ticketControl (IconConfig iconConfig) =
 
 
 {-| -}
-ticketLocation : IconConfig -> Svg.Svg msg
+ticketLocation : IconConfig msg -> Svg.Svg msg
 ticketLocation (IconConfig iconConfig) =
     let
         attributes =
@@ -3218,7 +3226,7 @@ ticketLocation (IconConfig iconConfig) =
 
 
 {-| -}
-ticketPdf : IconConfig -> Svg.Svg msg
+ticketPdf : IconConfig msg -> Svg.Svg msg
 ticketPdf (IconConfig iconConfig) =
     let
         attributes =
@@ -3233,7 +3241,7 @@ ticketPdf (IconConfig iconConfig) =
 
 
 {-| -}
-ticketPeriod : IconConfig -> Svg.Svg msg
+ticketPeriod : IconConfig msg -> Svg.Svg msg
 ticketPeriod (IconConfig iconConfig) =
     let
         attributes =
@@ -3248,7 +3256,7 @@ ticketPeriod (IconConfig iconConfig) =
 
 
 {-| -}
-ticketZone : IconConfig -> Svg.Svg msg
+ticketZone : IconConfig msg -> Svg.Svg msg
 ticketZone (IconConfig iconConfig) =
     let
         attributes =
@@ -3263,7 +3271,7 @@ ticketZone (IconConfig iconConfig) =
 
 
 {-| -}
-time : IconConfig -> Svg.Svg msg
+time : IconConfig msg -> Svg.Svg msg
 time (IconConfig iconConfig) =
     let
         attributes =
@@ -3278,7 +3286,7 @@ time (IconConfig iconConfig) =
 
 
 {-| -}
-toilet : IconConfig -> Svg.Svg msg
+toilet : IconConfig msg -> Svg.Svg msg
 toilet (IconConfig iconConfig) =
     let
         attributes =
@@ -3293,7 +3301,7 @@ toilet (IconConfig iconConfig) =
 
 
 {-| -}
-tokens : IconConfig -> Svg.Svg msg
+tokens : IconConfig msg -> Svg.Svg msg
 tokens (IconConfig iconConfig) =
     let
         attributes =
@@ -3308,7 +3316,7 @@ tokens (IconConfig iconConfig) =
 
 
 {-| -}
-town : IconConfig -> Svg.Svg msg
+town : IconConfig msg -> Svg.Svg msg
 town (IconConfig iconConfig) =
     let
         attributes =
@@ -3323,7 +3331,7 @@ town (IconConfig iconConfig) =
 
 
 {-| -}
-train : IconConfig -> Svg.Svg msg
+train : IconConfig msg -> Svg.Svg msg
 train (IconConfig iconConfig) =
     let
         attributes =
@@ -3338,7 +3346,7 @@ train (IconConfig iconConfig) =
 
 
 {-| -}
-tram : IconConfig -> Svg.Svg msg
+tram : IconConfig msg -> Svg.Svg msg
 tram (IconConfig iconConfig) =
     let
         attributes =
@@ -3353,7 +3361,7 @@ tram (IconConfig iconConfig) =
 
 
 {-| -}
-twitter : IconConfig -> Svg.Svg msg
+twitter : IconConfig msg -> Svg.Svg msg
 twitter (IconConfig iconConfig) =
     let
         attributes =
@@ -3368,7 +3376,7 @@ twitter (IconConfig iconConfig) =
 
 
 {-| -}
-update : IconConfig -> Svg.Svg msg
+update : IconConfig msg -> Svg.Svg msg
 update (IconConfig iconConfig) =
     let
         attributes =
@@ -3383,7 +3391,7 @@ update (IconConfig iconConfig) =
 
 
 {-| -}
-vendingMachine : IconConfig -> Svg.Svg msg
+vendingMachine : IconConfig msg -> Svg.Svg msg
 vendingMachine (IconConfig iconConfig) =
     let
         attributes =
@@ -3398,7 +3406,7 @@ vendingMachine (IconConfig iconConfig) =
 
 
 {-| -}
-vy : IconConfig -> Svg.Svg msg
+vy : IconConfig msg -> Svg.Svg msg
 vy (IconConfig iconConfig) =
     let
         attributes =
@@ -3413,7 +3421,7 @@ vy (IconConfig iconConfig) =
 
 
 {-| -}
-vyPluss : IconConfig -> Svg.Svg msg
+vyPluss : IconConfig msg -> Svg.Svg msg
 vyPluss (IconConfig iconConfig) =
     let
         attributes =
@@ -3428,7 +3436,7 @@ vyPluss (IconConfig iconConfig) =
 
 
 {-| -}
-wagon : IconConfig -> Svg.Svg msg
+wagon : IconConfig msg -> Svg.Svg msg
 wagon (IconConfig iconConfig) =
     let
         attributes =
@@ -3443,7 +3451,7 @@ wagon (IconConfig iconConfig) =
 
 
 {-| -}
-wait : IconConfig -> Svg.Svg msg
+wait : IconConfig msg -> Svg.Svg msg
 wait (IconConfig iconConfig) =
     let
         attributes =
@@ -3458,7 +3466,7 @@ wait (IconConfig iconConfig) =
 
 
 {-| -}
-walk : IconConfig -> Svg.Svg msg
+walk : IconConfig msg -> Svg.Svg msg
 walk (IconConfig iconConfig) =
     let
         attributes =
@@ -3473,7 +3481,7 @@ walk (IconConfig iconConfig) =
 
 
 {-| -}
-wallet : IconConfig -> Svg.Svg msg
+wallet : IconConfig msg -> Svg.Svg msg
 wallet (IconConfig iconConfig) =
     let
         attributes =
@@ -3488,7 +3496,7 @@ wallet (IconConfig iconConfig) =
 
 
 {-| -}
-warning : IconConfig -> Svg.Svg msg
+warning : IconConfig msg -> Svg.Svg msg
 warning (IconConfig iconConfig) =
     let
         attributes =
@@ -3503,7 +3511,7 @@ warning (IconConfig iconConfig) =
 
 
 {-| -}
-water : IconConfig -> Svg.Svg msg
+water : IconConfig msg -> Svg.Svg msg
 water (IconConfig iconConfig) =
     let
         attributes =
@@ -3518,7 +3526,7 @@ water (IconConfig iconConfig) =
 
 
 {-| -}
-wheelchair : IconConfig -> Svg.Svg msg
+wheelchair : IconConfig msg -> Svg.Svg msg
 wheelchair (IconConfig iconConfig) =
     let
         attributes =
@@ -3533,7 +3541,7 @@ wheelchair (IconConfig iconConfig) =
 
 
 {-| -}
-wifi : IconConfig -> Svg.Svg msg
+wifi : IconConfig msg -> Svg.Svg msg
 wifi (IconConfig iconConfig) =
     let
         attributes =
@@ -3548,7 +3556,7 @@ wifi (IconConfig iconConfig) =
 
 
 {-| -}
-winter : IconConfig -> Svg.Svg msg
+winter : IconConfig msg -> Svg.Svg msg
 winter (IconConfig iconConfig) =
     let
         attributes =
@@ -3563,7 +3571,7 @@ winter (IconConfig iconConfig) =
 
 
 {-| -}
-work : IconConfig -> Svg.Svg msg
+work : IconConfig msg -> Svg.Svg msg
 work (IconConfig iconConfig) =
     let
         attributes =
@@ -3578,7 +3586,7 @@ work (IconConfig iconConfig) =
 
 
 {-| -}
-youtube : IconConfig -> Svg.Svg msg
+youtube : IconConfig msg -> Svg.Svg msg
 youtube (IconConfig iconConfig) =
     let
         attributes =
