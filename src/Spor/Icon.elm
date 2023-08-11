@@ -852,7 +852,7 @@ add (IconConfig iconConfig) =
             addFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            addOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            addOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -867,7 +867,7 @@ aircondition (IconConfig iconConfig) =
             airconditionFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            airconditionOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            airconditionOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -882,7 +882,7 @@ airplane (IconConfig iconConfig) =
             airplaneFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            airplaneOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            airplaneOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -897,7 +897,7 @@ altTransport (IconConfig iconConfig) =
             altTransportFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            altTransportOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            altTransportOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -912,7 +912,7 @@ arrowDown (IconConfig iconConfig) =
             arrowDownFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            arrowDownOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            arrowDownOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -927,7 +927,7 @@ arrowLeft (IconConfig iconConfig) =
             arrowLeftFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            arrowLeftOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            arrowLeftOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -942,7 +942,7 @@ arrowRight (IconConfig iconConfig) =
             arrowRightFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            arrowRightOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            arrowRightOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -957,7 +957,7 @@ arrowUp (IconConfig iconConfig) =
             arrowUpFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            arrowUpOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            arrowUpOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -972,7 +972,7 @@ autumn (IconConfig iconConfig) =
             autumnFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            autumnOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            autumnOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -987,7 +987,7 @@ babyChanging (IconConfig iconConfig) =
             babyChangingFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            babyChangingOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            babyChangingOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1002,7 +1002,7 @@ battery (IconConfig iconConfig) =
             batteryFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            batteryOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            batteryOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1017,7 +1017,7 @@ bicycle (IconConfig iconConfig) =
             bicycleFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            bicycleOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            bicycleOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1032,7 +1032,7 @@ bookmark (IconConfig iconConfig) =
             bookmarkFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            bookmarkOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            bookmarkOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1047,7 +1047,7 @@ bus (IconConfig iconConfig) =
             busFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            busOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            busOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1062,7 +1062,7 @@ cafe (IconConfig iconConfig) =
             cafeFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            cafeOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            cafeOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1077,7 +1077,7 @@ calendar (IconConfig iconConfig) =
             calendarFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            calendarOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            calendarOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1092,7 +1092,7 @@ campaign (IconConfig iconConfig) =
             campaignFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            campaignOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            campaignOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1107,7 +1107,7 @@ capacityCarriage (IconConfig iconConfig) =
             capacityCarriageFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            capacityCarriageOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            capacityCarriageOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1122,7 +1122,7 @@ capacitySeat (IconConfig iconConfig) =
             capacitySeatFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            capacitySeatOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            capacitySeatOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1137,7 +1137,7 @@ car (IconConfig iconConfig) =
             carFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            carOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            carOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1152,7 +1152,7 @@ card (IconConfig iconConfig) =
             cardFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            cardOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            cardOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1167,7 +1167,7 @@ changeDirection (IconConfig iconConfig) =
             changeDirectionFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            changeDirectionOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            changeDirectionOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1182,7 +1182,7 @@ chapter (IconConfig iconConfig) =
             chapterFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            chapterOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            chapterOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1197,7 +1197,7 @@ checkmark (IconConfig iconConfig) =
             checkmarkFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            checkmarkOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            checkmarkOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1212,7 +1212,7 @@ childSeat (IconConfig iconConfig) =
             childSeatFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            childSeatOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            childSeatOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1227,7 +1227,7 @@ city (IconConfig iconConfig) =
             cityFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            cityOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            cityOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1242,7 +1242,7 @@ close (IconConfig iconConfig) =
             closeFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            closeOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            closeOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1257,7 +1257,7 @@ code (IconConfig iconConfig) =
             codeFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            codeOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            codeOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1272,7 +1272,7 @@ coffee (IconConfig iconConfig) =
             coffeeFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            coffeeOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            coffeeOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1287,7 +1287,7 @@ coffeeCart (IconConfig iconConfig) =
             coffeeCartFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            coffeeCartOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            coffeeCartOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1302,7 +1302,7 @@ coffeeMachine (IconConfig iconConfig) =
             coffeeMachineFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            coffeeMachineOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            coffeeMachineOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1317,7 +1317,7 @@ comfort (IconConfig iconConfig) =
             comfortFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            comfortOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            comfortOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1332,7 +1332,7 @@ compass (IconConfig iconConfig) =
             compassFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            compassOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            compassOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1347,7 +1347,7 @@ components (IconConfig iconConfig) =
             componentsFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            componentsOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            componentsOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1362,7 +1362,7 @@ cookies (IconConfig iconConfig) =
             cookiesFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            cookiesOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            cookiesOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1377,7 +1377,7 @@ copy (IconConfig iconConfig) =
             copyFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            copyOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            copyOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1392,7 +1392,7 @@ cottage (IconConfig iconConfig) =
             cottageFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            cottageOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            cottageOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1407,7 +1407,7 @@ coupon (IconConfig iconConfig) =
             couponFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            couponOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            couponOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1422,7 +1422,7 @@ customerService (IconConfig iconConfig) =
             customerServiceFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            customerServiceOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            customerServiceOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1437,7 +1437,7 @@ delete (IconConfig iconConfig) =
             deleteFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            deleteOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            deleteOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1452,7 +1452,7 @@ deleteCircle (IconConfig iconConfig) =
             deleteCircleFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            deleteCircleOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            deleteCircleOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1467,7 +1467,7 @@ departure (IconConfig iconConfig) =
             departureFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            departureOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            departureOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1482,7 +1482,7 @@ destination (IconConfig iconConfig) =
             destinationFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            destinationOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            destinationOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1497,7 +1497,7 @@ discount (IconConfig iconConfig) =
             discountFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            discountOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            discountOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1512,7 +1512,7 @@ download (IconConfig iconConfig) =
             downloadFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            downloadOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            downloadOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1527,7 +1527,7 @@ dropdownDown (IconConfig iconConfig) =
             dropdownDownFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            dropdownDownFill_ <| attribute "stroke" iconConfig.color :: attributes
+            dropdownDownFill_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1542,7 +1542,7 @@ dropdownLeft (IconConfig iconConfig) =
             dropdownLeftFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            dropdownLeftFill_ <| attribute "stroke" iconConfig.color :: attributes
+            dropdownLeftFill_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1557,7 +1557,7 @@ dropdownRight (IconConfig iconConfig) =
             dropdownRightFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            dropdownRightFill_ <| attribute "stroke" iconConfig.color :: attributes
+            dropdownRightFill_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1572,7 +1572,7 @@ dropdownUp (IconConfig iconConfig) =
             dropdownUpFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            dropdownUpFill_ <| attribute "stroke" iconConfig.color :: attributes
+            dropdownUpFill_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1587,7 +1587,7 @@ edit (IconConfig iconConfig) =
             editFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            editOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            editOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1602,7 +1602,7 @@ email (IconConfig iconConfig) =
             emailFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            emailOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            emailOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1617,7 +1617,7 @@ error (IconConfig iconConfig) =
             errorFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            errorOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            errorOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1632,7 +1632,7 @@ expand (IconConfig iconConfig) =
             expandFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            expandOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            expandOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1647,7 +1647,7 @@ expressBus (IconConfig iconConfig) =
             expressBusFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            expressBusOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            expressBusOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1662,7 +1662,7 @@ facebook (IconConfig iconConfig) =
             facebookOutline_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            facebookOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            facebookOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1677,7 +1677,7 @@ family (IconConfig iconConfig) =
             familyFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            familyOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            familyOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1692,7 +1692,7 @@ favourite (IconConfig iconConfig) =
             favouriteFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            favouriteOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            favouriteOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1707,7 +1707,7 @@ ferry (IconConfig iconConfig) =
             ferryFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            ferryOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            ferryOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1722,7 +1722,7 @@ figma (IconConfig iconConfig) =
             figmaFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            figmaOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            figmaOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1737,7 +1737,7 @@ filter (IconConfig iconConfig) =
             filterFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            filterOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            filterOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1752,7 +1752,7 @@ frown (IconConfig iconConfig) =
             frownFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            frownOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            frownOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1767,7 +1767,7 @@ github (IconConfig iconConfig) =
             githubFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            githubOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            githubOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1782,7 +1782,7 @@ greenJourney (IconConfig iconConfig) =
             greenJourneyOutline_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            greenJourneyOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            greenJourneyOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1797,7 +1797,7 @@ grid (IconConfig iconConfig) =
             gridFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            gridOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            gridOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1812,7 +1812,7 @@ guideDog (IconConfig iconConfig) =
             guideDogFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            guideDogOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            guideDogOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1827,7 +1827,7 @@ guidelines (IconConfig iconConfig) =
             guidelinesFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            guidelinesOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            guidelinesOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1842,7 +1842,7 @@ gym (IconConfig iconConfig) =
             gymFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            gymOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            gymOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1857,7 +1857,7 @@ hamburger (IconConfig iconConfig) =
             hamburgerFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            hamburgerOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            hamburgerOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1872,7 +1872,7 @@ headphones (IconConfig iconConfig) =
             headphonesFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            headphonesOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            headphonesOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1887,7 +1887,7 @@ history (IconConfig iconConfig) =
             historyFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            historyOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            historyOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1902,7 +1902,7 @@ home (IconConfig iconConfig) =
             homeFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            homeOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            homeOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1917,7 +1917,7 @@ icons (IconConfig iconConfig) =
             iconsFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            iconsOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            iconsOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1932,7 +1932,7 @@ information (IconConfig iconConfig) =
             informationFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            informationOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            informationOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1947,7 +1947,7 @@ instagram (IconConfig iconConfig) =
             instagramOutline_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            instagramOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            instagramOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1962,7 +1962,7 @@ insurance (IconConfig iconConfig) =
             insuranceFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            insuranceOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            insuranceOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1977,7 +1977,7 @@ keyboard (IconConfig iconConfig) =
             keyboardFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            keyboardOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            keyboardOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -1992,7 +1992,7 @@ klippekort (IconConfig iconConfig) =
             klippekortFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            klippekortOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            klippekortOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2007,7 +2007,7 @@ kroner (IconConfig iconConfig) =
             kronerFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            kronerOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            kronerOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2022,7 +2022,7 @@ language (IconConfig iconConfig) =
             languageFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            languageOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            languageOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2037,7 +2037,7 @@ largeCar (IconConfig iconConfig) =
             largeCarFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            largeCarOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            largeCarOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2052,7 +2052,7 @@ largeDog (IconConfig iconConfig) =
             largeDogFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            largeDogOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            largeDogOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2067,7 +2067,7 @@ like (IconConfig iconConfig) =
             likeFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            likeOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            likeOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2082,7 +2082,7 @@ linkOut (IconConfig iconConfig) =
             linkOutFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            linkOutOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            linkOutOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2097,7 +2097,7 @@ linkedin (IconConfig iconConfig) =
             linkedinOutline_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            linkedinOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            linkedinOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2112,7 +2112,7 @@ list (IconConfig iconConfig) =
             listFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            listOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            listOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2127,7 +2127,7 @@ luggage (IconConfig iconConfig) =
             luggageFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            luggageOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            luggageOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2142,7 +2142,7 @@ luggagePlus (IconConfig iconConfig) =
             luggagePlusFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            luggagePlusOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            luggagePlusOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2157,7 +2157,7 @@ luggageSpecial1 (IconConfig iconConfig) =
             luggageSpecial1Fill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            luggageSpecial1Outline_ <| attribute "stroke" iconConfig.color :: attributes
+            luggageSpecial1Outline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2172,7 +2172,7 @@ luggageSpecial2 (IconConfig iconConfig) =
             luggageSpecial2Fill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            luggageSpecial2Outline_ <| attribute "stroke" iconConfig.color :: attributes
+            luggageSpecial2Outline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2187,7 +2187,7 @@ map (IconConfig iconConfig) =
             mapFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            mapOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            mapOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2202,7 +2202,7 @@ maxitaxi (IconConfig iconConfig) =
             maxitaxiFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            maxitaxiOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            maxitaxiOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2217,7 +2217,7 @@ minibuss (IconConfig iconConfig) =
             minibussFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            minibussOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            minibussOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2232,7 +2232,7 @@ mobile (IconConfig iconConfig) =
             mobileFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            mobileOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            mobileOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2247,7 +2247,7 @@ neutral (IconConfig iconConfig) =
             neutralFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            neutralOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            neutralOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2262,7 +2262,7 @@ newspaper (IconConfig iconConfig) =
             newspaperFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            newspaperOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            newspaperOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2277,7 +2277,7 @@ night (IconConfig iconConfig) =
             nightFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            nightOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            nightOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2292,7 +2292,7 @@ notification (IconConfig iconConfig) =
             notificationFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            notificationOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            notificationOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2307,7 +2307,7 @@ notificationMute (IconConfig iconConfig) =
             notificationMuteFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            notificationMuteOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            notificationMuteOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2322,7 +2322,7 @@ notificationReceived (IconConfig iconConfig) =
             notificationReceivedFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            notificationReceivedOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            notificationReceivedOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2337,7 +2337,7 @@ options (IconConfig iconConfig) =
             optionsFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            optionsOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            optionsOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2352,7 +2352,7 @@ parking (IconConfig iconConfig) =
             parkingFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            parkingOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            parkingOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2367,7 +2367,7 @@ password (IconConfig iconConfig) =
             passwordFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            passwordOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            passwordOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2382,7 +2382,7 @@ pc (IconConfig iconConfig) =
             pcFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            pcOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            pcOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2397,7 +2397,7 @@ pdf (IconConfig iconConfig) =
             pdfFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            pdfOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            pdfOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2412,7 +2412,7 @@ person (IconConfig iconConfig) =
             personFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            personOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            personOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2427,7 +2427,7 @@ petAllowed (IconConfig iconConfig) =
             petAllowedFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            petAllowedOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            petAllowedOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2442,7 +2442,7 @@ petNotAllowed (IconConfig iconConfig) =
             petNotAllowedFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            petNotAllowedOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            petNotAllowedOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2457,7 +2457,7 @@ phone (IconConfig iconConfig) =
             phoneFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            phoneOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            phoneOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2472,7 +2472,7 @@ phoneSignal (IconConfig iconConfig) =
             phoneSignalFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            phoneSignalOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            phoneSignalOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2487,7 +2487,7 @@ picture (IconConfig iconConfig) =
             pictureFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            pictureOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            pictureOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2502,7 +2502,7 @@ playRoom (IconConfig iconConfig) =
             playRoomFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            playRoomOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            playRoomOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2517,7 +2517,7 @@ plussSeat (IconConfig iconConfig) =
             plussSeatFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            plussSeatOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            plussSeatOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2532,7 +2532,7 @@ podcast (IconConfig iconConfig) =
             podcastFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            podcastOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            podcastOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2547,7 +2547,7 @@ position (IconConfig iconConfig) =
             positionFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            positionOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            positionOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2562,7 +2562,7 @@ positionDot (IconConfig iconConfig) =
             positionDotFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            positionDotFill_ <| attribute "stroke" iconConfig.color :: attributes
+            positionDotFill_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2577,7 +2577,7 @@ positionOnMap (IconConfig iconConfig) =
             positionOnMapFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            positionOnMapOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            positionOnMapOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2592,7 +2592,7 @@ powerOutlet (IconConfig iconConfig) =
             powerOutletFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            powerOutletOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            powerOutletOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2607,7 +2607,7 @@ profile (IconConfig iconConfig) =
             profileFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            profileOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            profileOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2622,7 +2622,7 @@ qr (IconConfig iconConfig) =
             qrFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            qrOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            qrOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2637,7 +2637,7 @@ question (IconConfig iconConfig) =
             questionFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            questionOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            questionOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2652,7 +2652,7 @@ realtime (IconConfig iconConfig) =
             realtimeOutline_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            realtimeOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            realtimeOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2667,7 +2667,7 @@ refresh (IconConfig iconConfig) =
             refreshFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            refreshOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            refreshOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2682,7 +2682,7 @@ refundCard (IconConfig iconConfig) =
             refundCardFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            refundCardOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            refundCardOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2697,7 +2697,7 @@ refundKrone (IconConfig iconConfig) =
             refundKroneFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            refundKroneOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            refundKroneOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2712,7 +2712,7 @@ ruter (IconConfig iconConfig) =
             ruterFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            ruterOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            ruterOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2727,7 +2727,7 @@ satellite (IconConfig iconConfig) =
             satelliteFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            satelliteOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            satelliteOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2742,7 +2742,7 @@ school (IconConfig iconConfig) =
             schoolFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            schoolOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            schoolOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2757,7 +2757,7 @@ scooter (IconConfig iconConfig) =
             scooterFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            scooterOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            scooterOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2772,7 +2772,7 @@ search (IconConfig iconConfig) =
             searchFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            searchOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            searchOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2787,7 +2787,7 @@ seat (IconConfig iconConfig) =
             seatFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            seatOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            seatOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2802,7 +2802,7 @@ seatNotAvailable (IconConfig iconConfig) =
             seatNotAvailableFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            seatNotAvailableOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            seatNotAvailableOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2817,7 +2817,7 @@ settingsX1 (IconConfig iconConfig) =
             settingsX1Fill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            settingsX1Outline_ <| attribute "stroke" iconConfig.color :: attributes
+            settingsX1Outline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2832,7 +2832,7 @@ settingsX2 (IconConfig iconConfig) =
             settingsX2Fill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            settingsX2Outline_ <| attribute "stroke" iconConfig.color :: attributes
+            settingsX2Outline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2847,7 +2847,7 @@ share (IconConfig iconConfig) =
             shareFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            shareOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            shareOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2862,7 +2862,7 @@ skiStorage (IconConfig iconConfig) =
             skiStorageFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            skiStorageOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            skiStorageOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2877,7 +2877,7 @@ skicard (IconConfig iconConfig) =
             skicardFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            skicardOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            skicardOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2892,7 +2892,7 @@ sleep (IconConfig iconConfig) =
             sleepFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            sleepOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            sleepOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2907,7 +2907,7 @@ smallCar (IconConfig iconConfig) =
             smallCarFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            smallCarOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            smallCarOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2922,7 +2922,7 @@ smallDog (IconConfig iconConfig) =
             smallDogFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            smallDogOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            smallDogOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2937,7 +2937,7 @@ smartprice (IconConfig iconConfig) =
             smartpriceFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            smartpriceOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            smartpriceOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2952,7 +2952,7 @@ smile (IconConfig iconConfig) =
             smileFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            smileOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            smileOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2967,7 +2967,7 @@ sofa (IconConfig iconConfig) =
             sofaFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            sofaOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            sofaOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2982,7 +2982,7 @@ soundOff (IconConfig iconConfig) =
             soundOffFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            soundOffOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            soundOffOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -2997,7 +2997,7 @@ soundOn (IconConfig iconConfig) =
             soundOnFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            soundOnOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            soundOnOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3012,7 +3012,7 @@ speechBubble (IconConfig iconConfig) =
             speechBubbleFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            speechBubbleOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            speechBubbleOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3027,7 +3027,7 @@ spring (IconConfig iconConfig) =
             springFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            springOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            springOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3042,7 +3042,7 @@ stopwatch (IconConfig iconConfig) =
             stopwatchFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            stopwatchOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            stopwatchOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3057,7 +3057,7 @@ stroller (IconConfig iconConfig) =
             strollerFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            strollerOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            strollerOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3072,7 +3072,7 @@ subtract (IconConfig iconConfig) =
             subtractFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            subtractOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            subtractOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3087,7 +3087,7 @@ subway (IconConfig iconConfig) =
             subwayFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            subwayOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            subwayOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3102,7 +3102,7 @@ success (IconConfig iconConfig) =
             successFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            successOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            successOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3117,7 +3117,7 @@ summer (IconConfig iconConfig) =
             summerFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            summerOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            summerOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3132,7 +3132,7 @@ table (IconConfig iconConfig) =
             tableFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            tableOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            tableOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3147,7 +3147,7 @@ tablet (IconConfig iconConfig) =
             tabletFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            tabletOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            tabletOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3162,7 +3162,7 @@ taxi (IconConfig iconConfig) =
             taxiFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            taxiOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            taxiOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3177,7 +3177,7 @@ ticket (IconConfig iconConfig) =
             ticketFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            ticketOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            ticketOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3192,7 +3192,7 @@ ticketAdd (IconConfig iconConfig) =
             ticketAddFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            ticketAddOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            ticketAddOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3207,7 +3207,7 @@ ticketControl (IconConfig iconConfig) =
             ticketControlFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            ticketControlOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            ticketControlOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3222,7 +3222,7 @@ ticketLocation (IconConfig iconConfig) =
             ticketLocationFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            ticketLocationOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            ticketLocationOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3237,7 +3237,7 @@ ticketPdf (IconConfig iconConfig) =
             ticketPdfFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            ticketPdfOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            ticketPdfOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3252,7 +3252,7 @@ ticketPeriod (IconConfig iconConfig) =
             ticketPeriodFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            ticketPeriodOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            ticketPeriodOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3267,7 +3267,7 @@ ticketZone (IconConfig iconConfig) =
             ticketZoneFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            ticketZoneOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            ticketZoneOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3282,7 +3282,7 @@ time (IconConfig iconConfig) =
             timeFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            timeOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            timeOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3297,7 +3297,7 @@ toilet (IconConfig iconConfig) =
             toiletFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            toiletOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            toiletOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3312,7 +3312,7 @@ tokens (IconConfig iconConfig) =
             tokensFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            tokensOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            tokensOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3327,7 +3327,7 @@ town (IconConfig iconConfig) =
             townFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            townOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            townOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3342,7 +3342,7 @@ train (IconConfig iconConfig) =
             trainFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            trainOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            trainOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3357,7 +3357,7 @@ tram (IconConfig iconConfig) =
             tramFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            tramOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            tramOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3372,7 +3372,7 @@ twitter (IconConfig iconConfig) =
             twitterOutline_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            twitterOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            twitterOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3387,7 +3387,7 @@ update (IconConfig iconConfig) =
             updateFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            updateOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            updateOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3402,7 +3402,7 @@ vendingMachine (IconConfig iconConfig) =
             vendingMachineFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            vendingMachineOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            vendingMachineOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3417,7 +3417,7 @@ vy (IconConfig iconConfig) =
             vyOutline_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            vyOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            vyOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3432,7 +3432,7 @@ vyPluss (IconConfig iconConfig) =
             vyPlussOutline_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            vyPlussOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            vyPlussOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3447,7 +3447,7 @@ wagon (IconConfig iconConfig) =
             wagonFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            wagonOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            wagonOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3462,7 +3462,7 @@ wait (IconConfig iconConfig) =
             waitFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            waitOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            waitOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3477,7 +3477,7 @@ walk (IconConfig iconConfig) =
             walkFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            walkOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            walkOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3492,7 +3492,7 @@ wallet (IconConfig iconConfig) =
             walletFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            walletOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            walletOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3507,7 +3507,7 @@ warning (IconConfig iconConfig) =
             warningFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            warningOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            warningOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3522,7 +3522,7 @@ water (IconConfig iconConfig) =
             waterFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            waterOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            waterOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3537,7 +3537,7 @@ wheelchair (IconConfig iconConfig) =
             wheelchairFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            wheelchairOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            wheelchairOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3552,7 +3552,7 @@ wifi (IconConfig iconConfig) =
             wifiFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            wifiOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            wifiOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3567,7 +3567,7 @@ winter (IconConfig iconConfig) =
             winterFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            winterOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            winterOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3582,7 +3582,7 @@ work (IconConfig iconConfig) =
             workFill_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            workOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            workOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
@@ -3597,7 +3597,7 @@ youtube (IconConfig iconConfig) =
             youtubeOutline_ <| attribute "fill" iconConfig.color :: attributes
 
         Stroke ->
-            youtubeOutline_ <| attribute "stroke" iconConfig.color :: attributes
+            youtubeOutline_ <| attribute "fill" iconConfig.color :: attributes
 
 
 {-| -}
