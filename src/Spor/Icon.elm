@@ -82,6 +82,7 @@ type IconVariant
     | Ferry
     | Figma
     | Filter
+    | Forest
     | Frown
     | Github
     | GreenJourney
@@ -115,9 +116,11 @@ type IconVariant
     | Maxitaxi
     | Minibuss
     | Mobile
+    | Mountain
     | Neutral
     | Newspaper
     | Night
+    | NoWifi
     | Notification
     | NotificationMute
     | NotificationReceived
@@ -143,6 +146,7 @@ type IconVariant
     | Qr
     | Question
     | Realtime
+    | RecliningSeat
     | Refresh
     | RefundCard
     | RefundKrone
@@ -159,6 +163,7 @@ type IconVariant
     | SkiStorage
     | Skicard
     | Sleep
+    | Sleep6Beds
     | SmallCar
     | SmallDog
     | Smartprice
@@ -467,6 +472,9 @@ toHtml ((IconConfig iconOptions) as iconConfig) =
             Filter ->
                 filter iconConfig
 
+            Forest ->
+                forest iconConfig
+
             Frown ->
                 frown iconConfig
 
@@ -566,6 +574,9 @@ toHtml ((IconConfig iconOptions) as iconConfig) =
             Mobile ->
                 mobile iconConfig
 
+            Mountain ->
+                mountain iconConfig
+
             Neutral ->
                 neutral iconConfig
 
@@ -574,6 +585,9 @@ toHtml ((IconConfig iconOptions) as iconConfig) =
 
             Night ->
                 night iconConfig
+
+            NoWifi ->
+                noWifi iconConfig
 
             Notification ->
                 notification iconConfig
@@ -650,6 +664,9 @@ toHtml ((IconConfig iconOptions) as iconConfig) =
             Realtime ->
                 realtime iconConfig
 
+            RecliningSeat ->
+                recliningSeat iconConfig
+
             Refresh ->
                 refresh iconConfig
 
@@ -697,6 +714,9 @@ toHtml ((IconConfig iconOptions) as iconConfig) =
 
             Sleep ->
                 sleep iconConfig
+
+            Sleep6Beds ->
+                sleep6Beds iconConfig
 
             SmallCar ->
                 smallCar iconConfig
@@ -849,10 +869,10 @@ add (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            addFill_ <| attribute "fill" iconConfig.color :: attributes
+            addFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            addOutline_ <| attribute "fill" iconConfig.color :: attributes
+            addOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -864,10 +884,10 @@ aircondition (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            airconditionFill_ <| attribute "fill" iconConfig.color :: attributes
+            airconditionFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            airconditionOutline_ <| attribute "fill" iconConfig.color :: attributes
+            airconditionOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -879,10 +899,10 @@ airplane (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            airplaneFill_ <| attribute "fill" iconConfig.color :: attributes
+            airplaneFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            airplaneOutline_ <| attribute "fill" iconConfig.color :: attributes
+            airplaneOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -894,10 +914,10 @@ altTransport (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            altTransportFill_ <| attribute "fill" iconConfig.color :: attributes
+            altTransportFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            altTransportOutline_ <| attribute "fill" iconConfig.color :: attributes
+            altTransportOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -909,10 +929,10 @@ arrowDown (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            arrowDownFill_ <| attribute "fill" iconConfig.color :: attributes
+            arrowDownFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            arrowDownOutline_ <| attribute "fill" iconConfig.color :: attributes
+            arrowDownOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -924,10 +944,10 @@ arrowLeft (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            arrowLeftFill_ <| attribute "fill" iconConfig.color :: attributes
+            arrowLeftFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            arrowLeftOutline_ <| attribute "fill" iconConfig.color :: attributes
+            arrowLeftOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -939,10 +959,10 @@ arrowRight (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            arrowRightFill_ <| attribute "fill" iconConfig.color :: attributes
+            arrowRightFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            arrowRightOutline_ <| attribute "fill" iconConfig.color :: attributes
+            arrowRightOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -954,10 +974,10 @@ arrowUp (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            arrowUpFill_ <| attribute "fill" iconConfig.color :: attributes
+            arrowUpFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            arrowUpOutline_ <| attribute "fill" iconConfig.color :: attributes
+            arrowUpOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -969,10 +989,10 @@ autumn (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            autumnFill_ <| attribute "fill" iconConfig.color :: attributes
+            autumnFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            autumnOutline_ <| attribute "fill" iconConfig.color :: attributes
+            autumnOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -984,10 +1004,10 @@ babyChanging (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            babyChangingFill_ <| attribute "fill" iconConfig.color :: attributes
+            babyChangingFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            babyChangingOutline_ <| attribute "fill" iconConfig.color :: attributes
+            babyChangingOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -999,10 +1019,10 @@ battery (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            batteryFill_ <| attribute "fill" iconConfig.color :: attributes
+            batteryFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            batteryOutline_ <| attribute "fill" iconConfig.color :: attributes
+            batteryOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1014,10 +1034,10 @@ bicycle (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            bicycleFill_ <| attribute "fill" iconConfig.color :: attributes
+            bicycleFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            bicycleOutline_ <| attribute "fill" iconConfig.color :: attributes
+            bicycleOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1029,10 +1049,10 @@ bookmark (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            bookmarkFill_ <| attribute "fill" iconConfig.color :: attributes
+            bookmarkFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            bookmarkOutline_ <| attribute "fill" iconConfig.color :: attributes
+            bookmarkOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1044,10 +1064,10 @@ bus (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            busFill_ <| attribute "fill" iconConfig.color :: attributes
+            busFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            busOutline_ <| attribute "fill" iconConfig.color :: attributes
+            busOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1059,10 +1079,10 @@ cafe (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            cafeFill_ <| attribute "fill" iconConfig.color :: attributes
+            cafeFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            cafeOutline_ <| attribute "fill" iconConfig.color :: attributes
+            cafeOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1074,10 +1094,10 @@ calendar (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            calendarFill_ <| attribute "fill" iconConfig.color :: attributes
+            calendarFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            calendarOutline_ <| attribute "fill" iconConfig.color :: attributes
+            calendarOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1089,10 +1109,10 @@ campaign (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            campaignFill_ <| attribute "fill" iconConfig.color :: attributes
+            campaignFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            campaignOutline_ <| attribute "fill" iconConfig.color :: attributes
+            campaignOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1104,10 +1124,10 @@ capacityCarriage (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            capacityCarriageFill_ <| attribute "fill" iconConfig.color :: attributes
+            capacityCarriageFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            capacityCarriageOutline_ <| attribute "fill" iconConfig.color :: attributes
+            capacityCarriageOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1119,10 +1139,10 @@ capacitySeat (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            capacitySeatFill_ <| attribute "fill" iconConfig.color :: attributes
+            capacitySeatFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            capacitySeatOutline_ <| attribute "fill" iconConfig.color :: attributes
+            capacitySeatOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1134,10 +1154,10 @@ car (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            carFill_ <| attribute "fill" iconConfig.color :: attributes
+            carFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            carOutline_ <| attribute "fill" iconConfig.color :: attributes
+            carOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1149,10 +1169,10 @@ card (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            cardFill_ <| attribute "fill" iconConfig.color :: attributes
+            cardFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            cardOutline_ <| attribute "fill" iconConfig.color :: attributes
+            cardOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1164,10 +1184,10 @@ changeDirection (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            changeDirectionFill_ <| attribute "fill" iconConfig.color :: attributes
+            changeDirectionFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            changeDirectionOutline_ <| attribute "fill" iconConfig.color :: attributes
+            changeDirectionOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1179,10 +1199,10 @@ chapter (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            chapterFill_ <| attribute "fill" iconConfig.color :: attributes
+            chapterFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            chapterOutline_ <| attribute "fill" iconConfig.color :: attributes
+            chapterOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1194,10 +1214,10 @@ checkmark (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            checkmarkFill_ <| attribute "fill" iconConfig.color :: attributes
+            checkmarkFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            checkmarkOutline_ <| attribute "fill" iconConfig.color :: attributes
+            checkmarkOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1209,10 +1229,10 @@ childSeat (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            childSeatFill_ <| attribute "fill" iconConfig.color :: attributes
+            childSeatFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            childSeatOutline_ <| attribute "fill" iconConfig.color :: attributes
+            childSeatOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1224,10 +1244,10 @@ city (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            cityFill_ <| attribute "fill" iconConfig.color :: attributes
+            cityFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            cityOutline_ <| attribute "fill" iconConfig.color :: attributes
+            cityOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1239,10 +1259,10 @@ close (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            closeFill_ <| attribute "fill" iconConfig.color :: attributes
+            closeFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            closeOutline_ <| attribute "fill" iconConfig.color :: attributes
+            closeOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1254,10 +1274,10 @@ code (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            codeFill_ <| attribute "fill" iconConfig.color :: attributes
+            codeFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            codeOutline_ <| attribute "fill" iconConfig.color :: attributes
+            codeOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1269,10 +1289,10 @@ coffee (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            coffeeFill_ <| attribute "fill" iconConfig.color :: attributes
+            coffeeFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            coffeeOutline_ <| attribute "fill" iconConfig.color :: attributes
+            coffeeOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1284,10 +1304,10 @@ coffeeCart (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            coffeeCartFill_ <| attribute "fill" iconConfig.color :: attributes
+            coffeeCartFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            coffeeCartOutline_ <| attribute "fill" iconConfig.color :: attributes
+            coffeeCartOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1299,10 +1319,10 @@ coffeeMachine (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            coffeeMachineFill_ <| attribute "fill" iconConfig.color :: attributes
+            coffeeMachineFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            coffeeMachineOutline_ <| attribute "fill" iconConfig.color :: attributes
+            coffeeMachineOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1314,10 +1334,10 @@ comfort (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            comfortFill_ <| attribute "fill" iconConfig.color :: attributes
+            comfortFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            comfortOutline_ <| attribute "fill" iconConfig.color :: attributes
+            comfortOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1329,10 +1349,10 @@ compass (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            compassFill_ <| attribute "fill" iconConfig.color :: attributes
+            compassFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            compassOutline_ <| attribute "fill" iconConfig.color :: attributes
+            compassOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1344,10 +1364,10 @@ components (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            componentsFill_ <| attribute "fill" iconConfig.color :: attributes
+            componentsFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            componentsOutline_ <| attribute "fill" iconConfig.color :: attributes
+            componentsOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1359,10 +1379,10 @@ cookies (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            cookiesFill_ <| attribute "fill" iconConfig.color :: attributes
+            cookiesFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            cookiesOutline_ <| attribute "fill" iconConfig.color :: attributes
+            cookiesOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1374,10 +1394,10 @@ copy (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            copyFill_ <| attribute "fill" iconConfig.color :: attributes
+            copyFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            copyOutline_ <| attribute "fill" iconConfig.color :: attributes
+            copyOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1389,10 +1409,10 @@ cottage (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            cottageFill_ <| attribute "fill" iconConfig.color :: attributes
+            cottageFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            cottageOutline_ <| attribute "fill" iconConfig.color :: attributes
+            cottageOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1404,10 +1424,10 @@ coupon (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            couponFill_ <| attribute "fill" iconConfig.color :: attributes
+            couponFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            couponOutline_ <| attribute "fill" iconConfig.color :: attributes
+            couponOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1419,10 +1439,10 @@ customerService (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            customerServiceFill_ <| attribute "fill" iconConfig.color :: attributes
+            customerServiceFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            customerServiceOutline_ <| attribute "fill" iconConfig.color :: attributes
+            customerServiceOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1434,10 +1454,10 @@ delete (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            deleteFill_ <| attribute "fill" iconConfig.color :: attributes
+            deleteFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            deleteOutline_ <| attribute "fill" iconConfig.color :: attributes
+            deleteOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1449,10 +1469,10 @@ deleteCircle (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            deleteCircleFill_ <| attribute "fill" iconConfig.color :: attributes
+            deleteCircleFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            deleteCircleOutline_ <| attribute "fill" iconConfig.color :: attributes
+            deleteCircleOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1464,10 +1484,10 @@ departure (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            departureFill_ <| attribute "fill" iconConfig.color :: attributes
+            departureFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            departureOutline_ <| attribute "fill" iconConfig.color :: attributes
+            departureOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1479,10 +1499,10 @@ destination (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            destinationFill_ <| attribute "fill" iconConfig.color :: attributes
+            destinationFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            destinationOutline_ <| attribute "fill" iconConfig.color :: attributes
+            destinationOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1494,10 +1514,10 @@ discount (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            discountFill_ <| attribute "fill" iconConfig.color :: attributes
+            discountFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            discountOutline_ <| attribute "fill" iconConfig.color :: attributes
+            discountOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1509,10 +1529,10 @@ download (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            downloadFill_ <| attribute "fill" iconConfig.color :: attributes
+            downloadFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            downloadOutline_ <| attribute "fill" iconConfig.color :: attributes
+            downloadOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1524,10 +1544,10 @@ dropdownDown (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            dropdownDownFill_ <| attribute "fill" iconConfig.color :: attributes
+            dropdownDownFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            dropdownDownFill_ <| attribute "fill" iconConfig.color :: attributes
+            dropdownDownFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1539,10 +1559,10 @@ dropdownLeft (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            dropdownLeftFill_ <| attribute "fill" iconConfig.color :: attributes
+            dropdownLeftFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            dropdownLeftFill_ <| attribute "fill" iconConfig.color :: attributes
+            dropdownLeftFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1554,10 +1574,10 @@ dropdownRight (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            dropdownRightFill_ <| attribute "fill" iconConfig.color :: attributes
+            dropdownRightFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            dropdownRightFill_ <| attribute "fill" iconConfig.color :: attributes
+            dropdownRightFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1569,10 +1589,10 @@ dropdownUp (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            dropdownUpFill_ <| attribute "fill" iconConfig.color :: attributes
+            dropdownUpFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            dropdownUpFill_ <| attribute "fill" iconConfig.color :: attributes
+            dropdownUpFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1584,10 +1604,10 @@ edit (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            editFill_ <| attribute "fill" iconConfig.color :: attributes
+            editFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            editOutline_ <| attribute "fill" iconConfig.color :: attributes
+            editOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1599,10 +1619,10 @@ email (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            emailFill_ <| attribute "fill" iconConfig.color :: attributes
+            emailFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            emailOutline_ <| attribute "fill" iconConfig.color :: attributes
+            emailOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1614,10 +1634,10 @@ error (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            errorFill_ <| attribute "fill" iconConfig.color :: attributes
+            errorFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            errorOutline_ <| attribute "fill" iconConfig.color :: attributes
+            errorOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1629,10 +1649,10 @@ expand (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            expandFill_ <| attribute "fill" iconConfig.color :: attributes
+            expandFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            expandOutline_ <| attribute "fill" iconConfig.color :: attributes
+            expandOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1644,10 +1664,10 @@ expressBus (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            expressBusFill_ <| attribute "fill" iconConfig.color :: attributes
+            expressBusFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            expressBusOutline_ <| attribute "fill" iconConfig.color :: attributes
+            expressBusOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1659,10 +1679,10 @@ facebook (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            facebookOutline_ <| attribute "fill" iconConfig.color :: attributes
+            facebookOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            facebookOutline_ <| attribute "fill" iconConfig.color :: attributes
+            facebookOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1674,10 +1694,10 @@ family (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            familyFill_ <| attribute "fill" iconConfig.color :: attributes
+            familyFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            familyOutline_ <| attribute "fill" iconConfig.color :: attributes
+            familyOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1689,10 +1709,10 @@ favourite (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            favouriteFill_ <| attribute "fill" iconConfig.color :: attributes
+            favouriteFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            favouriteOutline_ <| attribute "fill" iconConfig.color :: attributes
+            favouriteOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1704,10 +1724,10 @@ ferry (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            ferryFill_ <| attribute "fill" iconConfig.color :: attributes
+            ferryFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            ferryOutline_ <| attribute "fill" iconConfig.color :: attributes
+            ferryOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1719,10 +1739,10 @@ figma (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            figmaFill_ <| attribute "fill" iconConfig.color :: attributes
+            figmaFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            figmaOutline_ <| attribute "fill" iconConfig.color :: attributes
+            figmaOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1734,10 +1754,25 @@ filter (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            filterFill_ <| attribute "fill" iconConfig.color :: attributes
+            filterFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            filterOutline_ <| attribute "fill" iconConfig.color :: attributes
+            filterOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
+
+
+{-| -}
+forest : IconConfig msg -> Svg.Svg msg
+forest (IconConfig iconConfig) =
+    let
+        attributes =
+            [ attribute "width" (sizeToEm iconConfig.size), attribute "height" (sizeToEm iconConfig.size), attribute "viewBox" "0 0 30 30" ]
+    in
+    case iconConfig.variant of
+        Fill ->
+            forestFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
+
+        Stroke ->
+            forestOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1749,10 +1784,10 @@ frown (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            frownFill_ <| attribute "fill" iconConfig.color :: attributes
+            frownFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            frownOutline_ <| attribute "fill" iconConfig.color :: attributes
+            frownOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1764,10 +1799,10 @@ github (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            githubFill_ <| attribute "fill" iconConfig.color :: attributes
+            githubFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            githubOutline_ <| attribute "fill" iconConfig.color :: attributes
+            githubOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1779,10 +1814,10 @@ greenJourney (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            greenJourneyOutline_ <| attribute "fill" iconConfig.color :: attributes
+            greenJourneyOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            greenJourneyOutline_ <| attribute "fill" iconConfig.color :: attributes
+            greenJourneyOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1794,10 +1829,10 @@ grid (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            gridFill_ <| attribute "fill" iconConfig.color :: attributes
+            gridFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            gridOutline_ <| attribute "fill" iconConfig.color :: attributes
+            gridOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1809,10 +1844,10 @@ guideDog (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            guideDogFill_ <| attribute "fill" iconConfig.color :: attributes
+            guideDogFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            guideDogOutline_ <| attribute "fill" iconConfig.color :: attributes
+            guideDogOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1824,10 +1859,10 @@ guidelines (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            guidelinesFill_ <| attribute "fill" iconConfig.color :: attributes
+            guidelinesFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            guidelinesOutline_ <| attribute "fill" iconConfig.color :: attributes
+            guidelinesOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1839,10 +1874,10 @@ gym (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            gymFill_ <| attribute "fill" iconConfig.color :: attributes
+            gymFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            gymOutline_ <| attribute "fill" iconConfig.color :: attributes
+            gymOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1854,10 +1889,10 @@ hamburger (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            hamburgerFill_ <| attribute "fill" iconConfig.color :: attributes
+            hamburgerFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            hamburgerOutline_ <| attribute "fill" iconConfig.color :: attributes
+            hamburgerOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1869,10 +1904,10 @@ headphones (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            headphonesFill_ <| attribute "fill" iconConfig.color :: attributes
+            headphonesFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            headphonesOutline_ <| attribute "fill" iconConfig.color :: attributes
+            headphonesOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1884,10 +1919,10 @@ history (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            historyFill_ <| attribute "fill" iconConfig.color :: attributes
+            historyFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            historyOutline_ <| attribute "fill" iconConfig.color :: attributes
+            historyOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1899,10 +1934,10 @@ home (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            homeFill_ <| attribute "fill" iconConfig.color :: attributes
+            homeFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            homeOutline_ <| attribute "fill" iconConfig.color :: attributes
+            homeOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1914,10 +1949,10 @@ icons (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            iconsFill_ <| attribute "fill" iconConfig.color :: attributes
+            iconsFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            iconsOutline_ <| attribute "fill" iconConfig.color :: attributes
+            iconsOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1929,10 +1964,10 @@ information (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            informationFill_ <| attribute "fill" iconConfig.color :: attributes
+            informationFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            informationOutline_ <| attribute "fill" iconConfig.color :: attributes
+            informationOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1944,10 +1979,10 @@ instagram (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            instagramOutline_ <| attribute "fill" iconConfig.color :: attributes
+            instagramOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            instagramOutline_ <| attribute "fill" iconConfig.color :: attributes
+            instagramOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1959,10 +1994,10 @@ insurance (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            insuranceFill_ <| attribute "fill" iconConfig.color :: attributes
+            insuranceFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            insuranceOutline_ <| attribute "fill" iconConfig.color :: attributes
+            insuranceOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1974,10 +2009,10 @@ keyboard (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            keyboardFill_ <| attribute "fill" iconConfig.color :: attributes
+            keyboardFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            keyboardOutline_ <| attribute "fill" iconConfig.color :: attributes
+            keyboardOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -1989,10 +2024,10 @@ klippekort (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            klippekortFill_ <| attribute "fill" iconConfig.color :: attributes
+            klippekortFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            klippekortOutline_ <| attribute "fill" iconConfig.color :: attributes
+            klippekortOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2004,10 +2039,10 @@ kroner (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            kronerFill_ <| attribute "fill" iconConfig.color :: attributes
+            kronerFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            kronerOutline_ <| attribute "fill" iconConfig.color :: attributes
+            kronerOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2019,10 +2054,10 @@ language (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            languageFill_ <| attribute "fill" iconConfig.color :: attributes
+            languageFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            languageOutline_ <| attribute "fill" iconConfig.color :: attributes
+            languageOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2034,10 +2069,10 @@ largeCar (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            largeCarFill_ <| attribute "fill" iconConfig.color :: attributes
+            largeCarFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            largeCarOutline_ <| attribute "fill" iconConfig.color :: attributes
+            largeCarOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2049,10 +2084,10 @@ largeDog (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            largeDogFill_ <| attribute "fill" iconConfig.color :: attributes
+            largeDogFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            largeDogOutline_ <| attribute "fill" iconConfig.color :: attributes
+            largeDogOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2064,10 +2099,10 @@ like (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            likeFill_ <| attribute "fill" iconConfig.color :: attributes
+            likeFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            likeOutline_ <| attribute "fill" iconConfig.color :: attributes
+            likeOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2079,10 +2114,10 @@ linkOut (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            linkOutFill_ <| attribute "fill" iconConfig.color :: attributes
+            linkOutFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            linkOutOutline_ <| attribute "fill" iconConfig.color :: attributes
+            linkOutOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2094,10 +2129,10 @@ linkedin (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            linkedinOutline_ <| attribute "fill" iconConfig.color :: attributes
+            linkedinOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            linkedinOutline_ <| attribute "fill" iconConfig.color :: attributes
+            linkedinOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2109,10 +2144,10 @@ list (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            listFill_ <| attribute "fill" iconConfig.color :: attributes
+            listFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            listOutline_ <| attribute "fill" iconConfig.color :: attributes
+            listOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2124,10 +2159,10 @@ luggage (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            luggageFill_ <| attribute "fill" iconConfig.color :: attributes
+            luggageFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            luggageOutline_ <| attribute "fill" iconConfig.color :: attributes
+            luggageOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2139,10 +2174,10 @@ luggagePlus (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            luggagePlusFill_ <| attribute "fill" iconConfig.color :: attributes
+            luggagePlusFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            luggagePlusOutline_ <| attribute "fill" iconConfig.color :: attributes
+            luggagePlusOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2154,10 +2189,10 @@ luggageSpecial1 (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            luggageSpecial1Fill_ <| attribute "fill" iconConfig.color :: attributes
+            luggageSpecial1Fill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            luggageSpecial1Outline_ <| attribute "fill" iconConfig.color :: attributes
+            luggageSpecial1Outline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2169,10 +2204,10 @@ luggageSpecial2 (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            luggageSpecial2Fill_ <| attribute "fill" iconConfig.color :: attributes
+            luggageSpecial2Fill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            luggageSpecial2Outline_ <| attribute "fill" iconConfig.color :: attributes
+            luggageSpecial2Outline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2184,10 +2219,10 @@ map (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            mapFill_ <| attribute "fill" iconConfig.color :: attributes
+            mapFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            mapOutline_ <| attribute "fill" iconConfig.color :: attributes
+            mapOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2199,10 +2234,10 @@ maxitaxi (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            maxitaxiFill_ <| attribute "fill" iconConfig.color :: attributes
+            maxitaxiFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            maxitaxiOutline_ <| attribute "fill" iconConfig.color :: attributes
+            maxitaxiOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2214,10 +2249,10 @@ minibuss (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            minibussFill_ <| attribute "fill" iconConfig.color :: attributes
+            minibussFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            minibussOutline_ <| attribute "fill" iconConfig.color :: attributes
+            minibussOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2229,10 +2264,25 @@ mobile (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            mobileFill_ <| attribute "fill" iconConfig.color :: attributes
+            mobileFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            mobileOutline_ <| attribute "fill" iconConfig.color :: attributes
+            mobileOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
+
+
+{-| -}
+mountain : IconConfig msg -> Svg.Svg msg
+mountain (IconConfig iconConfig) =
+    let
+        attributes =
+            [ attribute "width" (sizeToEm iconConfig.size), attribute "height" (sizeToEm iconConfig.size), attribute "viewBox" "0 0 30 30" ]
+    in
+    case iconConfig.variant of
+        Fill ->
+            mountainFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
+
+        Stroke ->
+            mountainOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2244,10 +2294,10 @@ neutral (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            neutralFill_ <| attribute "fill" iconConfig.color :: attributes
+            neutralFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            neutralOutline_ <| attribute "fill" iconConfig.color :: attributes
+            neutralOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2259,10 +2309,10 @@ newspaper (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            newspaperFill_ <| attribute "fill" iconConfig.color :: attributes
+            newspaperFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            newspaperOutline_ <| attribute "fill" iconConfig.color :: attributes
+            newspaperOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2274,10 +2324,25 @@ night (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            nightFill_ <| attribute "fill" iconConfig.color :: attributes
+            nightFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            nightOutline_ <| attribute "fill" iconConfig.color :: attributes
+            nightOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
+
+
+{-| -}
+noWifi : IconConfig msg -> Svg.Svg msg
+noWifi (IconConfig iconConfig) =
+    let
+        attributes =
+            [ attribute "width" (sizeToEm iconConfig.size), attribute "height" (sizeToEm iconConfig.size), attribute "viewBox" "0 0 30 30" ]
+    in
+    case iconConfig.variant of
+        Fill ->
+            noWifiFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
+
+        Stroke ->
+            noWifiOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2289,10 +2354,10 @@ notification (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            notificationFill_ <| attribute "fill" iconConfig.color :: attributes
+            notificationFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            notificationOutline_ <| attribute "fill" iconConfig.color :: attributes
+            notificationOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2304,10 +2369,10 @@ notificationMute (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            notificationMuteFill_ <| attribute "fill" iconConfig.color :: attributes
+            notificationMuteFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            notificationMuteOutline_ <| attribute "fill" iconConfig.color :: attributes
+            notificationMuteOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2319,10 +2384,10 @@ notificationReceived (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            notificationReceivedFill_ <| attribute "fill" iconConfig.color :: attributes
+            notificationReceivedFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            notificationReceivedOutline_ <| attribute "fill" iconConfig.color :: attributes
+            notificationReceivedOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2334,10 +2399,10 @@ options (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            optionsFill_ <| attribute "fill" iconConfig.color :: attributes
+            optionsFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            optionsOutline_ <| attribute "fill" iconConfig.color :: attributes
+            optionsOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2349,10 +2414,10 @@ parking (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            parkingFill_ <| attribute "fill" iconConfig.color :: attributes
+            parkingFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            parkingOutline_ <| attribute "fill" iconConfig.color :: attributes
+            parkingOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2364,10 +2429,10 @@ password (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            passwordFill_ <| attribute "fill" iconConfig.color :: attributes
+            passwordFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            passwordOutline_ <| attribute "fill" iconConfig.color :: attributes
+            passwordOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2379,10 +2444,10 @@ pc (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            pcFill_ <| attribute "fill" iconConfig.color :: attributes
+            pcFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            pcOutline_ <| attribute "fill" iconConfig.color :: attributes
+            pcOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2394,10 +2459,10 @@ pdf (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            pdfFill_ <| attribute "fill" iconConfig.color :: attributes
+            pdfFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            pdfOutline_ <| attribute "fill" iconConfig.color :: attributes
+            pdfOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2409,10 +2474,10 @@ person (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            personFill_ <| attribute "fill" iconConfig.color :: attributes
+            personFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            personOutline_ <| attribute "fill" iconConfig.color :: attributes
+            personOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2424,10 +2489,10 @@ petAllowed (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            petAllowedFill_ <| attribute "fill" iconConfig.color :: attributes
+            petAllowedFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            petAllowedOutline_ <| attribute "fill" iconConfig.color :: attributes
+            petAllowedOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2439,10 +2504,10 @@ petNotAllowed (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            petNotAllowedFill_ <| attribute "fill" iconConfig.color :: attributes
+            petNotAllowedFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            petNotAllowedOutline_ <| attribute "fill" iconConfig.color :: attributes
+            petNotAllowedOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2454,10 +2519,10 @@ phone (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            phoneFill_ <| attribute "fill" iconConfig.color :: attributes
+            phoneFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            phoneOutline_ <| attribute "fill" iconConfig.color :: attributes
+            phoneOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2469,10 +2534,10 @@ phoneSignal (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            phoneSignalFill_ <| attribute "fill" iconConfig.color :: attributes
+            phoneSignalFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            phoneSignalOutline_ <| attribute "fill" iconConfig.color :: attributes
+            phoneSignalOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2484,10 +2549,10 @@ picture (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            pictureFill_ <| attribute "fill" iconConfig.color :: attributes
+            pictureFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            pictureOutline_ <| attribute "fill" iconConfig.color :: attributes
+            pictureOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2499,10 +2564,10 @@ playRoom (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            playRoomFill_ <| attribute "fill" iconConfig.color :: attributes
+            playRoomFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            playRoomOutline_ <| attribute "fill" iconConfig.color :: attributes
+            playRoomOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2514,10 +2579,10 @@ plussSeat (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            plussSeatFill_ <| attribute "fill" iconConfig.color :: attributes
+            plussSeatFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            plussSeatOutline_ <| attribute "fill" iconConfig.color :: attributes
+            plussSeatOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2529,10 +2594,10 @@ podcast (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            podcastFill_ <| attribute "fill" iconConfig.color :: attributes
+            podcastFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            podcastOutline_ <| attribute "fill" iconConfig.color :: attributes
+            podcastOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2544,10 +2609,10 @@ position (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            positionFill_ <| attribute "fill" iconConfig.color :: attributes
+            positionFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            positionOutline_ <| attribute "fill" iconConfig.color :: attributes
+            positionOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2559,10 +2624,10 @@ positionDot (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            positionDotFill_ <| attribute "fill" iconConfig.color :: attributes
+            positionDotFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            positionDotFill_ <| attribute "fill" iconConfig.color :: attributes
+            positionDotFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2574,10 +2639,10 @@ positionOnMap (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            positionOnMapFill_ <| attribute "fill" iconConfig.color :: attributes
+            positionOnMapFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            positionOnMapOutline_ <| attribute "fill" iconConfig.color :: attributes
+            positionOnMapOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2589,10 +2654,10 @@ powerOutlet (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            powerOutletFill_ <| attribute "fill" iconConfig.color :: attributes
+            powerOutletFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            powerOutletOutline_ <| attribute "fill" iconConfig.color :: attributes
+            powerOutletOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2604,10 +2669,10 @@ profile (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            profileFill_ <| attribute "fill" iconConfig.color :: attributes
+            profileFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            profileOutline_ <| attribute "fill" iconConfig.color :: attributes
+            profileOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2619,10 +2684,10 @@ qr (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            qrFill_ <| attribute "fill" iconConfig.color :: attributes
+            qrFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            qrOutline_ <| attribute "fill" iconConfig.color :: attributes
+            qrOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2634,10 +2699,10 @@ question (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            questionFill_ <| attribute "fill" iconConfig.color :: attributes
+            questionFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            questionOutline_ <| attribute "fill" iconConfig.color :: attributes
+            questionOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2649,10 +2714,25 @@ realtime (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            realtimeOutline_ <| attribute "fill" iconConfig.color :: attributes
+            realtimeOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            realtimeOutline_ <| attribute "fill" iconConfig.color :: attributes
+            realtimeOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
+
+
+{-| -}
+recliningSeat : IconConfig msg -> Svg.Svg msg
+recliningSeat (IconConfig iconConfig) =
+    let
+        attributes =
+            [ attribute "width" (sizeToEm iconConfig.size), attribute "height" (sizeToEm iconConfig.size), attribute "viewBox" "0 0 30 30" ]
+    in
+    case iconConfig.variant of
+        Fill ->
+            recliningSeatFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
+
+        Stroke ->
+            recliningSeatOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2664,10 +2744,10 @@ refresh (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            refreshFill_ <| attribute "fill" iconConfig.color :: attributes
+            refreshFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            refreshOutline_ <| attribute "fill" iconConfig.color :: attributes
+            refreshOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2679,10 +2759,10 @@ refundCard (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            refundCardFill_ <| attribute "fill" iconConfig.color :: attributes
+            refundCardFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            refundCardOutline_ <| attribute "fill" iconConfig.color :: attributes
+            refundCardOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2694,10 +2774,10 @@ refundKrone (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            refundKroneFill_ <| attribute "fill" iconConfig.color :: attributes
+            refundKroneFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            refundKroneOutline_ <| attribute "fill" iconConfig.color :: attributes
+            refundKroneOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2709,10 +2789,10 @@ ruter (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            ruterFill_ <| attribute "fill" iconConfig.color :: attributes
+            ruterFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            ruterOutline_ <| attribute "fill" iconConfig.color :: attributes
+            ruterOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2724,10 +2804,10 @@ satellite (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            satelliteFill_ <| attribute "fill" iconConfig.color :: attributes
+            satelliteFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            satelliteOutline_ <| attribute "fill" iconConfig.color :: attributes
+            satelliteOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2739,10 +2819,10 @@ school (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            schoolFill_ <| attribute "fill" iconConfig.color :: attributes
+            schoolFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            schoolOutline_ <| attribute "fill" iconConfig.color :: attributes
+            schoolOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2754,10 +2834,10 @@ scooter (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            scooterFill_ <| attribute "fill" iconConfig.color :: attributes
+            scooterFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            scooterOutline_ <| attribute "fill" iconConfig.color :: attributes
+            scooterOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2769,10 +2849,10 @@ search (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            searchFill_ <| attribute "fill" iconConfig.color :: attributes
+            searchFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            searchOutline_ <| attribute "fill" iconConfig.color :: attributes
+            searchOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2784,10 +2864,10 @@ seat (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            seatFill_ <| attribute "fill" iconConfig.color :: attributes
+            seatFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            seatOutline_ <| attribute "fill" iconConfig.color :: attributes
+            seatOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2799,10 +2879,10 @@ seatNotAvailable (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            seatNotAvailableFill_ <| attribute "fill" iconConfig.color :: attributes
+            seatNotAvailableFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            seatNotAvailableOutline_ <| attribute "fill" iconConfig.color :: attributes
+            seatNotAvailableOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2814,10 +2894,10 @@ settingsX1 (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            settingsX1Fill_ <| attribute "fill" iconConfig.color :: attributes
+            settingsX1Fill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            settingsX1Outline_ <| attribute "fill" iconConfig.color :: attributes
+            settingsX1Outline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2829,10 +2909,10 @@ settingsX2 (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            settingsX2Fill_ <| attribute "fill" iconConfig.color :: attributes
+            settingsX2Fill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            settingsX2Outline_ <| attribute "fill" iconConfig.color :: attributes
+            settingsX2Outline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2844,10 +2924,10 @@ share (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            shareFill_ <| attribute "fill" iconConfig.color :: attributes
+            shareFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            shareOutline_ <| attribute "fill" iconConfig.color :: attributes
+            shareOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2859,10 +2939,10 @@ skiStorage (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            skiStorageFill_ <| attribute "fill" iconConfig.color :: attributes
+            skiStorageFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            skiStorageOutline_ <| attribute "fill" iconConfig.color :: attributes
+            skiStorageOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2874,10 +2954,10 @@ skicard (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            skicardFill_ <| attribute "fill" iconConfig.color :: attributes
+            skicardFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            skicardOutline_ <| attribute "fill" iconConfig.color :: attributes
+            skicardOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2889,10 +2969,25 @@ sleep (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            sleepFill_ <| attribute "fill" iconConfig.color :: attributes
+            sleepFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            sleepOutline_ <| attribute "fill" iconConfig.color :: attributes
+            sleepOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
+
+
+{-| -}
+sleep6Beds : IconConfig msg -> Svg.Svg msg
+sleep6Beds (IconConfig iconConfig) =
+    let
+        attributes =
+            [ attribute "width" (sizeToEm iconConfig.size), attribute "height" (sizeToEm iconConfig.size), attribute "viewBox" "0 0 30 30" ]
+    in
+    case iconConfig.variant of
+        Fill ->
+            sleep6BedsFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
+
+        Stroke ->
+            sleep6BedsOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2904,10 +2999,10 @@ smallCar (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            smallCarFill_ <| attribute "fill" iconConfig.color :: attributes
+            smallCarFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            smallCarOutline_ <| attribute "fill" iconConfig.color :: attributes
+            smallCarOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2919,10 +3014,10 @@ smallDog (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            smallDogFill_ <| attribute "fill" iconConfig.color :: attributes
+            smallDogFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            smallDogOutline_ <| attribute "fill" iconConfig.color :: attributes
+            smallDogOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2934,10 +3029,10 @@ smartprice (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            smartpriceFill_ <| attribute "fill" iconConfig.color :: attributes
+            smartpriceFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            smartpriceOutline_ <| attribute "fill" iconConfig.color :: attributes
+            smartpriceOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2949,10 +3044,10 @@ smile (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            smileFill_ <| attribute "fill" iconConfig.color :: attributes
+            smileFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            smileOutline_ <| attribute "fill" iconConfig.color :: attributes
+            smileOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2964,10 +3059,10 @@ sofa (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            sofaFill_ <| attribute "fill" iconConfig.color :: attributes
+            sofaFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            sofaOutline_ <| attribute "fill" iconConfig.color :: attributes
+            sofaOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2979,10 +3074,10 @@ soundOff (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            soundOffFill_ <| attribute "fill" iconConfig.color :: attributes
+            soundOffFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            soundOffOutline_ <| attribute "fill" iconConfig.color :: attributes
+            soundOffOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -2994,10 +3089,10 @@ soundOn (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            soundOnFill_ <| attribute "fill" iconConfig.color :: attributes
+            soundOnFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            soundOnOutline_ <| attribute "fill" iconConfig.color :: attributes
+            soundOnOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3009,10 +3104,10 @@ speechBubble (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            speechBubbleFill_ <| attribute "fill" iconConfig.color :: attributes
+            speechBubbleFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            speechBubbleOutline_ <| attribute "fill" iconConfig.color :: attributes
+            speechBubbleOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3024,10 +3119,10 @@ spring (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            springFill_ <| attribute "fill" iconConfig.color :: attributes
+            springFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            springOutline_ <| attribute "fill" iconConfig.color :: attributes
+            springOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3039,10 +3134,10 @@ stopwatch (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            stopwatchFill_ <| attribute "fill" iconConfig.color :: attributes
+            stopwatchFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            stopwatchOutline_ <| attribute "fill" iconConfig.color :: attributes
+            stopwatchOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3054,10 +3149,10 @@ stroller (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            strollerFill_ <| attribute "fill" iconConfig.color :: attributes
+            strollerFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            strollerOutline_ <| attribute "fill" iconConfig.color :: attributes
+            strollerOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3069,10 +3164,10 @@ subtract (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            subtractFill_ <| attribute "fill" iconConfig.color :: attributes
+            subtractFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            subtractOutline_ <| attribute "fill" iconConfig.color :: attributes
+            subtractOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3084,10 +3179,10 @@ subway (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            subwayFill_ <| attribute "fill" iconConfig.color :: attributes
+            subwayFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            subwayOutline_ <| attribute "fill" iconConfig.color :: attributes
+            subwayOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3099,10 +3194,10 @@ success (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            successFill_ <| attribute "fill" iconConfig.color :: attributes
+            successFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            successOutline_ <| attribute "fill" iconConfig.color :: attributes
+            successOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3114,10 +3209,10 @@ summer (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            summerFill_ <| attribute "fill" iconConfig.color :: attributes
+            summerFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            summerOutline_ <| attribute "fill" iconConfig.color :: attributes
+            summerOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3129,10 +3224,10 @@ table (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            tableFill_ <| attribute "fill" iconConfig.color :: attributes
+            tableFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            tableOutline_ <| attribute "fill" iconConfig.color :: attributes
+            tableOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3144,10 +3239,10 @@ tablet (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            tabletFill_ <| attribute "fill" iconConfig.color :: attributes
+            tabletFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            tabletOutline_ <| attribute "fill" iconConfig.color :: attributes
+            tabletOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3159,10 +3254,10 @@ taxi (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            taxiFill_ <| attribute "fill" iconConfig.color :: attributes
+            taxiFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            taxiOutline_ <| attribute "fill" iconConfig.color :: attributes
+            taxiOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3174,10 +3269,10 @@ ticket (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            ticketFill_ <| attribute "fill" iconConfig.color :: attributes
+            ticketFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            ticketOutline_ <| attribute "fill" iconConfig.color :: attributes
+            ticketOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3189,10 +3284,10 @@ ticketAdd (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            ticketAddFill_ <| attribute "fill" iconConfig.color :: attributes
+            ticketAddFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            ticketAddOutline_ <| attribute "fill" iconConfig.color :: attributes
+            ticketAddOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3204,10 +3299,10 @@ ticketControl (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            ticketControlFill_ <| attribute "fill" iconConfig.color :: attributes
+            ticketControlFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            ticketControlOutline_ <| attribute "fill" iconConfig.color :: attributes
+            ticketControlOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3219,10 +3314,10 @@ ticketLocation (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            ticketLocationFill_ <| attribute "fill" iconConfig.color :: attributes
+            ticketLocationFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            ticketLocationOutline_ <| attribute "fill" iconConfig.color :: attributes
+            ticketLocationOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3234,10 +3329,10 @@ ticketPdf (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            ticketPdfFill_ <| attribute "fill" iconConfig.color :: attributes
+            ticketPdfFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            ticketPdfOutline_ <| attribute "fill" iconConfig.color :: attributes
+            ticketPdfOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3249,10 +3344,10 @@ ticketPeriod (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            ticketPeriodFill_ <| attribute "fill" iconConfig.color :: attributes
+            ticketPeriodFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            ticketPeriodOutline_ <| attribute "fill" iconConfig.color :: attributes
+            ticketPeriodOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3264,10 +3359,10 @@ ticketZone (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            ticketZoneFill_ <| attribute "fill" iconConfig.color :: attributes
+            ticketZoneFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            ticketZoneOutline_ <| attribute "fill" iconConfig.color :: attributes
+            ticketZoneOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3279,10 +3374,10 @@ time (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            timeFill_ <| attribute "fill" iconConfig.color :: attributes
+            timeFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            timeOutline_ <| attribute "fill" iconConfig.color :: attributes
+            timeOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3294,10 +3389,10 @@ toilet (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            toiletFill_ <| attribute "fill" iconConfig.color :: attributes
+            toiletFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            toiletOutline_ <| attribute "fill" iconConfig.color :: attributes
+            toiletOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3309,10 +3404,10 @@ tokens (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            tokensFill_ <| attribute "fill" iconConfig.color :: attributes
+            tokensFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            tokensOutline_ <| attribute "fill" iconConfig.color :: attributes
+            tokensOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3324,10 +3419,10 @@ town (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            townFill_ <| attribute "fill" iconConfig.color :: attributes
+            townFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            townOutline_ <| attribute "fill" iconConfig.color :: attributes
+            townOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3339,10 +3434,10 @@ train (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            trainFill_ <| attribute "fill" iconConfig.color :: attributes
+            trainFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            trainOutline_ <| attribute "fill" iconConfig.color :: attributes
+            trainOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3354,10 +3449,10 @@ tram (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            tramFill_ <| attribute "fill" iconConfig.color :: attributes
+            tramFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            tramOutline_ <| attribute "fill" iconConfig.color :: attributes
+            tramOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3369,10 +3464,10 @@ twitter (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            twitterOutline_ <| attribute "fill" iconConfig.color :: attributes
+            twitterOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            twitterOutline_ <| attribute "fill" iconConfig.color :: attributes
+            twitterOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3384,10 +3479,10 @@ update (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            updateFill_ <| attribute "fill" iconConfig.color :: attributes
+            updateFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            updateOutline_ <| attribute "fill" iconConfig.color :: attributes
+            updateOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3399,10 +3494,10 @@ vendingMachine (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            vendingMachineFill_ <| attribute "fill" iconConfig.color :: attributes
+            vendingMachineFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            vendingMachineOutline_ <| attribute "fill" iconConfig.color :: attributes
+            vendingMachineOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3414,10 +3509,10 @@ vy (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            vyOutline_ <| attribute "fill" iconConfig.color :: attributes
+            vyOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            vyOutline_ <| attribute "fill" iconConfig.color :: attributes
+            vyOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3429,10 +3524,10 @@ vyPluss (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            vyPlussOutline_ <| attribute "fill" iconConfig.color :: attributes
+            vyPlussOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            vyPlussOutline_ <| attribute "fill" iconConfig.color :: attributes
+            vyPlussOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3444,10 +3539,10 @@ wagon (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            wagonFill_ <| attribute "fill" iconConfig.color :: attributes
+            wagonFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            wagonOutline_ <| attribute "fill" iconConfig.color :: attributes
+            wagonOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3459,10 +3554,10 @@ wait (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            waitFill_ <| attribute "fill" iconConfig.color :: attributes
+            waitFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            waitOutline_ <| attribute "fill" iconConfig.color :: attributes
+            waitOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3474,10 +3569,10 @@ walk (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            walkFill_ <| attribute "fill" iconConfig.color :: attributes
+            walkFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            walkOutline_ <| attribute "fill" iconConfig.color :: attributes
+            walkOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3489,10 +3584,10 @@ wallet (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            walletFill_ <| attribute "fill" iconConfig.color :: attributes
+            walletFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            walletOutline_ <| attribute "fill" iconConfig.color :: attributes
+            walletOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3504,10 +3599,10 @@ warning (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            warningFill_ <| attribute "fill" iconConfig.color :: attributes
+            warningFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            warningOutline_ <| attribute "fill" iconConfig.color :: attributes
+            warningOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3519,10 +3614,10 @@ water (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            waterFill_ <| attribute "fill" iconConfig.color :: attributes
+            waterFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            waterOutline_ <| attribute "fill" iconConfig.color :: attributes
+            waterOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3534,10 +3629,10 @@ wheelchair (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            wheelchairFill_ <| attribute "fill" iconConfig.color :: attributes
+            wheelchairFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            wheelchairOutline_ <| attribute "fill" iconConfig.color :: attributes
+            wheelchairOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3549,10 +3644,10 @@ wifi (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            wifiFill_ <| attribute "fill" iconConfig.color :: attributes
+            wifiFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            wifiOutline_ <| attribute "fill" iconConfig.color :: attributes
+            wifiOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3564,10 +3659,10 @@ winter (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            winterFill_ <| attribute "fill" iconConfig.color :: attributes
+            winterFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            winterOutline_ <| attribute "fill" iconConfig.color :: attributes
+            winterOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3579,10 +3674,10 @@ work (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            workFill_ <| attribute "fill" iconConfig.color :: attributes
+            workFill_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            workOutline_ <| attribute "fill" iconConfig.color :: attributes
+            workOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -3594,10 +3689,10 @@ youtube (IconConfig iconConfig) =
     in
     case iconConfig.variant of
         Fill ->
-            youtubeOutline_ <| attribute "fill" iconConfig.color :: attributes
+            youtubeOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
         Stroke ->
-            youtubeOutline_ <| attribute "fill" iconConfig.color :: attributes
+            youtubeOutline_ <| attribute "fill" iconConfig.color :: attributes ++ iconConfig.attributes
 
 
 {-| -}
@@ -4149,7 +4244,7 @@ airconditionFill_ attrs =
 {-| -}
 babyChangingFill_ : List (Attribute msg) -> Svg.Svg msg
 babyChangingFill_ attrs =
-    Svg.node "svg" ([ attribute "xmlns" "http://www.w3.org/2000/svg", attribute "fill" "none" ] ++ attrs) [ Svg.node "path" [ attribute "fill-rule" "evenodd", attribute "d" "M12.611 8.136a.5.5 0 0 1 .697.122l2.285 3.264c.702.094 1.33.466 1.8 1.019a4.225 4.225 0 0 1 8.285 1.158c0 1.653-.95 3.085-2.333 3.778h2.115c.893 0 1.618.724 1.618 1.618v1.378c0 .894-.725 1.618-1.618 1.618H4.54a1.618 1.618 0 0 1-1.618-1.618v-1.378c0-.894.725-1.618 1.618-1.618h1.723c-.558-.633-.904-1.515-.904-2.49 0-1.927 1.352-3.489 3.02-3.489h5.976l-1.867-2.666a.5.5 0 0 1 .122-.696Zm-2.41 4.362v4.978H8.38c-.985 0-2.02-.973-2.02-2.489 0-1.515 1.035-2.489 2.02-2.489h1.822Zm11.255 4.424a3.223 3.223 0 1 1 0-6.446 3.223 3.223 0 0 1 0 6.446Zm-1.89.555a4.242 4.242 0 0 1-1.5-1.258c-.156.478-.4.906-.71 1.258h2.21Z", attribute "clip-rule" "evenodd" ] [] ]
+    Svg.node "svg" ([ attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg" ] ++ attrs) [ Svg.node "path" [ attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M13 5.75a2.75 2.75 0 1 1 5.5 0 2.75 2.75 0 0 1-5.5 0ZM8.297 17.823l2.942-.736a2.877 2.877 0 0 1 3.575 2.79v.457h1a.5.5 0 0 1 0 1H4.5a.5.5 0 1 1 0-1h.755a2 2 0 0 1 3.042-2.511Zm-1.31.511a1 1 0 1 1 0 2 1 1 0 0 1 0-2ZM19.096 8.3a2.5 2.5 0 0 1 3.221 1.107l2.925 5.485a2 2 0 0 1 .232 1.059L25 24.029v.002c-.034.55-.174 1.169-.571 1.659-.416.511-1.055.81-1.928.81-.879 0-1.51-.31-1.92-.825-.388-.489-.528-1.102-.578-1.628v-.011l-.487-6.802a.5.5 0 0 0-.051-.188l-.73-1.46-2.037.874a.5.5 0 1 1-.394-.92l1.983-.85-1.297-2.594a2.5 2.5 0 0 1 1.22-3.403l.887-.394Zm1.163 8.1-.604-1.208.684-.293A1.09 1.09 0 0 0 21 13.897V10.5a.5.5 0 0 0-1 0v3.397a.09.09 0 0 1-.055.083l-.738.316-1.324-2.648a1.5 1.5 0 0 1 .733-2.041l.886-.394a1.5 1.5 0 0 1 1.933.665l2.836 5.319L20.26 16.4Z" ] [] ]
 
 
 {-| -}
@@ -4231,6 +4326,12 @@ luggageFill_ attrs =
 
 
 {-| -}
+noWifiFill_ : List (Attribute msg) -> Svg.Svg msg
+noWifiFill_ attrs =
+    Svg.node "svg" ([ attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg" ] ++ attrs) [ Svg.node "path" [ attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M22.8 3.6a.5.5 0 0 1 .1.7l-1.802 2.403-1.246 1.66-1.578 2.105-1.3 1.734-1.727 2.302-1.636 2.182L6.85 25.7l-.45.6a.5.5 0 0 1-.8-.6l5.892-7.856a5.293 5.293 0 0 0-.693.756A1 1 0 0 1 9.201 17.4a7.248 7.248 0 0 1 4.742-2.822l1.904-2.54a9.602 9.602 0 0 0-8.208 3.386 1 1 0 1 1-1.528-1.29A11.602 11.602 0 0 1 15 10c.758 0 1.499.073 2.217.211l1.631-2.176A14.01 14.01 0 0 0 15 7.5c-4.146 0-7.87 1.801-10.435 4.667a1 1 0 1 1-1.49-1.334A15.963 15.963 0 0 1 15 5.5c1.791 0 3.514.295 5.122.838L22.1 3.7a.5.5 0 0 1 .7-.1ZM15 16.5a5.24 5.24 0 0 1 4.2 2.1 1 1 0 1 0 1.6-1.201 7.252 7.252 0 0 0-4.401-2.764L15 16.5Zm3.014-4.019a9.637 9.637 0 0 1 4.347 2.942 1 1 0 1 0 1.528-1.29 11.653 11.653 0 0 0-4.62-3.324l-1.255 1.672Zm2.793-3.724a14.042 14.042 0 0 1 4.628 3.41 1 1 0 1 0 1.49-1.334 16.056 16.056 0 0 0-4.893-3.709l-1.225 1.633ZM12.5 21.5a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0Z" ] [] ]
+
+
+{-| -}
 petAllowedFill_ : List (Attribute msg) -> Svg.Svg msg
 petAllowedFill_ attrs =
     Svg.node "svg" ([ attribute "xmlns" "http://www.w3.org/2000/svg", attribute "fill" "none" ] ++ attrs) [ Svg.node "path" [ attribute "d" "M15.64 7.151c.341-2.197 2-3.765 3.704-3.5 1.704.264 2.81 2.26 2.469 4.458-.341 2.198-2 3.766-3.704 3.501-1.704-.264-2.81-2.26-2.469-4.459Zm-.61 5.915a.493.493 0 0 0-.064-.004c-2.786 0-4.836 1.301-6.175 3.09-1.329 1.776-1.96 4.032-1.96 6.003 0 1.154.476 1.964 1.244 2.375.734.393 1.637.37 2.422.096.253-.089.499-.18.741-.27 1.133-.42 2.205-.817 3.728-.817a.493.493 0 0 0 .063-.004c.02.003.042.005.064.005 1.522 0 2.594.397 3.727.817.242.09.488.18.741.269.785.273 1.688.297 2.422-.096.768-.411 1.245-1.22 1.245-2.375 0-1.971-.632-4.227-1.96-6.002-1.34-1.79-3.39-3.09-6.175-3.09a.493.493 0 0 0-.064.003Zm-.68-5.915c-.341-2.197-2-3.765-3.704-3.5-1.704.264-2.81 2.26-2.469 4.458.341 2.198 2 3.766 3.704 3.501 1.705-.264 2.81-2.26 2.469-4.459Zm7.963 3.584c.964-1.67 2.796-2.418 4.09-1.67 1.296.748 1.564 2.708.6 4.378-.964 1.67-2.796 2.418-4.091 1.67-1.295-.747-1.564-2.708-.6-4.378Zm-14.626 0c-.964-1.67-2.796-2.418-4.09-1.67-1.296.748-1.564 2.708-.6 4.378.964 1.67 2.796 2.418 4.091 1.67 1.295-.747 1.564-2.708.6-4.378Z" ] [], Svg.node "path" [ attribute "fill" "#fff", attribute "fill-rule" "evenodd", attribute "d" "M10.442 18.86a.5.5 0 0 1-.283-.648c.052-.134.287-.693.763-1.291.476-.6 1.214-1.262 2.277-1.547a.5.5 0 1 1 .258.966c-.79.212-1.361.71-1.753 1.203a4.337 4.337 0 0 0-.614 1.034.5.5 0 0 1-.648.283Z", attribute "clip-rule" "evenodd" ] [] ]
@@ -4255,6 +4356,12 @@ powerOutletFill_ attrs =
 
 
 {-| -}
+recliningSeatFill_ : List (Attribute msg) -> Svg.Svg msg
+recliningSeatFill_ attrs =
+    Svg.node "svg" ([ attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg" ] ++ attrs) [ Svg.node "path" [ attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "m7.899 11.44 1.73 1.652a1.914 1.914 0 0 1 3.224-.945L14.707 14H26a.5.5 0 0 1 .464.686l-.371.928c-.133.331-.32.63-.55.886H27a.5.5 0 0 1 .468.677l-.941 2.48c-.273.718-.938 1.347-1.826 1.347l-7.201-.002V25h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-3.999l-4-.001a.5.5 0 0 1-.353-.146L4.18 12.922a1.5 1.5 0 0 1-.3-.425L2.155 8.821A1.844 1.844 0 1 1 5.49 7.254l.153.325A3.001 3.001 0 0 1 11.5 8.5a3 3 0 0 1-3.601 2.94ZM6.5 8.5a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm6.707 8h10.105a2 2 0 0 0 1.852-1.257l.097-.243h-10.76a.5.5 0 0 1-.354-.146l-2-2a.914.914 0 0 0-1.293 1.292l2.353 2.354Z" ] [] ]
+
+
+{-| -}
 skiStorageFill_ : List (Attribute msg) -> Svg.Svg msg
 skiStorageFill_ attrs =
     Svg.node "svg" ([ attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg" ] ++ attrs) [ Svg.node "path" [ attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M11.5 2a.997.997 0 0 0-.54.181 2.3 2.3 0 0 0-.4.348 5.72 5.72 0 0 0-.726 1C9.4 4.268 9 5.238 9 6v8h5V6c0-.76-.4-1.73-.834-2.472a5.722 5.722 0 0 0-.726-1 2.3 2.3 0 0 0-.4-.347A.997.997 0 0 0 11.5 2ZM9 18.5V15h2v3.5H9Zm0 1v8a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-8H9Zm5-1V15h-2v3.5h2ZM4.5 9a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5H5v10h-.5a.5.5 0 0 0 0 1H5v1.5a.5.5 0 0 0 1 0V25h.5a.5.5 0 0 0 0-1H6V14h.5a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-.5-.5h-2Zm1 4H6v-3H5v3h.5Zm18-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5h.5v10h-.5a.5.5 0 1 0 0 1h.5v1.5a.5.5 0 0 0 1 0V25h.5a.5.5 0 0 0 0-1H25V14h.5a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-.5-.5h-2Zm1.5 4h-1v-3h1v3ZM17.96 2.181A.997.997 0 0 1 18.5 2c.22 0 .407.094.54.181a2.3 2.3 0 0 1 .4.348c.25.265.502.618.726 1C20.6 4.268 21 5.238 21 6v8h-5V6c0-.76.4-1.73.834-2.472.224-.38.476-.734.726-1a2.3 2.3 0 0 1 .4-.347ZM16 15v3.5h2V15h-2Zm0 12.5v-8h5v8a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5ZM21 15v3.5h-2V15h2Z" ] [] ]
@@ -4264,6 +4371,12 @@ skiStorageFill_ attrs =
 skicardFill_ : List (Attribute msg) -> Svg.Svg msg
 skicardFill_ attrs =
     Svg.node "svg" ([ attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg" ] ++ attrs) [ Svg.node "path" [ attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M10.586 2.707a2 2 0 0 1 2.828 0l13.879 13.879a2 2 0 0 1 0 2.828l-7.879 7.879a2 2 0 0 1-2.828 0L2.707 13.414a2 2 0 0 1 0-2.828l7.879-7.879Zm2.121.707a1 1 0 0 0-1.414 0l-7.879 7.879a1 1 0 0 0 0 1.414l13.879 13.879a1 1 0 0 0 1.414 0l7.879-7.879a1 1 0 0 0 0-1.414L12.707 3.414Z" ] [], Svg.node "path" [ attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M13.414 2.707a2 2 0 0 0-2.828 0l-7.879 7.879a2 2 0 0 0 0 2.828l13.879 13.879a2 2 0 0 0 2.828 0l7.879-7.879a2 2 0 0 0 0-2.828L13.414 2.707ZM12 5.5a.5.5 0 0 1 .5.5v1.793l.646-.647a.5.5 0 0 1 .708.708L12.5 9.207v1.586l1.146-1.147a.5.5 0 0 1 .708.708L13.207 11.5h1.586l1.353-1.354a.5.5 0 0 1 .708.708l-.647.646H18a.5.5 0 0 1 0 1h-1.793l.647.646a.5.5 0 0 1-.708.708L14.793 12.5h-1.586l1.147 1.146a.5.5 0 0 1-.708.708L12.5 13.207v1.586l1.354 1.353a.5.5 0 0 1-.708.708l-.646-.647V18a.5.5 0 0 1-1 0v-1.793l-.646.647a.5.5 0 0 1-.708-.708l1.354-1.353v-1.586l-1.146 1.147a.5.5 0 0 1-.708-.708l1.147-1.146H9.207l-1.353 1.354a.5.5 0 0 1-.708-.708l.647-.646H6a.5.5 0 0 1 0-1h1.793l-.647-.646a.5.5 0 0 1 .708-.708L9.207 11.5h1.586l-1.147-1.146a.5.5 0 0 1 .708-.708l1.146 1.147V9.207l-1.354-1.353a.5.5 0 0 1 .708-.708l.646.647V6a.5.5 0 0 1 .5-.5Zm13.5 10-10 10-2-2 10-10 2 2Z" ] [] ]
+
+
+{-| -}
+sleep6BedsFill_ : List (Attribute msg) -> Svg.Svg msg
+sleep6BedsFill_ attrs =
+    Svg.node "svg" ([ attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg" ] ++ attrs) [ Svg.node "path" [ attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M11.5 3a.5.5 0 0 0-.5.5v1.264A3 3 0 0 0 6.764 9H4V4.5a.5.5 0 1 0-1 0v7.978a.5.5 0 0 0 .5.5h23a.5.5 0 0 0 .5-.5V9.5a.5.5 0 0 0-.5-.5H26V5.5A2.5 2.5 0 0 0 23.5 3h-12ZM9 5a2 2 0 0 1 2 1.977v.046A2 2 0 1 1 9 5Zm-5 6.978V10h22v1.978H4ZM11.5 16a.5.5 0 0 0-.5.5v1.264A3 3 0 0 0 6.764 22H4v-4.5a.5.5 0 0 0-1 0v7.978a.5.5 0 0 0 .5.5h23a.5.5 0 0 0 .5-.5V22.5a.5.5 0 0 0-.5-.5H26v-3.5a2.5 2.5 0 0 0-2.5-2.5h-12Zm-.5 4.023v-.046a2 2 0 1 0 0 .046Zm-7 4.955V23h22v1.978H4Z" ] [] ]
 
 
 {-| -}
@@ -4519,6 +4632,12 @@ cottageFill_ attrs =
 
 
 {-| -}
+forestFill_ : List (Attribute msg) -> Svg.Svg msg
+forestFill_ attrs =
+    Svg.node "svg" ([ attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg" ] ++ attrs) [ Svg.node "path" [ attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M19.916 3.334a.6.6 0 0 1 .987 0l4.335 6.263a.6.6 0 0 1-.348.923l-1.115.279 2.93 3.766a.6.6 0 0 1-.356.957l-1.61.322 3.483 5.223a.6.6 0 0 1-.5.933H20.91v2.5a.5.5 0 0 1-1 0V22h-6.813a.6.6 0 0 1-.499-.933l1.896-2.844.121-.181.014.001.177-.022h1.025l-.365.547 3.054-1.35.105-.152c.488-.354 1.567-1.263 1.743-2.498.233-1.636-.512-2.844-1.459-3.651-.93-.793-2.144-1.187-2.942-1.366l-.292-.086a.79.79 0 0 1 .03-.047l4.212-6.084Z" ] [], Svg.node "path" [ attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M7.41 9.5c0-.773.188-1.93.733-2.875C8.673 5.704 9.524 5 10.909 5c1.38 0 2.414.783 3.167 1.85.757 1.074 1.185 2.376 1.341 3.24l.06.326.324.072c.693.154 1.712.55 2.497 1.218.77.655 1.286 1.538 1.117 2.723-.173 1.21-.926 2.055-1.857 2.634a6.886 6.886 0 0 1-2.704.94.5.5 0 1 0 .11.994 7.882 7.882 0 0 0 3.122-1.085c1.094-.68 2.091-1.75 2.318-3.341.231-1.615-.504-2.816-1.458-3.627-.823-.7-1.83-1.134-2.61-1.352-.214-.951-.673-2.226-1.443-3.318C14.03 5.05 12.729 4 10.909 4c-1.814 0-2.963.963-3.633 2.125-.551.958-.788 2.06-.85 2.919-1.282.223-3.131 1.343-3.513 4.394-.232 1.856.803 3.182 2.063 4.049 1.253.862 2.803 1.332 3.851 1.506a.5.5 0 1 0 .165-.986c-.952-.159-2.352-.589-3.45-1.344-1.09-.75-1.804-1.757-1.636-3.101C4.273 10.625 6.149 10 6.909 10h.5v-.5Zm4.5 0a.5.5 0 0 0-1 0v5.028L8.2 12.593a.5.5 0 0 0-.581.814l3.29 2.35V24.5a.5.5 0 1 0 1 0v-6.965l3.785-2.624a.5.5 0 1 0-.57-.822l-3.215 2.23V9.5Z" ] [] ]
+
+
+{-| -}
 gymFill_ : List (Attribute msg) -> Svg.Svg msg
 gymFill_ attrs =
     Svg.node "svg" ([ attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg" ] ++ attrs) [ Svg.node "path" [ attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M6 8.5a2 2 0 1 1 4 0v5h10v-5a2 2 0 1 1 4 0v1.668a1.75 1.75 0 0 1 2.5 1.582v1.75h1a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-1v1.75a1.75 1.75 0 0 1-2.5 1.582V21.5a2 2 0 1 1-4 0v-5H10v5a2 2 0 1 1-4 0v-1.668a1.75 1.75 0 0 1-2.5-1.582V16.5h-1A.5.5 0 0 1 2 16v-2a.5.5 0 0 1 .5-.5h1v-1.75A1.75 1.75 0 0 1 6 10.168V8.5Zm20.5 7h.5v-1h-.5v1Zm-23-1v1H3v-1h.5Zm6.5 1h10v-1H10v1Z" ] [] ]
@@ -4534,6 +4653,12 @@ homeFill_ attrs =
 insuranceFill_ : List (Attribute msg) -> Svg.Svg msg
 insuranceFill_ attrs =
     Svg.node "svg" ([ attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg" ] ++ attrs) [ Svg.node "path" [ attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M15.3 3.1a.5.5 0 0 0-.6 0l-.224.168a8.22 8.22 0 0 1-7.741 1.149A1.293 1.293 0 0 0 5 5.632v8.807a12.864 12.864 0 0 0 8.99 12.267 3.354 3.354 0 0 0 2.02 0A12.864 12.864 0 0 0 25 14.439V5.632c0-.897-.892-1.522-1.735-1.215a8.22 8.22 0 0 1-7.741-1.15L15.3 3.1Zm6.054 7.046a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L14 16.793l6.646-6.647a.5.5 0 0 1 .708 0Z" ] [] ]
+
+
+{-| -}
+mountainFill_ : List (Attribute msg) -> Svg.Svg msg
+mountainFill_ attrs =
+    Svg.node "svg" ([ attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg" ] ++ attrs) [ Svg.node "path" [ attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M25.91 6.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm1 0a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0ZM13.304 8.17a1 1 0 0 0-1.789 0L3.462 24.277a.5.5 0 0 0 .56.711.1.1 0 0 0 .05.013h17a.099.099 0 0 0 .035-.006.988.988 0 0 0 .111.006h.502l-3.92-7.844-.002.004-4.494-8.99Zm5.08 7.917 4.334 8.675.12.238H27.9a.495.495 0 0 0 .444-.253.497.497 0 0 0-.008-.506l-6.772-11.61a.75.75 0 0 0-1.307.019l-1.874 3.437Zm-7.57.868-1.47-2.205 3.066-6.132 2.359 4.719-.982 1.833-1.024-1.024-.522-.522-.291.679-1.136 2.652Zm9.113-1.609 1.62 2.026 1.259-.63-1.882-3.225-.997 1.83Z" ] [] ]
 
 
 {-| -}
@@ -5181,7 +5306,7 @@ airconditionOutline_ attrs =
 {-| -}
 babyChangingOutline_ : List (Attribute msg) -> Svg.Svg msg
 babyChangingOutline_ attrs =
-    Svg.node "svg" ([ attribute "xmlns" "http://www.w3.org/2000/svg", attribute "fill" "none" ] ++ attrs) [ Svg.node "path" [ attribute "fill-rule" "evenodd", attribute "d" "M13.313 8.255a.5.5 0 1 0-.82.573l1.87 2.67H8.38c-1.668 0-3.02 1.562-3.02 3.489 0 .975.346 1.857.904 2.49H4.541c-.894 0-1.618.724-1.618 1.618v1.378c0 .894.724 1.618 1.618 1.618H25.46c.893 0 1.618-.724 1.618-1.618v-1.378c0-.894-.725-1.618-1.618-1.618h-2.116a4.223 4.223 0 1 0-5.95-4.936c-.473-.556-1.105-.929-1.811-1.02a.508.508 0 0 0-.056-.104l-2.214-3.162Zm4.92 5.444a3.223 3.223 0 1 0 6.445 0 3.223 3.223 0 0 0-6.445 0Zm-.166 2.52c.393.527.906.96 1.5 1.258h-2.211c.31-.352.554-.78.71-1.258Zm-7.81-3.721H8.38c-.985 0-2.02.974-2.02 2.489s1.035 2.489 2.02 2.489h1.877v-4.978Zm1 4.978v-4.978h3.983c.985 0 2.02.974 2.02 2.489s-1.035 2.489-2.02 2.489h-3.983Zm14.203 1H4.54a.618.618 0 0 0-.618.619v1.378c0 .342.277.618.618.618h20.92a.618.618 0 0 0 .618-.618v-1.378a.618.618 0 0 0-.618-.618Z", attribute "clip-rule" "evenodd" ] [] ]
+    Svg.node "svg" ([ attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg" ] ++ attrs) [ Svg.node "path" [ attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M13 5.75a2.75 2.75 0 1 1 5.5 0 2.75 2.75 0 0 1-5.5 0ZM15.75 4a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5ZM8.297 17.823l2.942-.736a2.877 2.877 0 0 1 3.575 2.79v.457h1a.5.5 0 0 1 0 1H4.5a.5.5 0 1 1 0-1h.755a2 2 0 0 1 3.042-2.511Zm3.185.234a1.877 1.877 0 0 1 2.332 1.82v.457H8.72a1.99 1.99 0 0 0 .167-1.628l2.595-.649Zm-4.495.277a1 1 0 1 1 0 2 1 1 0 0 1 0-2ZM19.096 8.3a2.5 2.5 0 0 1 3.221 1.107l2.925 5.485a2 2 0 0 1 .232 1.059L25 24.029v.002c-.034.55-.174 1.169-.571 1.659-.416.511-1.055.81-1.928.81-.879 0-1.51-.31-1.92-.825-.388-.489-.528-1.102-.578-1.628v-.011l-.487-6.802a.5.5 0 0 0-.051-.188l-.73-1.46-2.037.874a.5.5 0 1 1-.394-.92l1.983-.85-1.297-2.594a2.5 2.5 0 0 1 1.22-3.403l.887-.394Zm1.163 8.1-.604-1.208.684-.293A1.09 1.09 0 0 0 21 13.897V10.5a.5.5 0 0 0-1 0v3.397a.09.09 0 0 1-.055.083l-.738.316-1.324-2.648a1.5 1.5 0 0 1 .733-2.041l.886-.394a1.5 1.5 0 0 1 1.933.665l2.836 5.319L20.26 16.4Zm4.2-.216-3.932 1.18.471 6.594c.043.444.153.829.365 1.095.193.242.516.447 1.137.447.627 0 .957-.202 1.151-.441.212-.26.322-.641.35-1.09l.458-7.785Z" ] [] ]
 
 
 {-| -}
@@ -5263,6 +5388,12 @@ luggageOutline_ attrs =
 
 
 {-| -}
+noWifiOutline_ : List (Attribute msg) -> Svg.Svg msg
+noWifiOutline_ attrs =
+    Svg.node "svg" ([ attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg" ] ++ attrs) [ Svg.node "path" [ attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M22.9 4.3a.5.5 0 1 0-.8-.6l-2.295 3.06A15.487 15.487 0 0 0 15 6c-4.59 0-8.716 1.996-11.553 5.167a.5.5 0 1 0 .745.667A14.463 14.463 0 0 1 15 7c1.45 0 2.849.213 4.169.608l-2.288 3.05A11.193 11.193 0 0 0 15 10.5a11.102 11.102 0 0 0-8.507 3.956.5.5 0 0 0 .764.645 10.102 10.102 0 0 1 8.94-3.53L13.5 15.167A6.754 6.754 0 0 0 9.6 17.698a.5.5 0 0 0 .8.6 5.776 5.776 0 0 1 2.016-1.687L5.6 25.7a.5.5 0 1 0 .8.6l.45-.6 7.219-9.625.805-1.074 2.429-3.238.65-.867 2.212-2.95.623-.83L22.9 4.3Zm-1.174 3.232-.612.816a14.545 14.545 0 0 1 4.694 3.486.5.5 0 0 0 .745-.667 15.55 15.55 0 0 0-4.827-3.635Zm-2.77 3.692-.626.836a10.141 10.141 0 0 1 4.413 3.04.5.5 0 1 0 .764-.644 11.15 11.15 0 0 0-4.55-3.232Zm-2.893 3.86-.697.928A5.742 5.742 0 0 1 19.6 18.3a.5.5 0 0 0 .8-.6 6.747 6.747 0 0 0-4.337-2.617ZM13.5 21.5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM15 19a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z" ] [] ]
+
+
+{-| -}
 petAllowedOutline_ : List (Attribute msg) -> Svg.Svg msg
 petAllowedOutline_ attrs =
     Svg.node "svg" ([ attribute "xmlns" "http://www.w3.org/2000/svg", attribute "fill" "none" ] ++ attrs) [ Svg.node "path" [ attribute "fill-rule" "evenodd", attribute "d" "M15.028 13.316a.493.493 0 0 0-.063-.004c-2.786 0-4.836 1.301-6.175 3.09-1.328 1.776-1.96 4.032-1.96 6.003 0 1.154.476 1.964 1.245 2.375.734.393 1.637.37 2.421.096.253-.089.499-.18.742-.27 1.133-.42 2.205-.817 3.727-.817a.493.493 0 0 0 .063-.004.448.448 0 0 0 .064.005c1.522 0 2.594.397 3.727.817.243.09.488.18.741.269.785.273 1.688.297 2.422-.096.768-.411 1.245-1.22 1.245-2.375 0-1.971-.632-4.227-1.96-6.002-1.34-1.79-3.39-3.09-6.175-3.09a.493.493 0 0 0-.064.003Zm0 9.478a.512.512 0 0 1 .064-.005c1.716 0 2.97.467 4.113.893.232.086.46.17.685.25.602.21 1.2.191 1.62-.034.386-.206.717-.638.717-1.493 0-1.78-.576-3.82-1.761-5.403-1.174-1.57-2.942-2.69-5.374-2.69a.512.512 0 0 1-.064-.004.512.512 0 0 1-.063.004c-2.433 0-4.2 1.12-5.374 2.69-1.185 1.583-1.762 3.623-1.762 5.403 0 .855.331 1.287.717 1.493.42.225 1.019.243 1.621.034.226-.08.453-.164.684-.25 1.143-.425 2.398-.892 4.114-.892.021 0 .043 0 .063.004ZM19.19 4.889c-.939-.146-2.267.765-2.562 2.666-.294 1.9.695 3.171 1.634 3.317.94.146 2.268-.765 2.563-2.666.295-1.9-.695-3.171-1.634-3.317Zm.154-.988c-1.704-.265-3.363 1.303-3.704 3.5-.34 2.198.765 4.195 2.469 4.46 1.704.264 3.363-1.304 3.704-3.502.34-2.197-.764-4.194-2.469-4.458Zm-8.544.988c.94-.146 2.267.765 2.562 2.666.295 1.9-.694 3.171-1.634 3.317-.94.146-2.268-.765-2.562-2.666-.295-1.9.694-3.171 1.633-3.317Zm-.154-.988c1.704-.265 3.363 1.303 3.704 3.5.341 2.198-.764 4.195-2.469 4.46-1.704.264-3.363-1.304-3.704-3.502-.34-2.197.765-4.194 2.47-4.458Zm15.258 6.279c-.625-.36-1.912-.104-2.725 1.305-.814 1.41-.392 2.651.233 3.012.625.361 1.911.106 2.725-1.304.814-1.41.392-2.651-.233-3.012Zm.5-.865c-1.295-.748-3.127 0-4.091 1.67-.965 1.67-.696 3.63.599 4.378 1.295.748 3.127 0 4.091-1.67.964-1.67.696-3.63-.6-4.378Zm-22.308.865c.625-.36 1.912-.104 2.725 1.305.814 1.41.392 2.651-.233 3.012-.625.361-1.911.106-2.725-1.304-.814-1.41-.392-2.651.233-3.012Zm-.5-.865c1.295-.748 3.127 0 4.091 1.67.965 1.67.696 3.63-.599 4.378-1.295.748-3.127 0-4.091-1.67-.964-1.67-.696-3.63.6-4.378Z", attribute "clip-rule" "evenodd" ] [], Svg.node "path" [ attribute "fill-rule" "evenodd", attribute "d" "M10.442 19.11a.5.5 0 0 1-.283-.648c.052-.134.287-.693.763-1.291.476-.6 1.214-1.262 2.277-1.547a.5.5 0 1 1 .258.966c-.79.212-1.361.71-1.753 1.203a4.337 4.337 0 0 0-.614 1.034.5.5 0 0 1-.648.283Z", attribute "clip-rule" "evenodd" ] [] ]
@@ -5287,6 +5418,12 @@ powerOutletOutline_ attrs =
 
 
 {-| -}
+recliningSeatOutline_ : List (Attribute msg) -> Svg.Svg msg
+recliningSeatOutline_ attrs =
+    Svg.node "svg" ([ attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg" ] ++ attrs) [ Svg.node "path" [ attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "m7.899 11.44 1.73 1.652a1.914 1.914 0 0 1 3.224-.945L14.707 14H26a.5.5 0 0 1 .464.686l-.371.928c-.133.331-.32.63-.55.886H27a.5.5 0 0 1 .468.677l-.941 2.48c-.273.718-.938 1.347-1.826 1.347l-7.201-.002V25h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-3.999l-4-.001a.5.5 0 0 1-.353-.146L4.18 12.922a1.5 1.5 0 0 1-.3-.425L2.155 8.821A1.844 1.844 0 1 1 5.49 7.254l.153.325A3.001 3.001 0 0 1 11.5 8.5a3 3 0 0 1-3.601 2.94ZM6.5 8.5a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm6.707 8h10.105a2 2 0 0 0 1.852-1.257l.097-.243h-10.76a.5.5 0 0 1-.354-.146l-2-2a.914.914 0 0 0-1.293 1.292l2.353 2.354Zm-3.012 1h16.08l-.683 1.802c-.164.432-.518.702-.891.702l-7.201-.002V20h-1v.001h-3.793L10.194 17.5Zm1.557-1L6.47 11.458l-.003-.002a1.5 1.5 0 0 1-.315-.441L4.586 7.679a.844.844 0 1 0-1.527.717l1.727 3.676c.025.052.058.1.1.141L9.19 16.5h2.561Z" ] [] ]
+
+
+{-| -}
 skiStorageOutline_ : List (Attribute msg) -> Svg.Svg msg
 skiStorageOutline_ attrs =
     Svg.node "svg" ([ attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg" ] ++ attrs) [ Svg.node "path" [ attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M10 6c0-.49.288-1.27.697-1.966.198-.338.407-.625.591-.82.087-.093.16-.155.212-.19.053.035.125.097.212.19.184.195.393.482.591.82C12.712 4.73 13 5.511 13 6v8h-3V6Zm-1 8.5V6c0-.76.4-1.73.834-2.472a5.72 5.72 0 0 1 .726-1 2.3 2.3 0 0 1 .4-.347A.997.997 0 0 1 11.5 2c.22 0 .407.094.54.181a2.3 2.3 0 0 1 .4.348c.25.265.502.618.726 1C13.6 4.268 14 5.238 14 6v21.5a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5v-13Zm4 .5v3.5h-1V15h1Zm-2 0v3.5h-1V15h1Zm2 12v-7.5h-3V27h3Zm4-21c0-.49.288-1.27.697-1.966.198-.338.407-.625.591-.82.087-.093.16-.155.212-.19.053.035.125.097.212.19.184.195.393.482.591.82C19.712 4.73 20 5.511 20 6v8h-3V6Zm2 9h1v3.5h-1V15Zm-2 12v-7.5h3V27h-3Zm-1 .5V6c0-.76.4-1.73.834-2.472.224-.38.476-.734.726-1 .124-.132.259-.254.4-.347A.997.997 0 0 1 18.5 2c.22 0 .407.094.54.181a2.3 2.3 0 0 1 .4.348c.25.265.502.618.726 1C20.6 4.268 21 5.238 21 6v21.5a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5Zm2-9h-1V15h1v3.5Zm-14-9a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H6v10h.5a.5.5 0 0 1 0 1H6v1.5a.5.5 0 0 1-1 0V25h-.5a.5.5 0 0 1 0-1H5V14h-.5a.5.5 0 0 1-.5-.5v-4ZM6 13H5v-3h1v3Zm17-3.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H25v10h.5a.5.5 0 0 1 0 1H25v1.5a.5.5 0 1 1-1 0V25h-.5a.5.5 0 1 1 0-1h.5V14h-.5a.5.5 0 0 1-.5-.5v-4Zm2 3.5h-1v-3h1v3Z" ] [] ]
@@ -5296,6 +5433,12 @@ skiStorageOutline_ attrs =
 skicardOutline_ : List (Attribute msg) -> Svg.Svg msg
 skicardOutline_ attrs =
     Svg.node "svg" ([ attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg" ] ++ attrs) [ Svg.node "path" [ attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M10.586 2.707a2 2 0 0 1 2.828 0l13.879 13.879a2 2 0 0 1 0 2.828l-7.879 7.879a2 2 0 0 1-2.828 0L2.707 13.414a2 2 0 0 1 0-2.828l7.879-7.879Zm2.121.707a1 1 0 0 0-1.414 0l-7.879 7.879a1 1 0 0 0 0 1.414L13.5 22.793l9.293-9.293L12.707 3.414ZM23.5 14.207 14.207 23.5l1.293 1.293 9.293-9.293-1.293-1.293Zm2 2L16.207 25.5l1.086 1.086a1 1 0 0 0 1.414 0l7.879-7.879a1 1 0 0 0 0-1.414L25.5 16.207ZM12 5.5a.5.5 0 0 1 .5.5v1.793l.646-.647a.5.5 0 0 1 .708.708L12.5 9.207v1.586l1.146-1.147a.5.5 0 0 1 .708.708L13.207 11.5h1.586l1.353-1.354a.5.5 0 0 1 .708.708l-.647.646H18a.5.5 0 0 1 0 1h-1.793l.647.646a.5.5 0 0 1-.708.708L14.793 12.5h-1.586l1.147 1.146a.5.5 0 0 1-.708.708L12.5 13.207v1.586l1.354 1.353a.5.5 0 0 1-.708.708l-.646-.647V18a.5.5 0 0 1-1 0v-1.793l-.646.647a.5.5 0 0 1-.708-.708l1.354-1.353v-1.586l-1.146 1.147a.5.5 0 0 1-.708-.708l1.147-1.146H9.207l-1.353 1.354a.5.5 0 0 1-.708-.708l.647-.646H6a.5.5 0 0 1 0-1h1.793l-.647-.646a.5.5 0 0 1 .708-.708L9.207 11.5h1.586l-1.147-1.146a.5.5 0 0 1 .708-.708l1.146 1.147V9.207l-1.354-1.353a.5.5 0 0 1 .708-.708l.646.647V6a.5.5 0 0 1 .5-.5Z" ] [] ]
+
+
+{-| -}
+sleep6BedsOutline_ : List (Attribute msg) -> Svg.Svg msg
+sleep6BedsOutline_ attrs =
+    Svg.node "svg" ([ attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg" ] ++ attrs) [ Svg.node "path" [ attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M11 3.5a.5.5 0 0 1 .5-.5h12A2.5 2.5 0 0 1 26 5.5V9h.5a.5.5 0 0 1 .5.5v2.978a.5.5 0 0 1-.5.5h-23a.5.5 0 0 1-.5-.5V4.5a.5.5 0 1 1 1 0V9h2.764A3 3 0 0 1 11 4.764V3.5Zm1 3.528V4h11.5A1.5 1.5 0 0 1 25 5.5V9H12V7.028Zm-1-.051a2 2 0 1 0 0 .046v-.046ZM4 10v1.978h22V10H4Zm7 6.5a.5.5 0 0 1 .5-.5h12a2.5 2.5 0 0 1 2.5 2.5V22h.5a.5.5 0 0 1 .5.5v2.978a.5.5 0 0 1-.5.5h-23a.5.5 0 0 1-.5-.5V17.5a.5.5 0 0 1 1 0V22h2.764A3 3 0 0 1 11 17.764V16.5Zm1 3.528V17h11.5a1.5 1.5 0 0 1 1.5 1.5V22H12v-1.972Zm-1-.051v.046a2 2 0 1 1 0-.046ZM4 23v1.978h22V23H4Z" ] [] ]
 
 
 {-| -}
@@ -5587,6 +5730,12 @@ cottageOutline_ attrs =
 
 
 {-| -}
+forestOutline_ : List (Attribute msg) -> Svg.Svg msg
+forestOutline_ attrs =
+    Svg.node "svg" ([ attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg" ] ++ attrs) [ Svg.node "path" [ attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M19.916 3.334a.6.6 0 0 1 .987 0l4.335 6.263a.6.6 0 0 1-.348.923l-1.115.279 2.93 3.766a.6.6 0 0 1-.356.957l-1.61.322 3.483 5.223a.6.6 0 0 1-.5.933H20.91v2.5a.5.5 0 1 1-1 0V22h-6.813a.6.6 0 0 1-.499-.933l1.896-2.844.121-.181.014.001 1.186-.148.11-.014-.598.896L13.844 21h13.131l-3.482-5.223-.414-.62.732-.147 1.707-.342-3.003-3.861-.471-.606.744-.186 1.299-.325-3.677-5.312-3.718 5.37a8.725 8.725 0 0 0-.726-.197l-.294-.086 4.244-6.13Z" ] [], Svg.node "path" [ attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M7.41 9.5c0-.773.188-1.93.733-2.875C8.673 5.704 9.524 5 10.909 5c1.38 0 2.414.783 3.167 1.85.757 1.074 1.185 2.376 1.341 3.24l.06.326.324.072c.693.154 1.712.55 2.497 1.218.77.655 1.286 1.538 1.117 2.723-.173 1.21-.926 2.061-1.857 2.645a6.833 6.833 0 0 1-2.7.949.5.5 0 1 0 .11.994 7.829 7.829 0 0 0 3.122-1.096c1.092-.685 2.087-1.76 2.314-3.35.231-1.615-.504-2.816-1.458-3.627-.823-.7-1.83-1.134-2.61-1.352-.214-.951-.673-2.226-1.443-3.318C14.03 5.05 12.729 4 10.909 4c-1.814 0-2.963.963-3.633 2.125-.551.958-.788 2.06-.85 2.919-1.282.223-3.131 1.343-3.513 4.394-.232 1.856.803 3.182 2.063 4.049 1.253.862 2.803 1.332 3.851 1.506a.5.5 0 1 0 .165-.986c-.952-.159-2.352-.589-3.45-1.344-1.09-.75-1.804-1.757-1.636-3.101C4.273 10.625 6.149 10 6.909 10h.5v-.5Zm4-.5a.5.5 0 0 1 .5.5v15a.5.5 0 0 1-1 0v-8.743l-3.291-2.35a.5.5 0 0 1 .581-.814l2.71 1.935V9.5a.5.5 0 0 1 .5-.5Z" ] [], Svg.node "path" [ attribute "d" "m15.41 14.5-3.948 2.737", attribute "stroke" "#2B2B2C", attribute "stroke-linecap" "round" ] [] ]
+
+
+{-| -}
 greenJourneyOutline_ : List (Attribute msg) -> Svg.Svg msg
 greenJourneyOutline_ attrs =
     Svg.node "svg" ([ attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg" ] ++ attrs) [ Svg.node "path" [ attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M3 15C3 8.373 8.373 3 15 3s12 5.373 12 12-5.373 12-12 12S3 21.627 3 15ZM15 2C7.82 2 2 7.82 2 15s5.82 13 13 13 13-5.82 13-13S22.18 2 15 2Zm5.269 17.168c-1.625-.593-3.133-.733-4.55-.768-1.586-.052-2.719-.14-3.417-.316-1.095-.245-2.19-.718-3.323-1.42a8.564 8.564 0 0 1-1.246-.912c.396.176.811.316 1.246.421.642.158 1.926.246 3.814.28 1.812.018 2.945.088 3.38.194 1.586.35 2.573.943 3.308 1.662.252.247.788.86.788.86Zm-2.945-7.958c2.153.491 3.531 1.526 4.116 3.087.276.732.283 1.896.006 3.506.683.907 1.054 1.885 1.054 2.697a.5.5 0 1 1-1 0c0-.708-.455-1.804-1.453-2.776a6.236 6.236 0 0 0-.356-.321c-.83-.657-1.803-1.106-3.097-1.403l-.195-.055c-.173-.047-.453-.086-.84-.117a38.365 38.365 0 0 0-2.255-.059h-.135c-.835-.006-1.684-.015-2.485-.088a11.54 11.54 0 0 1-.846-.106 6.016 6.016 0 0 1-.633-.103h-.037c-1.152-.263-2.059-.824-2.72-1.684a3.21 3.21 0 0 1-.207-.333s0-.018-.019-.018A5.093 5.093 0 0 1 5.41 11c.453.422 1 .702 1.605.843.793.175 1.662.21 2.606.105.547-.053 1.397-.193 2.51-.438 1.096-.246 1.927-.404 2.512-.456.963-.106 1.85-.053 2.681.157Z" ] [] ]
@@ -5608,6 +5757,12 @@ homeOutline_ attrs =
 insuranceOutline_ : List (Attribute msg) -> Svg.Svg msg
 insuranceOutline_ attrs =
     Svg.node "svg" ([ attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg" ] ++ attrs) [ Svg.node "path" [ attribute "fill-rule" "evenodd", attribute "clip-rule" "evenodd", attribute "d" "M15.3 3.1a.5.5 0 0 0-.6 0l-.224.168a8.22 8.22 0 0 1-7.741 1.149A1.293 1.293 0 0 0 5 5.632v8.807a12.864 12.864 0 0 0 8.99 12.267 3.354 3.354 0 0 0 2.02 0A12.864 12.864 0 0 0 25 14.439V5.632c0-.897-.892-1.522-1.735-1.215a8.22 8.22 0 0 1-7.741-1.15L15.3 3.1ZM6.393 5.357A9.22 9.22 0 0 0 15 4.124a9.22 9.22 0 0 0 8.607 1.233.293.293 0 0 1 .393.275v8.807c0 5.176-3.356 9.754-8.291 11.313a2.354 2.354 0 0 1-1.418 0A11.864 11.864 0 0 1 6 14.439V5.632c0-.203.202-.345.393-.275Zm14.96 5.497a.5.5 0 0 0-.707-.708L14 16.793l-3.646-3.647a.5.5 0 0 0-.708.708l4 4a.5.5 0 0 0 .708 0l7-7Z" ] [] ]
+
+
+{-| -}
+mountainOutline_ : List (Attribute msg) -> Svg.Svg msg
+mountainOutline_ attrs =
+    Svg.node "svg" ([ attribute "fill" "none", attribute "xmlns" "http://www.w3.org/2000/svg" ] ++ attrs) [ Svg.node "path" [ attribute "d" "M20.91 24.5 12.632 7.947a.25.25 0 0 0-.447 0L4.09 24.138a.25.25 0 0 0 .224.362h16.595Zm0 0h7M17.91 18l2.787-5.111a.25.25 0 0 1 .436-.006L27.909 24.5", attribute "stroke" "#2B2B2C", attribute "stroke-linecap" "round" ] [], Svg.node "path" [ attribute "d" "m8.91 15 1.743 2.616a.25.25 0 0 0 .438-.04L12.41 14.5l1.261 1.26a.25.25 0 0 0 .398-.059l1.326-2.501M19.41 15.5l1.873 2.342a.25.25 0 0 0 .307.068l1.82-.91", attribute "stroke" "#2B2B2C" ] [], Svg.node "circle" [ attribute "cx" "23.409", attribute "cy" "6.5", attribute "r" "3", attribute "stroke" "#2B2B2C" ] [] ]
 
 
 {-| -}

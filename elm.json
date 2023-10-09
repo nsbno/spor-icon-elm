@@ -3,7 +3,7 @@
     "name": "nsbno/spor-icon-elm",
     "summary": "Icons used for Elm applications hosted on vy.no",
     "license": "MIT",
-    "version": "3.0.2",
+    "version": "4.0.0",
     "exposed-modules": [
         "Spor.Icon"
     ],
